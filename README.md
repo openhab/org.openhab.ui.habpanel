@@ -3,10 +3,10 @@ HABPanel
 
 Another take on the dashboard-like web user interface concept for OpenHAB (v1.8, OpenHAB2 untested yet), with the following features:
 
-- 100% client-side application, put it your OpenHAB web installation as static files, no resources used on the server, nothing to start - if OpenHAB is up, it's up;
+- 100% client-side application, put it inside your OpenHAB web installation as static files, no resources used on the server, nothing to start - if OpenHAB is up, it's up;
 - Dashboards are stored in the browser local storage, meaning they can be customized per device (a better way to backup and reuse configurations is definitely needed though);
-- Touch-friendly in-app drag-and-drop editor - OpenHAB's sitemaps are not used, it reads the items directly;
-- Use the REST API and receives item updates via Websockets or long polling (unfortunately, this is not working reliably);
+- Touch-friendly in-app drag-and-drop designer - OpenHAB's sitemaps are not used, it reads the items directly;
+- Uses the REST API and receives item updates via Websockets or long polling (unfortunately, this is not working reliably yet);
 - Goes fullscreen using the HTML5 Fullscreen API of the browser;
 - <a href="https://github.com/angular-slider/angularjs-slider">Sliders!</a> I like sliders.
 
@@ -17,7 +17,7 @@ Another take on the dashboard-like web user interface concept for OpenHAB (v1.8,
 
 ## Configuration
 
-Nothing yet, it will simply try to connect to the local OpenHAB instance. This might change in the future.
+Nothing for now, it will simply try to connect to the local OpenHAB instance. This might change in the future.
 
 ## First steps
 
