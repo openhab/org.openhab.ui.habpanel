@@ -24,35 +24,37 @@
                                     <select ng-model="form.item" ng-options="item.name as item.name for item in items" class="form-control"></select>
                                 </div>
                             </div>
-                            <div class="col-xs-6">
-                                <div class="form-group" ng-class="{error: _form.floor.$error && _form.submitted}">
-                                    <label class="control-label col-xs-4">Min</label>
-                                    <div class="col-xs-6">
-                                        <input name="min" type="number" ng-model="form.floor" class="form-control" />
+                            <div class="form-group">
+                                <div class="col-xs-6">
+                                    <div class="form-group" ng-class="{error: _form.floor.$error && _form.submitted}">
+                                        <label class="control-label col-xs-4">Min</label>
+                                        <div class="col-xs-6">
+                                            <input name="min" type="number" ng-model="form.floor" class="form-control" />
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-xs-6">
-                                <div class="form-group" ng-class="{error: _form.ceil.$error && _form.submitted}">
-                                    <label class="control-label col-xs-4">Max</label>
-                                    <div class="col-xs-6">
-                                        <input name="max" type="number" ng-model="form.ceil" class="form-control" />
+                                <div class="col-xs-6">
+                                    <div class="form-group" ng-class="{error: _form.ceil.$error && _form.submitted}">
+                                        <label class="control-label col-xs-4">Max</label>
+                                        <div class="col-xs-6">
+                                            <input name="max" type="number" ng-model="form.ceil" class="form-control" />
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-xs-6">
-                                <div class="form-group" ng-class="{error: _form.step.$error && _form.submitted}">
-                                    <label class="control-label col-xs-4">Step</label>
-                                    <div class="col-xs-6">
-                                        <input name="step" type="number" ng-model="form.step" class="form-control" />
+                                <div class="col-xs-6">
+                                    <div class="form-group" ng-class="{error: _form.step.$error && _form.submitted}">
+                                        <label class="control-label col-xs-4">Step</label>
+                                        <div class="col-xs-6">
+                                            <input name="step" type="number" ng-model="form.step" class="form-control" />
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-xs-6">
-                                <div class="form-group" ng-class="{error: _form.unit.$error && _form.submitted}">
-                                    <label class="control-label col-xs-4">Unit</label>
-                                    <div class="col-xs-6">
-                                        <input name="unit" type="text" ng-model="form.unit" class="form-control" />
+                                <div class="col-xs-6">
+                                    <div class="form-group" ng-class="{error: _form.unit.$error && _form.submitted}">
+                                        <label class="control-label col-xs-4">Unit</label>
+                                        <div class="col-xs-6">
+                                            <input name="unit" type="text" ng-model="form.unit" class="form-control" />
+                                        </div>
                                     </div>
                                 </div>
                             </div>
