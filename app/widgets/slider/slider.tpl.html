@@ -1,0 +1,9 @@
+<div class="box-content slider">
+    <div ng-class="{ 'slider-content': !vm.widget.vertical, 'slider-content-vertical': vm.widget.vertical }">
+        <div class="slider-label" ng-hide="vm.widget.hidelabel">{{vm.widget.name}}</div>
+        <div class="slider-container">
+            <rzslider rz-slider-model="vm.slider.value" rz-slider-options="vm.slider.options"></rzslider>
+        </div>
+
+    </div>
+</div>

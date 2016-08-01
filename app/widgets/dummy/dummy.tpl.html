@@ -1,0 +1,10 @@
+<div class="box-content dummy">
+    <div class="dummy-content" ng-if="vm.widget.nolinebreak">
+        <span class="pull-left">{{vm.widget.name}}</span>
+    </div>
+    <div class="dummy-content">
+        <span ng-if="!vm.widget.nolinebreak">{{vm.widget.name}}</span>
+        <br ng-if="!vm.widget.nolinebreak" />
+        <span ng-style="{ 'font-size': vm.widget.font_size + 'pt' }" ng-class="{ 'dummy-value-right': vm.widget.nolinebreak }" class="value">{{vm.value}}<small ng-if="vm.widget.unit">{{vm.widget.unit}}</small></span>
+    </div>
+</div>
