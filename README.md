@@ -36,21 +36,21 @@ Nothing yet, it will simply try to connect to the local OpenHAB instance. This m
 
 Here are some working dashboards for my own installation:
 
-!(http://i.imgur.com/hrkL5l7.png)
+![](http://i.imgur.com/hrkL5l7.png)
 
-!(http://i.imgur.com/eURUPuD.png)
+![](http://i.imgur.com/eURUPuD.png)
 
-!(http://i.imgur.com/7kiG0kf.png)
+![](http://i.imgur.com/7kiG0kf.png)
 
-!(http://i.imgur.com/WuKkXmz.png)
+![](http://i.imgur.com/WuKkXmz.png)
 
-!(http://i.imgur.com/Uo8NJ62.png)
+![](http://i.imgur.com/Uo8NJ62.png)
 
-!(http://i.imgur.com/v50fNnA.png)
+![](http://i.imgur.com/v50fNnA.png)
 
-!(http://i.imgur.com/iUCsjRp.png)
+![](http://i.imgur.com/iUCsjRp.png)
 
-!(http://i.imgur.com/ZmlMlkv.png)
+![](http://i.imgur.com/ZmlMlkv.png)
 
 ## Disclaimer
 
