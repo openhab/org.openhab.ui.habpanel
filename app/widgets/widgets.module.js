@@ -43,7 +43,7 @@
                 ngModel: '='
             },
             link: function (scope, element, attrs) {
-                element.html('<widget-' + scope.type + ' ng-model="ngModel"><widget-' + scope.type + '>');
+                element.html('<widget-' + scope.type + ' ng-model="ngModel"></widget-' + scope.type + '>');
                 $compile(element.contents())(scope);
             }
         }
