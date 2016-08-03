@@ -29,7 +29,14 @@
             $http.get('/rest/items')
             .then(function (data) {
                 console.log('Loaded OpenHAB items');
-                $rootScope.items = data.data.item;
+                if (data.data && data.data.item) {
+                  $rootScope.items = data.data.item; // openHAB 1
+                } else if (angular.isArray(data.data)) {
+                  $rootScope.items = data.data;      // openHAB 2
+                } else {
+                  console.log("Items not found?");
+                  $rootScope.items = [];
+                }
                 $rootScope.$emit('openhab-update');
             });
         }
@@ -63,7 +70,11 @@
             //longPollUpdates('');
         }
 
-        // watch for changes with Atmosphere.js
+        $interval(function () {
+          reloadItems();
+        }, 5000);
+
+        /*// watch for changes with Atmosphere.js
         var request = {
             url: '/rest/items',
             contentType: 'application/json',
@@ -103,7 +114,7 @@
              }
         };
 
-        var socket = atmosphere.subscribe(request);
+        var socket = atmosphere.subscribe(request);*/
 
 /*
         var longPollings = [];
