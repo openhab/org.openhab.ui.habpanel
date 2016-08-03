@@ -1,9 +1,9 @@
-HABPanel
+HABpanel
 ========
 
-Another take on the dashboard-like web user interface concept for OpenHAB (v1.8, OpenHAB2 untested yet), with the following features:
+Another take on the dashboard-like web user interface concept for openHAB, with the following features:
 
-- 100% client-side application, put it inside your OpenHAB web installation as static files, no resources used on the server, nothing to start - if OpenHAB is up, it's up;
+- 100% client-side application, put it among your OpenHAB static files, no resources used on the server, nothing to start - if OpenHAB is up, it's up;
 - Dashboards are stored in the browser local storage, meaning they can be customized per device (a better way to backup and reuse configurations is definitely needed though);
 - Touch-friendly in-app drag-and-drop designer - OpenHAB's sitemaps are not used, it reads the items directly;
 - Uses the REST API and receives item updates via Websockets or long polling (unfortunately, this is not working reliably yet);
@@ -12,23 +12,23 @@ Another take on the dashboard-like web user interface concept for OpenHAB (v1.8,
 
 ## Installation
 
-1. Copy (or clone this Git repository) into your OpenHAB static directory (for instance ```/usr/share/openhab/webapps/static```, depends on your installation). 
+1. Copy (or clone this Git repository) into your openHAB static directory (e.g. ```/usr/share/openhab/webapps/static``` for openHAB .deb packages, or ```/opt/openhab/conf/html``` for openHAB 2, depends on your installation). 
 2. That's it.
 
 ## Configuration
 
-Nothing for now, it will simply try to connect to the local OpenHAB instance. This might change in the future.
+Nothing for now, it will simply try to connect to the local openHAB instance. This might change in the future.
 
 ## First steps
 
 - Navigate to ```http://<your-openhab-instance>:8080/static/habpanel/```
 - You should be presented with a screen with a clock, a settings icon (gears) to the left. Click on the icon.
-- You're now in edit mode, a link ("Add new dashboard...") appeared, click on it and give your first dashboard a name
+- You're now in edit mode, a link ("Add new dashboard") appeared, click on it and give your first dashboard a name
 - Click on the pencil icon to enter the dashboard editor (if you missed it and don't see a "Add Widget" button, go back and enter Edit mode again)
-- Add your first widget: click on "New Widget" and select the type in the menu (let's say Dummy)
-- You may now move the widget by drag-and-drop and resize it with the white chevron
+- Add your first widget: click on "Add Widget" and select the type in the menu (let's say Dummy)
+- Move the widget by drag-and-drop and resize it with the white chevron
 - Click on the gears icon to bring up the widget's settings
-- Rename the widget, bind it to a supported OpenHAB item and click OK
+- Rename the widget, bind it to a supported openHAB item and click OK
 - Save your configuration by clicking the Save button
 - Click Run to see your dashboard in action - use your browser's back button or the arrow to go back to the drawing board
 
