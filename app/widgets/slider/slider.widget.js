@@ -40,7 +40,7 @@
         var vm = this;
         this.widget = this.ngModel;
         vm.slider = {
-            value: 0,
+            value: OHService.getItem(vm.widget.item) ? parseInt(OHService.getItem(vm.widget.item).state) : 0,
             options: {
                 id: 'slider-' + vm.widget.item,
                 floor: (vm.widget.floor) ? vm.widget.floor : 0,
@@ -58,7 +58,6 @@
                     return (vm.widget.unit) ? value + vm.widget.unit : value;
                 },
                 onEnd: function (id) {
-                    console.log('slider onEnd:' + id);
                     OHService.sendCmd(vm.widget.item, vm.slider.value);
                 }
             }
@@ -66,9 +65,9 @@
 
         function updateValue() {
             vm.slider.value = parseInt(OHService.getItem(vm.widget.item).state);
-            $timeout(function () {
+            $scope.$$postDigest(function () {
                 $scope.$broadcast('rzSliderForceRender');
-            });
+            }, 0, false);
         }
 
         OHService.onUpdate($scope, vm.widget.item, function () {

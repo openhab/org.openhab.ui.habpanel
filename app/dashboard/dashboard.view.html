@@ -5,7 +5,7 @@
 	<a class="btn pull-right" ng-click="vm.refresh()"><i class="glyphicon glyphicon-refresh"></i></a>
 	<h2>&nbsp;{{vm.dashboard.name}}</h2>
 </div>
-<div gridster="vm.gridsterOptions">
+<div ng-show="vm.ready" gridster="vm.gridsterOptions">
 	<ul>
 		<li gridster-item="widget" ng-repeat="widget in vm.dashboard.widgets">
 			<div class="box">
