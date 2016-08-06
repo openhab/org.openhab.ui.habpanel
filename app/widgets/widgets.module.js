@@ -22,9 +22,9 @@
 
         ////////////////
         
-        function registerType(name) {
-            widgetTypes.push(name);
-            console.log("Registered widget type: " + name);
+        function registerType(widget) {
+            widgetTypes.push(widget);
+            console.log("Registered widget type: " + widget.type);
         }
 
         function getWidgetTypes() {
