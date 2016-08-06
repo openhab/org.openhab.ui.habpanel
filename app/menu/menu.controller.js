@@ -23,10 +23,23 @@
             $interval(tick, 1000);
         }
 
+        vm.gridsterOptions = {
+            margins: [5, 5],
+            columns: 1,
+            defaultSizeX: 1,
+            defaultSizeY: 1,
+            rowHeight: 110,
+            swapping: true,
+            //floating: false,
+            mobileModeEnabled: false,
+            draggable: { enabled: true, handle: '.handle', stop: function(evt) { PersistenceService.saveDashboards() } },
+            resizable: { enabled: false }
+        }
+
         vm.addNewDashboard = function() {
             prompt({
                 title: "New dashboard",
-                message: "Name of your new dashboard",
+                message: "Name of your new dashboard:",
                 input: true
             }).then(function (name) {
                 dashboards.push({ id: name, name: name, widgets: [] });
@@ -49,8 +62,25 @@
             });
         }
 
+        vm.renameDashboard = function (dash) {
+            prompt({
+                title: "Rename dashboard",
+                message: "New name:",
+                value: dash.name,
+                input: true
+            }).then(function (name) {
+                dash.id = dash.name = name;
+                PersistenceService.saveDashboards();
+            })
+
+        }
+
         vm.viewDashboard = function (dash) {
-            $location.url('/view/' + dash.id);
+            if (vm.editMode) {
+                $location.url('/edit/' + dash.id);
+            } else {
+                $location.url('/view/' + dash.id);
+            }
         }
 
 		vm.goFullscreen = function () {
@@ -67,7 +97,7 @@
             }).then(function (confstr) {
                 try {
                     var newconf = JSON.parse(confstr);
-                // maybe add some checks here eventually
+                    // maybe add some checks here eventually
                     angular.copy(newconf, $rootScope.dashboards);
                     PersistenceService.saveDashboards();
                     PersistenceService.getDashboards();

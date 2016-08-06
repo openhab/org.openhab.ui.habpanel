@@ -5,6 +5,7 @@ html {
 body {
     background-color: black;
 }
+
 h1, h2 {
     color: #def;
 }
@@ -30,9 +31,12 @@ input {
     max-width: 1000px;
 }
 .dash-buttons {
-    font-size: 22px;
-    margin-top: 10px;
+    font-size: 30px;
+    margin-top: 16px;
     margin-right: -15px;
+}
+.handle {
+    cursor: move;
 }
 .dash-card {
     margin: 5px 0px 5px 0px;

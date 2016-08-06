@@ -4,11 +4,14 @@
     <h1>{{vm.clock | date:'EEE d MMM HH:mm:ss'}}</h1>
 </div>
 <div class="row">
-    <div class="col-md-12 col-lg-12">
-        <div class="dash-card col-md-6 col-lg-6 col-sm-6 box" ng-repeat="dash in vm.dashboards">
+    <div gridster="vm.gridsterOptions" class="col-md-12 col-lg-12">
+        <div gridster-item="dash" class="dash-card col-md-6 col-lg-6 col-sm-6 box" ng-repeat="dash in vm.dashboards">
+            <div class="pull-left dash-buttons" ng-if="vm.editMode">
+                <span class="pull-right handle"><i class="glyphicon glyphicon-sort">&nbsp;</i></span>
+            </div>
             <div class="pull-right dash-buttons" ng-if="vm.editMode">
                 <a class="pull-right" ng-click="vm.removeDashboard(dash)"><i class="glyphicon glyphicon-trash">&nbsp;</i></a>
-                <a class="pull-right" href="#/edit/{{dash.id}}"><i class="glyphicon glyphicon-pencil">&nbsp;</i></a>
+                <a class="pull-right" ng-click="vm.renameDashboard(dash)"><i class="glyphicon glyphicon-pencil">&nbsp;</i></a>
             </div>
             <h3 ng-click="vm.viewDashboard(dash)" class="card-title">{{dash.name}}</h3>
         </div>
