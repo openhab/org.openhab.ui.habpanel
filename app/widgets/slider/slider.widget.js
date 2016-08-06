@@ -58,7 +58,7 @@
                     return (vm.widget.unit) ? value + vm.widget.unit : value;
                 },
                 onEnd: function (id) {
-                    OHService.sendCmd(vm.widget.item, vm.slider.value);
+                    OHService.sendCmd(vm.widget.item, vm.slider.value.toString());
                 }
             }
         };
