@@ -1,6 +1,6 @@
 angular.module('app')
-    .controller('DashboardEditCtrl', ['$scope', '$location', '$timeout', 'dashboard', 'Widgets', 'PersistenceService',
-        function($scope, $location, $timeout, dashboard, Widgets, PersistenceService) {
+    .controller('DashboardEditCtrl', ['$scope', '$location', '$timeout', 'dashboard', 'Widgets', 'PersistenceService', 'OHService',
+        function($scope, $location, $timeout, dashboard, Widgets, PersistenceService, OHService) {
 
             $scope.dashboard = dashboard;
 
@@ -43,6 +43,8 @@ angular.module('app')
                 $scope.save();
                 $location.url("/view/" + $scope.dashboard.id);
             };
+
+            OHService.reloadItems();
 
         }
     ])
