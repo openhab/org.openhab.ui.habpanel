@@ -53,6 +53,7 @@
                 hidePointerLabels: vm.widget.hidepointer,
                 showTicks: vm.widget.showticks,
                 showTicksValues: vm.widget.showticksvalues,
+                rightToLeft: vm.widget.inverted,
                 enforceStep: false,
                 translate: function (value) {
                     return (vm.widget.unit) ? value + vm.widget.unit : value;
@@ -101,7 +102,7 @@
             hidepointer: widget.hidepointer,
             showticks: widget.showticks,
             showticksvalues: widget.showticksvalues,
-
+            inverted: widget.inverted
         };
 
         $scope.dismiss = function() {
