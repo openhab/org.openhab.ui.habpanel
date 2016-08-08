@@ -67,22 +67,26 @@ ul {
     background-color: #234;
     color: #def;
 }
-.box-draggable {
-    cursor: move;
+.box-design {
     border: 1px solid #567;
 }
 .box-header {
     display: table;
     background-color: #567;
-    padding: 0 5px 0 5px;
+    padding: 0 5px 0 0;
     border-right: 1px solid #567;
     border-bottom: 1px solid #567;
     cursor: move;
     position: absolute;
     opacity: 0.4;
 }
+.box-header i {
+    font-size: 3rem;
+    vertical-align: middle;
+}
 .box-header h3 {
-    margin-top: 6px;
+    vertical-align: middle;
+    margin: 0.2em 0 0 0;
     display: inline-block;
     font-size: 10pt;
 }
@@ -92,8 +96,8 @@ ul {
     height: 100%;
 }
 .box-header-btns {
-    top: 5px;
-    right: 10px;
+    top: 0;
+    right: 1rem;
     cursor: pointer;
     position: absolute;
 }
@@ -104,7 +108,7 @@ ul {
     margin: auto;
 }
 .settings-btn i {
-    font-size: 22px;
+    font-size: 3rem;
 }
 a {
     color: #abc;
@@ -115,6 +119,10 @@ form {
 .gridster {
     padding: 2px;
     /*border: 1px solid #ccc;*/
+}
+.gridster .gridster-item:hover .handle-se {
+    border-width: 0 0 3rem 3rem !important;
+    border-color: transparent transparent #def !important;
 }
 
 /* Widget styles */

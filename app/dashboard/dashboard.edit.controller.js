@@ -11,7 +11,7 @@ angular.module('app')
                 floating: false,
                 mobileModeEnabled: false,
                 draggable: {
-                    handle: '.box'
+                    handle: '.box-header'
                 },
                 resizable: {
                     enabled: true,
