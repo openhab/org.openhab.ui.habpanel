@@ -219,3 +219,21 @@ form {
     width: 100%;
     height: 100%;
 }
+
+.icon-backdrop {
+    position: absolute;
+    top: 10%;
+    bottom: 10%;
+    left: 10%;
+    right: 10%;
+}
+.icon-tile-backdrop {
+    margin: auto;
+    filter: opacity(15%);
+    -webkit-filter: opacity(15%);
+}
+
+.colorize {
+    filter: invert(60%) sepia(100%) hue-rotate(165deg) opacity(15%) !important;
+    -webkit-filter: invert(60%) sepia(100%) hue-rotate(165deg) opacity(15%) !important;
+}

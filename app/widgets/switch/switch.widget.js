@@ -79,7 +79,9 @@
             item: widget.item,
             hidelabel: widget.hidelabel,
             hideicon: widget.hideicon,
-            hideonoff: widget.hideonoff
+            hideonoff: widget.hideonoff,
+            iconset: widget.iconset,
+            icon: widget.icon
         };
 
         $scope.dismiss = function() {

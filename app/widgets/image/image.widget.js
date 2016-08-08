@@ -56,7 +56,9 @@
             sizeY: widget.sizeY,
             col: widget.col,
             row: widget.row,
-            url: widget.url
+            url: widget.url,
+            iconset: widget.iconset,
+            icon: widget.icon
         };
 
         $scope.dismiss = function() {

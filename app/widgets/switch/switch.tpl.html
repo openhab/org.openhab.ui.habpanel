@@ -1,4 +1,5 @@
 <div class="box-content switch" ng-click="vm.toggleSwitch()">
+    <widget-icon ng-if="vm.widget.icon" iconset="vm.widget.iconset" icon="vm.widget.icon"></widget-icon>
     <div class="switch-content">
         <div ng-hide="vm.widget.hidelabel">{{vm.widget.name}}</div>
         <div class="value" ng-class="{ 'switch-off': !vm.valueAsBool() }">
