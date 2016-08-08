@@ -242,3 +242,13 @@ form {
     bottom: 0;
     left: 0;
 }
+
+
+/* colour picker */
+.color-picker-swatch {
+    border: #3960FF 1px dotted;
+}
+.transparent-swatch-arrow {
+    padding-left: 3px;
+    padding-top: 8px;
+}
