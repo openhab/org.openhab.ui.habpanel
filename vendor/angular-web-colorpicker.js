@@ -4,10 +4,11 @@ angular.module('web.colorpicker').directive('webColorpicker', function() {
   return {
     template: '<div>' +
       '<div ng-repeat="row in rows" ng-style="{ \'margin-left\': \'\' + row.offset*dabWidth +\'px\', height: \'\' + dabHeight - dabVertical + \'px\', \'min-width\': \'\' + 13*dabWidth + \'px\' }">' +
-      '<div ng-repeat="color in row.colors" ng-click="selectColor(color)" style="display: inline-block; position: relative; cursor: pointer;" ng-style="{ \'box-shadow\': color == dabModel ? \'0 0 0 2px hsl(0, 0%, 100%),0 0 0 4px hsl(0, 0%, 15%)\' : \'none\', \'z-index\': color == dabModel ? 3 : 2, \'background-color\': color, height: \'\' + dabHeight + \'px\', width: \'\' + dabWidth + \'px\', \'border-radius\': \'\' + dabRadius + \'%\', transform: \'rotate(\' + dabRotate + \'deg)\', \'margin-top\': \'\' + dabTop + \'px\' }">' +
+      '<div class="color-picker-swatch" ng-repeat="color in row.colors" ng-click="selectColor(color)" style="display: inline-block; position: relative; cursor: pointer;" ng-style="{ \'box-shadow\': color == dabModel ? \'0 0 0 2px hsl(0, 0%, 100%),0 0 0 4px hsl(0, 0%, 15%)\' : \'none\', \'z-index\': color == dabModel ? 3 : 2, \'background-color\': color, height: \'\' + dabHeight + \'px\', width: \'\' + dabWidth + \'px\', \'border-radius\': \'\' + dabRadius + \'%\', transform: \'rotate(\' + dabRotate + \'deg)\', \'margin-top\': \'\' + dabTop + \'px\' }">' +
       '</div>' +
       '</div>' +
-      '</div>',
+      '</div>' +
+      '<div class="transparent-swatch-arrow"><i class="glyphicon glyphicon-arrow-up"></i> Transparent</div>',
     restrict: 'EA',
     scope: {
       dabModel: '=',
@@ -41,8 +42,10 @@ angular.module('web.colorpicker').directive('webColorpicker', function() {
       ];
 
       if (scope.showGrayscale) {
-      	scope.rows.push({ colors: [] })
-      	scope.rows.push({ offset: 1.5,  colors: ['#E6E6E6', '#CCCCCC', '#B3B3B3', '#999999', '#808080', '#666666', '#4C4C4C', '#333333', '#191919', '#000000'] })
+        scope.rows.push({ colors: [] })
+        scope.rows.push({ offset: 1.5,  colors: ['#E6E6E6', '#CCCCCC', '#B3B3B3', '#999999', '#808080', '#666666', '#4C4C4C', '#333333', '#191919', '#000000'] })
+        scope.rows.push({ colors: [] })
+        scope.rows.push({ offset: 0,  colors: ['transparent'] })
       }
 
       var area, i, len, ref;
