@@ -39,8 +39,27 @@
     function SliderController ($rootScope, $scope, OHService, $timeout) {
         var vm = this;
         this.widget = this.ngModel;
+
+        function getValue() {
+            var item = OHService.getItem(vm.widget.item);
+            if (!item) {
+                console.log('item' + vm.widget.item + 'not found');
+                return;
+            }
+
+            var parts = item.state.split(',');
+            var value;
+            if (parts.length == 3) {
+                // slider received HSB value, use the 3rd (brightness)
+                value = parseInt(parts[2]);
+            } else {
+                value = parseInt(parts[0]);
+            }
+
+            return value;
+        }
+
         vm.slider = {
-            value: OHService.getItem(vm.widget.item) ? parseInt(OHService.getItem(vm.widget.item).state) : 0,
             options: {
                 id: 'slider-' + vm.widget.item,
                 floor: (vm.widget.floor) ? vm.widget.floor : 0,
@@ -64,11 +83,22 @@
             }
         };
 
+        $scope.$$postDigest(function () {
+            var initialValue = getValue();
+            vm.slider.value = isNaN(initialValue) ? initialValue : 0;
+            $scope.$broadcast('rzSliderForceRender');
+        });
+
         function updateValue() {
-            vm.slider.value = parseInt(OHService.getItem(vm.widget.item).state);
-            $scope.$$postDigest(function () {
-                $scope.$broadcast('rzSliderForceRender');
-            }, 0, false);
+            var value = getValue();
+
+            if (!isNaN(value) && value != vm.slider.value) {
+                $timeout(function () {
+                    vm.slider.value = value;
+                    $scope.$broadcast('rzSliderForceRender');
+                });
+            }
+
         }
 
         OHService.onUpdate($scope, vm.widget.item, function () {
