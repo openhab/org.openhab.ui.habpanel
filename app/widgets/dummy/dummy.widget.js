@@ -69,7 +69,9 @@
             // foreground: widget.foreground,
             font_size: widget.font_size,
             nolinebreak: widget.nolinebreak,
-            unit: widget.unit
+            unit: widget.unit,
+            iconset: widget.iconset,
+            icon: widget.icon
         };
 
         $scope.dismiss = function() {

@@ -6,11 +6,6 @@
 		</button>
 		<ul class="dropdown-menu" aria-labelledby="addWidgetMenu">
 			<li ng-repeat="type in widgetTypes"><a ng-click="addWidget(type.type)">{{type.displayName}}</a></li>
-			<!--<li><a ng-click="addWidget('dummy')">Dummy</a></li>
-			<li><a ng-click="addWidget('label')">Label</a></li>
-			<li><a ng-click="addWidget('button')">Command button</a></li>
-			<li><a ng-click="addWidget('switch')">Switch</a></li>
-			<li><a ng-click="addWidget('slider')">Slider</a></li>-->
 		</ul>
 	</div>
 	<a class="btn" href="#/"><i class="glyphicon glyphicon-chevron-left"></i></a>
@@ -21,19 +16,19 @@
 <div gridster="gridsterOptions">
 	<ul>
 		<li gridster-item="widget" ng-repeat="widget in dashboard.widgets">
-			<div class="box box-draggable" ng-controller="CustomWidgetCtrl">
-        <div class="box-header pull-left" style="display: inline">
-          <h3>{{ widget.type }}</h3>
-        </div>
-        <div class="box-content box-label-content">
-          <div class="box-label">
-            {{ widget.name }}
-          </div>
-
-        </div>
-        <div class="box-header-btns pull-right">
-          <a class="settings-btn" title="settings" ng-click="openSettings(widget)"><i class="glyphicon glyphicon-cog"></i></a>
-        </div>
+			<div class="box box-design" ng-controller="CustomWidgetCtrl">
+				<div class="box-header pull-left" style="display: inline">
+					<i class="handle glyphicon glyphicon-move"></i>
+					<h3>{{ widget.type }}</h3>
+				</div>
+				<div class="box-content box-label-content">
+					<div class="box-label">
+						{{ widget.name }}
+					</div>
+				</div>
+				<div class="box-header-btns pull-right">
+					<a class="settings-btn" title="settings" ng-click="openSettings(widget)"><i class="glyphicon glyphicon-cog"></i></a>
+				</div>
 			</div>
 		</li>
 	</ul>

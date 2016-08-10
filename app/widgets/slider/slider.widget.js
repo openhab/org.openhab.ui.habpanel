@@ -39,20 +39,41 @@
     function SliderController ($rootScope, $scope, OHService, $timeout) {
         var vm = this;
         this.widget = this.ngModel;
+
+        function getValue() {
+            var item = OHService.getItem(vm.widget.item);
+            if (!item) {
+                console.log('item' + vm.widget.item + 'not found');
+                return;
+            }
+
+            var parts = item.state.split(',');
+            var value;
+            if (parts.length == 3) {
+                // slider received HSB value, use the 3rd (brightness)
+                value = parseInt(parts[2]);
+            } else {
+                value = parseInt(parts[0]);
+            }
+
+            return value;
+        }
+
         vm.slider = {
-            value: OHService.getItem(vm.widget.item) ? parseInt(OHService.getItem(vm.widget.item).state) : 0,
             options: {
                 id: 'slider-' + vm.widget.item,
                 floor: (vm.widget.floor) ? vm.widget.floor : 0,
                 ceil: (vm.widget.ceil) ? vm.widget.ceil : 100,
                 step: (vm.widget.step) ? vm.widget.step : 1,
+                precision: ((+vm.widget.step).toFixed(2)).replace(/^-?\d*\.?|0+$/g, '').length,
                 keyboardSupport: false,
                 vertical: vm.widget.vertical,
                 showSelectionBar: true,
                 hideLimitLabels: vm.widget.hidelimits,
                 hidePointerLabels: vm.widget.hidepointer,
-                showTicks: vm.widget.showticks,
+                showTicks: vm.widget.showticks || vm.widget.bigslider,
                 showTicksValues: vm.widget.showticksvalues,
+                rightToLeft: vm.widget.inverted,
                 enforceStep: false,
                 translate: function (value) {
                     return (vm.widget.unit) ? value + vm.widget.unit : value;
@@ -63,11 +84,22 @@
             }
         };
 
+        var initialValue = getValue();
+        vm.slider.value = angular.isDefined(getValue()) ? getValue() : 0;
+        $timeout(function() {
+            $scope.$broadcast('rzSliderForceRender');
+        })
+
         function updateValue() {
-            vm.slider.value = parseInt(OHService.getItem(vm.widget.item).state);
-            $scope.$$postDigest(function () {
-                $scope.$broadcast('rzSliderForceRender');
-            }, 0, false);
+            var value = getValue();
+
+            if (!isNaN(value) && value != vm.slider.value) {
+                $timeout(function () {
+                    vm.slider.value = value;
+                    $scope.$broadcast('rzSliderForceRender');
+                });
+            }
+
         }
 
         OHService.onUpdate($scope, vm.widget.item, function () {
@@ -101,7 +133,8 @@
             hidepointer: widget.hidepointer,
             showticks: widget.showticks,
             showticksvalues: widget.showticksvalues,
-
+            inverted: widget.inverted,
+            bigslider: widget.bigslider
         };
 
         $scope.dismiss = function() {

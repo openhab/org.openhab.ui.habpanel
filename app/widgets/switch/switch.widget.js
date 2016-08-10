@@ -41,7 +41,26 @@
         this.widget = this.ngModel;
 
         function updateValue() {
-            vm.value = OHService.getItem(vm.widget.item).state;
+            var item = OHService.getItem(vm.widget.item);
+            if (!item || item.state === vm.value) return;
+            
+            if (item.state != 'ON' && item.state != 'OFF') {
+                // deal with non bool values being sent to switchitems...
+                var parts = item.state.split(',');
+
+                if (parts.length == 3 && parseInt(parts[2]) > 0) {
+                    // HSB value with brightness > 0
+                    vm.value = 'ON';
+                } else if (parts.length == 1 && parseInt(parts[0]) > 0) {
+                    // numerical value (assuming brightness) > 0
+                    vm.value = 'ON';
+                } else {
+                    vm.value = 'OFF';
+                }
+            } else {
+                vm.value = OHService.getItem(vm.widget.item).state;
+            }
+            
         }
 
         OHService.onUpdate($scope, vm.widget.item, function () {

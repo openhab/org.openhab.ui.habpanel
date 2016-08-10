@@ -45,7 +45,7 @@
                                     <div class="form-group" ng-class="{error: _form.step.$error && _form.submitted}">
                                         <label class="control-label col-xs-4">Step</label>
                                         <div class="col-xs-6">
-                                            <input name="step" type="number" ng-model="form.step" class="form-control" />
+                                            <input name="step" type="number" step="any" ng-model="form.step" class="form-control" />
                                         </div>
                                     </div>
                                 </div>
@@ -126,6 +126,30 @@
                                     <div class="checkbox">
                                         <label>
                                             <input type="checkbox" name="vertical" ng-model="form.showticksvalues" /> Show ticks labels
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-12">
+                            <div class="form-group" ng-class="{error: _form.showticks.$error && _form.submitted}">
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" name="showticks" ng-model="form.inverted" /> Reverse direction
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-12">
+                            <div class="form-group" ng-class="{error: _form.bigslider.$error && _form.submitted}">
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" name="bigslider" ng-model="form.bigslider" /> Big slider (horizontal only)
                                         </label>
                                     </div>
                                 </div>
