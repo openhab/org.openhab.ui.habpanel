@@ -65,12 +65,13 @@
                 floor: (vm.widget.floor) ? vm.widget.floor : 0,
                 ceil: (vm.widget.ceil) ? vm.widget.ceil : 100,
                 step: (vm.widget.step) ? vm.widget.step : 1,
+                precision: ((+vm.widget.step).toFixed(2)).replace(/^-?\d*\.?|0+$/g, '').length,
                 keyboardSupport: false,
                 vertical: vm.widget.vertical,
                 showSelectionBar: true,
                 hideLimitLabels: vm.widget.hidelimits,
                 hidePointerLabels: vm.widget.hidepointer,
-                showTicks: vm.widget.showticks,
+                showTicks: vm.widget.showticks || vm.widget.bigslider,
                 showTicksValues: vm.widget.showticksvalues,
                 rightToLeft: vm.widget.inverted,
                 enforceStep: false,
@@ -83,11 +84,11 @@
             }
         };
 
-        $scope.$$postDigest(function () {
-            var initialValue = getValue();
-            vm.slider.value = isNaN(initialValue) ? initialValue : 0;
+        var initialValue = getValue();
+        vm.slider.value = angular.isDefined(getValue()) ? getValue() : 0;
+        $timeout(function() {
             $scope.$broadcast('rzSliderForceRender');
-        });
+        })
 
         function updateValue() {
             var value = getValue();
@@ -132,7 +133,8 @@
             hidepointer: widget.hidepointer,
             showticks: widget.showticks,
             showticksvalues: widget.showticksvalues,
-            inverted: widget.inverted
+            inverted: widget.inverted,
+            bigslider: widget.bigslider
         };
 
         $scope.dismiss = function() {
