@@ -48,11 +48,28 @@
                 </div>
             </div>
 
-            <div class="form-group" ng-class="{error: _form.name.$error && _form.submitted}">
+            <div class="form-group" ng-class="{error: _form.backdrop_icon.$error && _form.submitted}">
+                <label class="control-label col-lg-3 col-md-3">Backdrop Icon</label>
+                <div class="col-lg-9 col-md-9">
+                    <icon-picker iconset="form.backdrop_iconset" icon="form.backdrop_icon"></icon-picker>
+                    <div ng-if="form.backdrop_icon" class="checkbox">
+                        <label>
+                            <input type="checkbox" name="vertical" ng-model="form.backdrop_center" /> Center backdrop horizontally
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group" ng-class="{error: _form.icon.$error && _form.submitted}">
                 <label class="control-label col-lg-3 col-md-3">Icon</label>
                 <div class="col-lg-9 col-md-9">
-                    <icon-picker iconset="form.iconset" icon="form.icon" />
-                    <widget-icon iconset="form.iconset" icon="form.icon" />
+                    <icon-picker iconset="form.iconset" icon="form.icon"></icon-picker>
+                    <div class="col-xs-5 input-group" ng-if="form.icon">
+                        <div class="input-group-addon">Size</div>
+                        <input name="icon_size" ng-model="form.icon_size" class="form-control" />
+                        <div class="input-group-addon">px</div>
+                    </div>
+
                 </div>
             </div>
 

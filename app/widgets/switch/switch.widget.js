@@ -99,8 +99,12 @@
             hidelabel: widget.hidelabel,
             hideicon: widget.hideicon,
             hideonoff: widget.hideonoff,
+            backdrop_iconset: widget.backdrop_iconset,
+            backdrop_icon: widget.backdrop_icon,
+            backdrop_center: widget.backdrop_center,
             iconset: widget.iconset,
-            icon: widget.icon
+            icon: widget.icon,
+            icon_size: widget.icon_size
         };
 
         $scope.dismiss = function() {

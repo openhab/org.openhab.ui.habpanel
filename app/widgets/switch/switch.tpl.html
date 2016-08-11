@@ -1,9 +1,10 @@
 <div class="box-content switch" ng-click="vm.toggleSwitch()">
-    <widget-icon ng-if="vm.widget.icon" iconset="vm.widget.iconset" icon="vm.widget.icon"></widget-icon>
+    <widget-icon ng-if="vm.widget.backdrop_icon" backdrop="true" iconset="vm.widget.backdrop_iconset" icon="vm.widget.backdrop_icon" center="vm.widget.backdrop_center"></widget-icon>
     <div class="switch-content">
         <div ng-hide="vm.widget.hidelabel">{{vm.widget.name}}</div>
         <div class="value" ng-class="{ 'switch-off': !vm.valueAsBool() }">
-            <div class="switch-icon" ng-hide="vm.widget.hideicon">
+            <widget-icon ng-if="vm.widget.icon && !vm.widget.hideicon" iconset="vm.widget.iconset" icon="vm.widget.icon" size="vm.widget.icon_size" state="vm.value"></widget-icon>
+            <div ng-if="!vm.widget.icon" class="switch-icon" ng-hide="vm.widget.hideicon">
                 <i class="glyphicon glyphicon-off" ng-show="vm.value=='OFF'"></i>
                 <i class="glyphicon glyphicon-record" ng-show="vm.value=='ON'"></i>
             </div>

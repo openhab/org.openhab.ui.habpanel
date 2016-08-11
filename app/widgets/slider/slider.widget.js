@@ -79,13 +79,14 @@
                     return (vm.widget.unit) ? value + vm.widget.unit : value;
                 },
                 onEnd: function (id) {
-                    OHService.sendCmd(vm.widget.item, vm.slider.value.toString());
+                    vm.value = vm.slider.value;
+                    OHService.sendCmd(vm.widget.item, vm.value.toString());
                 }
             }
         };
 
         var initialValue = getValue();
-        vm.slider.value = angular.isDefined(getValue()) ? getValue() : 0;
+        vm.value = vm.slider.value = angular.isDefined(getValue()) ? getValue() : 0;
         $timeout(function() {
             $scope.$broadcast('rzSliderForceRender');
         })
@@ -95,7 +96,7 @@
 
             if (!isNaN(value) && value != vm.slider.value) {
                 $timeout(function () {
-                    vm.slider.value = value;
+                    vm.value = vm.slider.value = value;
                     $scope.$broadcast('rzSliderForceRender');
                 });
             }
@@ -134,7 +135,10 @@
             showticks: widget.showticks,
             showticksvalues: widget.showticksvalues,
             inverted: widget.inverted,
-            bigslider: widget.bigslider
+            bigslider: widget.bigslider,
+            backdrop_iconset: widget.backdrop_iconset,
+            backdrop_icon: widget.backdrop_icon,
+            backdrop_center: widget.backdrop_center
         };
 
         $scope.dismiss = function() {

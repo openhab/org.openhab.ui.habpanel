@@ -213,6 +213,18 @@ form {
     text-align: left;
 }
 
+
+:not(.bigslider).rz-bubble {
+    color: #0db9f0;
+}
+.rz-floor {
+    color: #89a !important;
+}
+
+.rz-ceil {
+    color: #89a !important;
+}
+
 .image {
     background: black;
     display: flex;
@@ -229,12 +241,19 @@ form {
     height: 100%;
 }
 
-.icon-backdrop {
+.icon.backdrop {
     position: absolute;
     top: 10%;
     bottom: 10%;
+}
+
+.icon.backdrop.center {
     left: 10%;
     right: 10%;
+}
+
+.icon.inline {
+    display: inline;
 }
 
 .icon-tile-backdrop {
@@ -243,9 +262,18 @@ form {
     -webkit-filter: opacity(15%);
 }
 
-.colorize {
-    filter: invert(60%) sepia(100%) hue-rotate(165deg) opacity(15%) !important;
-    -webkit-filter: invert(60%) sepia(100%) hue-rotate(165deg) opacity(15%) !important;
+.icon-tile-backdrop.colorize {
+    filter: invert(60%) sepia(100%) hue-rotate(165deg) opacity(15%);
+    -webkit-filter: invert(60%) sepia(100%) hue-rotate(165deg) opacity(15%);
+}
+
+.icon-tile.colorize.off {
+    filter: invert(45%) sepia(80%) hue-rotate(170deg);
+    -webkit-filter: invert(45%) sepia(80%) hue-rotate(170deg);    
+}
+.icon-tile.colorize {
+    filter: invert(60%) sepia(100%) hue-rotate(185deg) saturate(1000%);
+    -webkit-filter: invert(60%) sepia(100%) hue-rotate(185deg) saturate(1000%);
 }
 
 
