@@ -3,7 +3,9 @@
 
     angular
         .module('app.services')
-        .service('OHService', OHService);
+        .service('OHService', OHService)
+        .value('OH2ServiceConfiguration', {})
+        .service('OH2StorageService', OH2StorageService);
 
     OHService.$inject = ['$rootScope', '$http', '$q', '$timeout', '$interval', 'atmosphereService'];
     function OHService($rootScope, $http, $q, $timeout, $interval, atmosphereService) {
@@ -154,4 +156,134 @@
             liveUpdatesEnabled = true;
         }
     }
+
+    OH2StorageService.$inject = ['OH2ServiceConfiguration', '$rootScope', '$http', '$q', 'localStorageService'];
+    function OH2StorageService(OH2ServiceConfiguration, $rootScope, $http, $q, localStorageService) {
+        var SERVICE_NAME = 'org.openhab.ui.panelui';
+
+        this.tryGetServiceConfiguration = tryGetServiceConfiguration;
+        this.saveServiceConfiguration = saveServiceConfiguration;
+        this.saveCurrentPanelConfig = saveCurrentPanelConfig;
+        this.setCurrentPanelConfig = setCurrentPanelConfig;
+        this.getCurrentPanelConfig = getCurrentPanelConfig;
+        this.useCurrentPanelConfig = useCurrentPanelConfig;
+        this.useLocalStorage = useLocalStorage;
+
+        function tryGetServiceConfiguration() {
+            var deferred = $q.defer();
+
+            $http.get('/rest/services/' + SERVICE_NAME + '/config').then(function (resp) {
+                /*if (!resp.data.hasOwnProperty('lockEditing')) {
+                    console.log('Empty service configuration - service not installed?');
+                    useLocalStorage();
+                    deferred.reject();
+                    return;
+                }*/
+
+                console.log('openHAB 2 service configuration loaded');
+                OH2ServiceConfiguration = resp.data;
+                if (!OH2ServiceConfiguration.panelsRegistry) {
+                    $rootScope.panelsRegistry = OH2ServiceConfiguration.panelsRegistry = {};
+                } else {
+                    $rootScope.panelsRegistry = JSON.parse(resp.data.panelsRegistry);
+                }
+                if (OH2ServiceConfiguration.lockEditing) {
+                    $rootScope.lockEditing = true;
+                }
+
+                deferred.resolve();
+
+            }, function (err) {
+                console.log('Cannot load openHAB 2 service configuration: ' + JSON.stringify(err));
+
+                deferred.reject();
+            });
+
+            return deferred.promise;
+        }
+
+        function saveServiceConfiguration() {
+            var deferred = $q.defer();
+
+            if ($rootScope.panelsRegistry) {
+                OH2ServiceConfiguration.panelsRegistry = JSON.stringify($rootScope.panelsRegistry, null, 4);
+            }
+
+            $http({
+                method: 'PUT',
+                url: '/rest/services/' + SERVICE_NAME + '/config',
+                data: OH2ServiceConfiguration,
+                headers: { 'Content-Type': 'application/json' }
+            }).then (function (resp) {
+                console.log('openHAB 2 service configuration saved');
+                deferred.resolve();
+            }, function (err) {
+                console.log('Error while saving openHAB 2 service configuration: ' + JSON.stringify(err));
+                deferred.reject();
+            });
+
+            return deferred.promise;
+
+        }
+
+        function saveCurrentPanelConfig() {
+            var deferred = $q.defer();
+
+            var lastUpdatedTime = $rootScope.panelsRegistry[getCurrentPanelConfig()].updatedTime; 
+
+            // fetch the current configuration again (to perform optimistic concurrency on the current panel config only)
+            tryGetServiceConfiguration().then(function () {
+                var config = $rootScope.panelsRegistry[getCurrentPanelConfig()];
+                if (!config) {
+                    console.log('Warning: creating new panel config!');
+                    config = $rootScope.panelsRegistry[getCurrentPanelConfig()] = { };
+                }
+                var currentUpdatedTime = config.updatedTime;
+                if (Date.parse(currentUpdatedTime) > Date.parse(lastUpdatedTime)) {
+                    deferred.reject('Panel configuration has a newer version on the server updated on ' + currentUpdatedTime);
+                    return;
+                }
+                config.updatedTime = new Date();
+                config.dashboards = angular.copy($rootScope.dashboards);
+                return saveServiceConfiguration().then(function () {
+                    deferred.resolve();
+                }, function () {
+                    deferred.reject();
+                });
+            });
+
+            return deferred.promise;
+        }
+
+        function useLocalStorage() {
+            $rootScope.currentPanelConfig = undefined;
+            localStorageService.set("currentPanelConfig", $rootScope.currentPanelConfig);
+        }
+
+        function getCurrentPanelConfig() {
+            if (!$rootScope.currentPanelConfig) {
+                $rootScope.currentPanelConfig = localStorageService.get("currentPanelConfig");
+            }
+
+            return $rootScope.currentPanelConfig;
+        }
+
+        function useCurrentPanelConfig() {
+            var currentPanelConfig = getCurrentPanelConfig();
+            if (!currentPanelConfig || !$rootScope.panelsRegistry[currentPanelConfig]) {
+                console.log("Warning: current panel config not found, falling back to local storage!");
+                useLocalStorage();
+            } else {
+                $rootScope.dashboards = angular.copy($rootScope.panelsRegistry[currentPanelConfig].dashboards);
+            }
+        }
+
+        function setCurrentPanelConfig(name) {
+            $rootScope.currentPanelConfig = name;
+            localStorageService.set("currentPanelConfig", $rootScope.currentPanelConfig);
+            useCurrentPanelConfig();
+        }
+
+    }
+
 })();

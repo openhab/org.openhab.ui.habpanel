@@ -13,6 +13,10 @@
 	<a class="btn btn-primary" ng-click="run()"><i class="glyphicon glyphicon-play"></i>&nbsp;Run</a>
 
 </div>
+<div ng-show="error" class="alert alert-warning" role="alert">
+	<button type="button" class="close" ng-click="error=undefined"><span>&times;</span></button>
+	<strong>Server save failed!</strong> {{error}}
+</div>
 <div gridster="gridsterOptions">
 	<ul>
 		<li gridster-item="widget" ng-repeat="widget in dashboard.widgets">

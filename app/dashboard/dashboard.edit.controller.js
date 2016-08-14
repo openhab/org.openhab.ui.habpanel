@@ -36,12 +36,20 @@ angular.module('app')
             };
 
             $scope.save = function() {
-                PersistenceService.saveDashboards();
+                PersistenceService.saveDashboards().then(function () {
+
+                }, function (err) {
+                    $scope.error = err;
+                });
             };
 
             $scope.run = function() {
-                $scope.save();
-                $location.url("/view/" + $scope.dashboard.id);
+                PersistenceService.saveDashboards().then(function () {
+                    $location.url("/view/" + $scope.dashboard.id);
+                }, function (err) {
+                    $scope.error = err;
+                });
+                
             };
 
             OHService.reloadItems();

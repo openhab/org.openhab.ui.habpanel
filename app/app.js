@@ -45,6 +45,16 @@
                     }]
                 }
             })
+            .when('/settings', {
+                templateUrl: 'app/settings/settings.html',
+                controller: 'SettingsCtrl',
+                controllerAs: 'vm',
+                resolve: {
+                    dashboards: ['PersistenceService', function (persistenceService) {
+                        return persistenceService.getDashboards();
+                    }]
+                }
+            })
             .otherwise({
                 redirectTo: '/'
             });

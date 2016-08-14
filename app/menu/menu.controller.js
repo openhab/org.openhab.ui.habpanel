@@ -87,28 +87,5 @@
 			Fullscreen.toggleAll();
 		}
 
-        vm.showConfiguration = function () {
-            prompt({
-                title: "Show configuration",
-                message: "This is the raw configuration object. You can use this to backup/restore your entire config by copy-pasting the JSON to or from somewhere else. Be careful though - no checks are performed here!",
-                input: true,
-                label: "Configuration JSON object",
-                value: JSON.stringify(dashboards) 
-            }).then(function (confstr) {
-                try {
-                    var newconf = JSON.parse(confstr);
-                    // maybe add some checks here eventually
-                    angular.copy(newconf, $rootScope.dashboards);
-                    PersistenceService.saveDashboards();
-                    PersistenceService.getDashboards();
-                } catch (e) {
-                    prompt({
-                        title: "Error",
-                        message: "Configuration parsing error, nothing has been modified: " + e,
-                        buttons: [{ label:'OK', primary: true }]
-                    });
-                }
-            });
-        }
     }
 })();
