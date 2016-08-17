@@ -243,7 +243,7 @@
                     deferred.reject('Panel configuration has a newer version on the server updated on ' + currentUpdatedTime);
                     return;
                 }
-                config.updatedTime = new Date();
+                config.updatedTime = new Date().toISOString();
                 config.dashboards = angular.copy($rootScope.dashboards);
                 return saveServiceConfiguration().then(function () {
                     deferred.resolve();

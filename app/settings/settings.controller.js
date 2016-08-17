@@ -18,7 +18,7 @@
                 message: "Please choose a name for the new panel configuration (letters and digits only please):",
                 input: true
             }).then(function (name) {
-                vm.panelsRegistry[name] = { "dashboards": $rootScope.dashboards, "updatedTime": new Date() };
+                vm.panelsRegistry[name] = { "dashboards": $rootScope.dashboards, "updatedTime": new Date().toISOString() };
                 vm.storageOption = name;
                 OH2StorageService.setCurrentPanelConfig(name);
                 OH2StorageService.saveCurrentPanelConfig();
