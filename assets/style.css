@@ -383,3 +383,20 @@ see http://www.makeuseof.com/wp-content/uploads/2016/07/mr-robot-heating.jpg */
 .bigslider .rzslider .rz-bar.rz-selection {
     display: none;
 }
+
+.chart-content .chart .grid .tick > line {
+  stroke: #456;
+}
+
+.chart-content .chart .axis > .tick > text {
+  fill: #89a;
+  font-family: "Helvetica";
+}
+
+.chart-content .legend-label {
+  color: #def;
+}
+
+.chart-content .chart-tooltip {
+  background-color: #123;
+}

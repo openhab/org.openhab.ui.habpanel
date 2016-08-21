@@ -21,7 +21,8 @@ gulp.task('vendor-css', function() {
     return gulp.src([
         'bower_components/bootstrap/dist/css/bootstrap.min.css',
         'bower_components/angular-gridster/dist/angular-gridster.min.css',
-        'bower_components/angularjs-slider/dist/rzslider.min.css'
+        'bower_components/angularjs-slider/dist/rzslider.min.css',
+        'node_modules/n3-charts/build/LineChart.min.css'
     ]).pipe(concat('vendor.css')).pipe(gulp.dest('vendor'));
 });
 
@@ -50,6 +51,7 @@ gulp.task('vendor-js', function() {
         'bower_components/atmosphere.js/atmosphere.min.js',
         'bower_components/angular-atmosphere-service/service/angular-atmosphere-service.js',
         'bower_components/ng-knob/dist/ng-knob.min.js',
+        'node_modules/n3-charts/build/LineChart.min.js',
         'vendor/angular-web-colorpicker.js'
     ]).pipe(concat('vendor.js')).pipe(gulp.dest('vendor'));
 

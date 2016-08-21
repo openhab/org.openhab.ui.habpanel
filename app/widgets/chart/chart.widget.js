@@ -46,11 +46,102 @@
             });
         }
     }
-    ChartController.$inject = ['$rootScope', '$scope', 'OHService'];
-    function ChartController ($rootScope, $scope, OHService) {
+    ChartController.$inject = ['$rootScope', '$scope', '$http', '$filter', 'OHService'];
+    function ChartController ($rootScope, $scope, $http, $filter, OHService) {
         var vm = this;
         this.widget = this.ngModel;
 
+        function tooltipHook(val) {
+            return {
+                abscissas: $filter('date')(val[0].row.x, 'EEE d MMM HH:mm:ss'),
+                rows: [{
+                    label: val[0].series.label,
+                    value: val[0].row.y0 || val[0].row.y1,
+                    color: val[0].series.color,
+                    id: val[0].series.id
+                }]
+            };
+        };
+
+        if (vm.widget.charttype == 'interactive') {
+            var startDate = new Date();
+            switch (vm.widget.period)
+            {
+                case 'h': startDate.setTime(startDate.getTime() - 60*60*1000); break;
+                case '4h': startDate.setTime(startDate.getTime() - 4*60*60*1000); break;
+                case '4h': startDate.setTime(startDate.getTime() - 4*60*60*1000); break;
+                case '8h': startDate.setTime(startDate.getTime() - 8*60*60*1000); break;
+                case '12h': startDate.setTime(startDate.getTime() - 12*60*60*1000); break;
+                case 'D': startDate.setTime(startDate.getTime() - 24*60*60*1000); break;
+                case '3D': startDate.setTime(startDate.getTime() - 3*24*60*60*1000); break;
+                case 'W': startDate.setTime(startDate.getTime() - 7*24*60*60*1000); break;
+                case '2W': startDate.setTime(startDate.getTime() - 2*7*60*60*1000); break;
+                case '1M': startDate.setTime(startDate.getTime() - 31*24*60*60*1000); break; //Well...
+                case '2M': startDate.setTime(startDate.getTime() - 2*31*24*60*60*1000); break;
+                case '4M': startDate.setTime(startDate.getTime() - 4*31*24*60*60*1000); break;
+                case 'Y': startDate.setTime(startDate.getTime() - 12*31*24*60*60*1000); break;
+                default: startDate.setTime(startDate.getTime() - 24*60*60*1000); break;
+            }
+
+            $http.get('/rest/persistence/' + vm.widget.item + '?servicename=' + vm.widget.service + "&starttime=" + startDate.toISOString()).then(function (resp) {
+                console.log('datapoints=' + resp.data.datapoints);
+                if (resp.data.datapoints < 1) return;
+
+                var seriesname = resp.data.name;
+                var finaldata = resp.data.data;
+
+                angular.forEach(finaldata, function (datapoint) {
+                    datapoint.time = new Date(datapoint.time);
+                    datapoint.state = parseFloat(datapoint.state);
+                });
+
+                vm.datasets = {};
+                vm.datasets[seriesname] = finaldata;
+
+                vm.interactiveChartOptions = {
+                    margin: {
+                        top: 20,
+                        bottom: 50
+                    },
+                    series: [
+                        {
+                            axis: "y",
+                            dataset: seriesname,
+                            key: "state",
+                            label: vm.widget.name,
+                            color: "#0db9f0",
+                            type: [
+                            "line", "area"
+                            ],
+                            id: seriesname
+                        }
+                    ],
+                    axes: {
+                        x: {
+                            key: "time",
+                            type: "date",
+                            tickFormat: function (value) {
+                                if (value.getDate() === 1) {
+                                    return $filter('date')(value, 'MMM');
+                                }
+                                if (value.getHours() === 0) {
+                                    return $filter('date')(value, 'EEE d');
+                                }
+                                return $filter('date')(value, 'HH:mm');
+                            }
+                        }
+                    },
+                    tooltipHook: tooltipHook,
+                    zoom: {
+                        x: true
+                    }
+                    // grid: {
+                    //     x: true
+                    // }
+                };
+
+            });
+        }
     }
 
 

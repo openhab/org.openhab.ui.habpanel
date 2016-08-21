@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "author": "Yannick Schaus",
   "description": "Dashboard user interface for openHAB",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/ghys/habpanel"
@@ -29,5 +30,7 @@
     "gulp-main-bower-files": "1.5.3",
     "gulp-uglify": "^2.0.0"
   },
-  "license": "MIT"
+  "dependencies": {
+    "n3-charts": "^2.0.28"
+  }
 }

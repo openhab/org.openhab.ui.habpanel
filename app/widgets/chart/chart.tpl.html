@@ -5,4 +5,7 @@
     <div class="chart-content" ng-if="vm.widget.charttype=='rrd4j'">
         <img src="/rrdchart.png?items={{vm.widget.item}}&period={{vm.widget.period}}&w={{vm.width}}&h={{vm.height}}" />
     </div>
+    <div class="chart-content" ng-if="vm.widget.charttype=='interactive'" style="height: calc(100% - 2em)">
+        <linechart data="vm.datasets" options="vm.interactiveChartOptions"></linechart>
+    </div>
 </div>

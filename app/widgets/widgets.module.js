@@ -5,7 +5,8 @@
         'app.services',
         'rzModule',
         'ui.knob',
-        'web.colorpicker'
+        'web.colorpicker',
+        'n3-line-chart'
     ])
     .value('WidgetTypes', [])
     .factory('Widgets', WidgetsService)
