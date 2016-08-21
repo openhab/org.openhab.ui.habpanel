@@ -147,7 +147,7 @@ form {
     width: 100%;
 }
 
-.dumm-value-right {
+.dummy-value-right {
     float: right;
     text-align: right;
 }
@@ -224,6 +224,16 @@ form {
 .rz-ceil {
     color: #89a !important;
 }
+
+
+.knob-content {
+    width: 100%;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 0;
+    margin-right: 0;
+}
+
 
 .image {
     background: black;

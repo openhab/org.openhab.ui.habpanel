@@ -37,8 +37,9 @@ gulp.task('vendor-js', function() {
 
     return gulp.src([
         'bower_components/angular/angular.min.js',
-        'bower_components/angular-gridster/dist/angular-gridster.min.js',
         'bower_components/angular-route/angular-route.min.js',
+        'bower_components/d3/d3.min.js',
+        'bower_components/angular-gridster/dist/angular-gridster.min.js',
         'bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js',
         'bower_components/angular-fullscreen/src/angular-fullscreen.js',
         'bower_components/angular-prompt/dist/angular-prompt.min.js',
@@ -46,6 +47,7 @@ gulp.task('vendor-js', function() {
         'bower_components/angularjs-slider/dist/rzslider.min.js',
         'bower_components/atmosphere.js/atmosphere.min.js',
         'bower_components/angular-atmosphere-service/service/angular-atmosphere-service.js',
+        'bower_components/ng-knob/dist/ng-knob.min.js',
         'vendor/angular-web-colorpicker.js'
     ]).pipe(concat('vendor.js')).pipe(gulp.dest('vendor'));
 

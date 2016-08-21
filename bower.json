@@ -35,6 +35,8 @@
     "angularjs-slider": "~5.4.3",
     "atmosphere.js": "latest",
     "angular-atmosphere-service": "latest",
-    "bootstrap": "~3.3.7"
+    "bootstrap": "~3.3.7",
+    "d3": "^3.5.x",
+    "ng-knob": "https://github.com/ghys/ng-knob.git#0.1.5"
   }
 }

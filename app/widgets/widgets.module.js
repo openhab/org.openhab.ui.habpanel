@@ -4,6 +4,7 @@
     angular.module('app.widgets', [
         'app.services',
         'rzModule',
+        'ui.knob',
         'web.colorpicker'
     ])
     .value('WidgetTypes', [])
