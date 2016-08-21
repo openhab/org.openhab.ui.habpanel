@@ -42,8 +42,10 @@
 
         function updateValue() {
             var item = OHService.getItem(vm.widget.item);
-            if (!item)
+            if (!item) {
                 vm.value = "N/A";
+                return;
+            }
             var value = item.state;
             if (vm.widget.format)
                 value = sprintf(vm.widget.format, value);
