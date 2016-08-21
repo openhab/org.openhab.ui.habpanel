@@ -1,0 +1,8 @@
+<div class="box-content chart">
+    <div class="chart-content" ng-if="vm.widget.charttype=='default'">
+        <img src="/chart?items={{vm.widget.item}}&period={{vm.widget.period}}&w={{vm.width}}&h={{vm.height}}" />
+    </div>
+    <div class="chart-content" ng-if="vm.widget.charttype=='rrd4j'">
+        <img src="/rrdchart.png?items={{vm.widget.item}}&period={{vm.widget.period}}&w={{vm.width}}&h={{vm.height}}" />
+    </div>
+</div>
