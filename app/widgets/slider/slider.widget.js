@@ -13,7 +13,7 @@
             });
         });
 
-    widgetSlider.$inject = ['$rootScope', '$modal', 'OHService'];
+    widgetSlider.$inject = ['$rootScope', '$uibModal', 'OHService'];
     function widgetSlider($rootScope, $modal, OHService) {
         // Usage: <widget-Slider ng-model="widget" />
         //
@@ -43,7 +43,7 @@
         function getValue() {
             var item = OHService.getItem(vm.widget.item);
             if (!item) {
-                console.log('item' + vm.widget.item + 'not found');
+                //console.log('item ' + vm.widget.item + ' not found');
                 return;
             }
 
@@ -111,7 +111,7 @@
 
 
     // settings dialog
-    WidgetSettingsCtrlSlider.$inject = ['$scope', '$timeout', '$rootScope', '$modalInstance', 'widget', 'OHService'];
+    WidgetSettingsCtrlSlider.$inject = ['$scope', '$timeout', '$rootScope', '$uibModalInstance', 'widget', 'OHService'];
 
     function WidgetSettingsCtrlSlider($scope, $timeout, $rootScope, $modalInstance, widget, OHService) {
         $scope.widget = widget;

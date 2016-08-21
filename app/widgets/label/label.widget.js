@@ -13,7 +13,7 @@
             });
         });
 
-    widgetLabel.$inject = ['$rootScope', '$modal', 'OHService'];
+    widgetLabel.$inject = ['$rootScope', '$uibModal', 'OHService'];
     function widgetLabel($rootScope, $modal, OHService) {
         // Usage: <widget-label ng-model="widget" />
         //
@@ -44,7 +44,7 @@
 
 
     // settings dialog
-    WidgetSettingsCtrlLabel.$inject = ['$scope', '$timeout', '$rootScope', '$modalInstance', 'widget', 'OHService'];
+    WidgetSettingsCtrlLabel.$inject = ['$scope', '$timeout', '$rootScope', '$uibModalInstance', 'widget', 'OHService'];
 
     function WidgetSettingsCtrlLabel($scope, $timeout, $rootScope, $modalInstance, widget, OHService) {
         $scope.widget = widget;

@@ -57,7 +57,7 @@ angular.module('app')
         }
     ])
 
-    .controller('CustomWidgetCtrl', ['$scope', '$modal', 'OHService',
+    .controller('CustomWidgetCtrl', ['$scope', '$uibModal', 'OHService',
         function($scope, $modal, OHService) {
 
             $scope.remove = function(widget) {

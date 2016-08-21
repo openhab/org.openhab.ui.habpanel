@@ -6,8 +6,8 @@
         .service('IconService', IconService)
         .directive('iconPicker', IconPicker)
 
-    IconService.$inject = ['$http', '$q'];
-    function IconService($http, $q) {
+    IconService.$inject = ['$http', '$q', '$filter'];
+    function IconService($http, $q, $filter) {
         this.getIconUrl = getIconUrl;
         this.getIconSets = getIconSets;
         this.getIconSet = getIconSet;
@@ -23,7 +23,7 @@
         ////////////////
 
         function getIconUrl(iconset, icon, state) {
-            var set = _.find(iconsets, ['id', iconset]);
+            var set = $filter('filter')(iconsets, {id: iconset}, true)[0];
             if (set.type === 'builtin') {
                 return 'assets/icons/' + set.id + '/' + icon + '.svg';
             } else {
@@ -37,7 +37,7 @@
         }
 
         function getIconSet(iconset) {
-            return _.find(iconsets, ['id', iconset]);
+            return $filter('filter')(iconsets, {id: iconset}, true)[0];
         }
 
         function getIcons(iconset) {
@@ -55,16 +55,16 @@
             restrict: 'AE',
             template: 
                 // TODO put this template in a HTML file
-                '<div class="btn-group" dropdown is-open="status.isopen2">' +
-                '<a href id="iconset-picker-btn" class="btn btn-default" dropdown-toggle>' +
+                '<div class="btn-group" uib-dropdown is-open="status.isopen2">' +
+                '<a href id="iconset-picker-btn" class="btn btn-default" uib-dropdown-toggle>' +
                 '{{setdropdownlabel}}&nbsp;<span class="caret" /></a>' +
                 '<ul class="dropdown-menu" role="menu" aria-labelledby="iconset-picker-btn">' +
                 '<li><a ng-click="clearIcon()"><i>(none)</i></a></li>' +
                 '<li ng-repeat="iconset in iconsets"><a ng-click="selectIconset(iconset.id)">{{iconset.name}}</a></li>' +
                 '</ul>' +
                 '</div><br />' +
-                '<div ng-if="iconset" class="btn-group" dropdown is-open="status.isopen">' +
-                '<a href id="icon-picker-btn" class="btn btn-default" dropdown-toggle>' +
+                '<div ng-if="iconset" class="btn-group" uib-dropdown is-open="status.isopen">' +
+                '<a href id="icon-picker-btn" class="btn btn-default" uib-dropdown-toggle>' +
                 '<img width="64px" height="64px" ng-src="{{iconUrl}}" />&nbsp;{{icon}}&nbsp;<span class="caret" />' +
                 '</a>' +
                 '<ul style="width: 420px" class="dropdown-menu" role="menu" aria-labelledby="icon-picker-btn">' +

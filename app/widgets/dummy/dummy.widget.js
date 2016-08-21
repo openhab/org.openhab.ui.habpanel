@@ -13,7 +13,7 @@
             });
         });
 
-    widgetDummy.$inject = ['$rootScope', '$modal', 'OHService'];
+    widgetDummy.$inject = ['$rootScope', '$uibModal', 'OHService'];
     function widgetDummy($rootScope, $modal, OHService) {
         // Usage: <widget-dummy ng-model="widget" />
         //
@@ -52,7 +52,7 @@
 
 
     // settings dialog
-    WidgetSettingsCtrlDummy.$inject = ['$scope', '$timeout', '$rootScope', '$modalInstance', 'widget', 'OHService'];
+    WidgetSettingsCtrlDummy.$inject = ['$scope', '$timeout', '$rootScope', '$uibModalInstance', 'widget', 'OHService'];
 
     function WidgetSettingsCtrlDummy($scope, $timeout, $rootScope, $modalInstance, widget, OHService) {
         $scope.widget = widget;

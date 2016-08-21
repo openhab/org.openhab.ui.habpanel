@@ -13,7 +13,7 @@
             });
         });
 
-    widgetSwitch.$inject = ['$rootScope', '$modal', 'OHService'];
+    widgetSwitch.$inject = ['$rootScope', '$uibModal', 'OHService'];
     function widgetSwitch($rootScope, $modal, OHService) {
         // Usage: <widget-Switch ng-model="widget" />
         //
@@ -83,7 +83,7 @@
 
 
     // settings dialog
-    WidgetSettingsCtrlSwitch.$inject = ['$scope', '$timeout', '$rootScope', '$modalInstance', 'widget', 'OHService'];
+    WidgetSettingsCtrlSwitch.$inject = ['$scope', '$timeout', '$rootScope', '$uibModalInstance', 'widget', 'OHService'];
 
     function WidgetSettingsCtrlSwitch($scope, $timeout, $rootScope, $modalInstance, widget, OHService) {
         $scope.widget = widget;

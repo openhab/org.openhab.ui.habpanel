@@ -1,0 +1,40 @@
+{
+  "name": "habpanel",
+  "version": "1.0.0",
+  "homepage": "https://github.com/ghys/habpanel",
+  "authors": [
+    "Yannick Schaus"
+  ],
+  "description": "Dashboard user interface for openHAB",
+  "main": "",
+  "moduleType": [],
+  "keywords": [
+    "dashboard",
+    "panel",
+    "openhab",
+    "smarthome",
+    "ui"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.5.8",
+    "angular-gridster": "~0.13.14",
+    "angular-bootstrap": "^1.x",
+    "angular-fullscreen": "~1.0.1",
+    "angular-prompt": "~1.2",
+    "angular-local-storage": "~0.4.0",
+    "angular-route": "~1.5.8",
+    "angularjs-slider": "~5.4.3",
+    "atmosphere.js": "latest",
+    "angular-atmosphere-service": "latest",
+    "bootstrap": "~3.3.7"
+  }
+}

@@ -8,8 +8,8 @@
         <div class="modal-body">
             <div class="form-group">
                 <div class="col-xs-9"> 
-                <tabset>
-                    <tab heading="Binding">
+                <uib-tabset>
+                    <uib-tab heading="Binding">
                       <br />
                       <div class="form-group" ng-class="{error: _form.name.$error && _form.submitted}">
                           <label class="control-label col-lg-3 col-md-3">Name</label>
@@ -29,8 +29,8 @@
                               <input name="command" type="text" ng-model="form.command" class="form-control" />
                           </div>
                       </div>
-                    </tab>
-                    <tab heading="Inactive style">
+                    </uib-tab>
+                    <uib-tab heading="Inactive style">
                     <br />
                             <div class="form-group" ng-class="{error: _form.font_size.$error && _form.submitted}">
                                 <label class="control-label col-xs-4">Font size</label>
@@ -58,8 +58,8 @@
                                 <div dab-model="form.foreground" web-colorpicker dab-width="20" dab-height="20" dab-radius="50" dab-vertical="4" dab-rotate="0" show-grayscale="true"></div>
                             </div>
                         </div>
-                    </tab>
-                    <tab heading="Active style">
+                    </uib-tab>
+                    <uib-tab heading="Active style">
                     <br />
                             <div class="form-group" ng-class="{error: _form.font_size.$error && _form.submitted}">
                                 <label class="control-label col-xs-4">Font size</label>
@@ -88,7 +88,7 @@
                             </div>
                         </div>
                     </tab>
-                </tabset>
+                </uib-tabset>
                 </div>
                 <div class="col-xs-3" style="height: 80px">
                     <div class="box">

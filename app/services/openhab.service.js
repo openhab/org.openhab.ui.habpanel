@@ -7,8 +7,8 @@
         .value('OH2ServiceConfiguration', {})
         .service('OH2StorageService', OH2StorageService);
 
-    OHService.$inject = ['$rootScope', '$http', '$q', '$timeout', '$interval', 'atmosphereService'];
-    function OHService($rootScope, $http, $q, $timeout, $interval, atmosphereService) {
+    OHService.$inject = ['$rootScope', '$http', '$q', '$timeout', '$interval', '$filter', 'atmosphereService'];
+    function OHService($rootScope, $http, $q, $timeout, $interval, $filter, atmosphereService) {
         this.getItem = getItem;
         this.getItems = getItems;
         this.onUpdate = onUpdate;
@@ -47,7 +47,8 @@
         }
 
         function getItem(name) {
-            return _.find($rootScope.items, ['name', name]);
+            var item = $filter('filter')($rootScope.items, {name: name}, true); 
+            return (item && item.length == 1) ? item[0] : null;
         }
 
         function getItems() {
@@ -89,7 +90,7 @@
                         if (evtdata.type === 'ItemStateEvent') {
                             var payload = JSON.parse(evtdata.payload);
                             var newstate = payload.value;
-                            var item = _.find($rootScope.items, ['name', topicparts[2]]);
+                            var item = $filter('filter')($rootScope.items, {name: topicparts[2]}, true)[0];
                             if (item && item.state !== payload.value) {
                                 $timeout(function () {
                                     console.log("Updating " + item.name + " state from " + item.state + " to " + payload.value);
@@ -138,7 +139,7 @@
                 {
                     var data = atmosphere.util.parseJSON(response.responseBody);
                     if ($rootScope.items && data && data != "") {
-                        var item = _.find($rootScope.items, ['name', data.name]);
+                        var item = $filter('filter')($rootScope.items, {name: data.name}, true)[0];
                         if (item) {
                             $timeout(function () {
                                 console.log("Received push message: Changing " + item.name + " state from " + item.state + " to " + data.state);

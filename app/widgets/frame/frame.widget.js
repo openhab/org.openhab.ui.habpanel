@@ -13,7 +13,7 @@
             });
         });
 
-    widgetFrame.$inject = ['$rootScope', '$modal', 'OHService', '$sce'];
+    widgetFrame.$inject = ['$rootScope', '$uibModal', 'OHService', '$sce'];
     function widgetFrame($rootScope, $modal, OHService, $sce) {
         // Usage: <widget-label ng-model="widget" />
         //
@@ -46,7 +46,7 @@
 
 
     // settings dialog
-    WidgetSettingsCtrlFrame.$inject = ['$scope', '$timeout', '$rootScope', '$modalInstance', 'widget', 'OHService', '$sce'];
+    WidgetSettingsCtrlFrame.$inject = ['$scope', '$timeout', '$rootScope', '$uibModalInstance', 'widget', 'OHService', '$sce'];
 
     function WidgetSettingsCtrlFrame($scope, $timeout, $rootScope, $modalInstance, widget, OHService, $sce) {
         $scope.widget = widget;

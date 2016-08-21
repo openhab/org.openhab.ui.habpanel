@@ -5,8 +5,8 @@
         .module('app.services')
         .service('PersistenceService', PersistenceService);
 
-    PersistenceService.$inject = ['$rootScope', '$q', 'OH2StorageService', 'localStorageService'];
-    function PersistenceService($rootScope, $q, OH2StorageService, localStorageService) {
+    PersistenceService.$inject = ['$rootScope', '$q', '$filter', 'OH2StorageService', 'localStorageService'];
+    function PersistenceService($rootScope, $q, $filter, OH2StorageService, localStorageService) {
         this.getDashboards = getDashboards;
         this.getDashboard = getDashboard;
         this.saveDashboards = saveDashboards;
@@ -57,10 +57,10 @@
         function getDashboard(id) {
             
             if (!$rootScope.dashboards) {
-                return loadDashboards().then(function () { return _.find($rootScope.dashboards, ['id', id]); });
+                return loadDashboards().then(function () { return $filter('filter')($rootScope.dashboards, {id: id}, true)[0]; });
             }
 
-            return _.find($rootScope.dashboards, ['id', id]);
+            return $filter('filter')($rootScope.dashboards, {id: id}, true)[0];
         }
 
         function saveDashboards() {
