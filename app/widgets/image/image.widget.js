@@ -13,7 +13,7 @@
             });
         });
 
-    widgetImage.$inject = ['$rootScope', '$modal', 'OHService'];
+    widgetImage.$inject = ['$rootScope', '$uibModal', 'OHService'];
     function widgetImage($rootScope, $modal, OHService) {
         // Usage: <widget-image ng-model="widget" />
         //
@@ -44,7 +44,7 @@
 
 
     // settings dialog
-    WidgetSettingsCtrlImage.$inject = ['$scope', '$timeout', '$rootScope', '$modalInstance', 'widget', 'OHService'];
+    WidgetSettingsCtrlImage.$inject = ['$scope', '$timeout', '$rootScope', '$uibModalInstance', 'widget', 'OHService'];
 
     function WidgetSettingsCtrlImage($scope, $timeout, $rootScope, $modalInstance, widget, OHService) {
         $scope.widget = widget;
