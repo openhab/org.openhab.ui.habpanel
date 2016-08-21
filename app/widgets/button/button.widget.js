@@ -85,7 +85,15 @@
             foreground: widget.foreground,
             font_size: widget.font_size,
             background_active: widget.background_active,
-            foreground_active: widget.foreground_active
+            foreground_active: widget.foreground_active,
+            backdrop_iconset: widget.backdrop_iconset,
+            backdrop_icon: widget.backdrop_icon,
+            backdrop_center : widget.backdrop_center,
+            iconset: widget.iconset,
+            icon: widget.icon,
+            icon_size: widget.icon_size,
+            icon_nolinebreak: widget.icon_nolinebreak,
+            icon_replacestext: widget.icon_replacestext
         };
 
         $scope.dismiss = function() {
