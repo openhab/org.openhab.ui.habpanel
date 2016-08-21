@@ -41,7 +41,15 @@
         this.widget = this.ngModel;
 
         function updateValue() {
-            vm.value = OHService.getItem(vm.widget.item).state;
+            var item = OHService.getItem(vm.widget.item);
+            if (!item)
+                vm.value = "N/A";
+            var value = item.state;
+            if (vm.widget.format)
+                value = sprintf(vm.widget.format, value);
+            if (vm.widget.useserverformat && item.stateDescription && item.stateDescription.pattern)
+                value = sprintf(item.stateDescription.pattern, value);
+            vm.value = value;
         }
 
         OHService.onUpdate($scope, vm.widget.item, function () {
@@ -70,6 +78,8 @@
             font_size: widget.font_size,
             nolinebreak: widget.nolinebreak,
             unit: widget.unit,
+            format: widget.format,
+            useserverformat: widget.useserverformat,
             backdrop_iconset: widget.backdrop_iconset,
             backdrop_icon: widget.backdrop_icon,
             backdrop_center : widget.backdrop_center,
