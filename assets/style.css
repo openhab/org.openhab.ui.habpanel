@@ -152,6 +152,10 @@ form {
     text-align: right;
 }
 
+.box-content.switch {
+    padding-top: 0;
+    padding-bottom: 0;
+}
 .switch {
     display: flex;
     cursor: pointer;
@@ -270,6 +274,8 @@ form {
     margin: auto;
     filter: opacity(15%);
     -webkit-filter: opacity(15%);
+    max-width: calc(100% - 20px);
+    /*max-height: calc(100% - 20px);*/
 }
 
 .icon-tile-backdrop.colorize {
