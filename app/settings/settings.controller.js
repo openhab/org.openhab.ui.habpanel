@@ -5,8 +5,8 @@
         .module('app')
         .controller('SettingsCtrl', SettingsController);
 
-    SettingsController.$inject = ['$rootScope', 'OH2ServiceConfiguration', 'OH2StorageService', 'prompt'];
-    function SettingsController($rootScope, OH2ServiceConfiguration, OH2StorageService, prompt) {
+    SettingsController.$inject = ['$rootScope', 'OH2ServiceConfiguration', 'OH2StorageService', 'PersistenceService', 'prompt'];
+    function SettingsController($rootScope, OH2ServiceConfiguration, OH2StorageService, PersistenceService, prompt) {
         var vm = this;
         //vm.serviceConfiguration = OH2ServiceConfiguration;
         vm.useRegistry = $rootScope.useRegistry;
