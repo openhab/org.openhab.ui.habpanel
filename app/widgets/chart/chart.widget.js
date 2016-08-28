@@ -51,16 +51,27 @@
         var vm = this;
         this.widget = this.ngModel;
 
+        function formatValue(val) {
+            if (!vm.item)
+                vm.item = OHService.getItem(vm.widget.item);
+                
+            if (vm.item && vm.item.stateDescription && vm.item.stateDescription.pattern)
+                return sprintf(vm.item.stateDescription.pattern, val);
+            else
+                return val;
+        }
+
         function tooltipHook(val) {
-            return {
-                abscissas: $filter('date')(val[0].row.x, 'EEE d MMM HH:mm:ss'),
-                rows: [{
-                    label: val[0].series.label,
-                    value: val[0].row.y0 || val[0].row.y1,
-                    color: val[0].series.color,
-                    id: val[0].series.id
-                }]
-            };
+            if (val)
+                return {
+                    abscissas: $filter('date')(val[0].row.x, 'EEE d MMM HH:mm:ss'),
+                    rows: [{
+                        label: val[0].series.label,
+                        value: formatValue(val[0].row.y0 || val[0].row.y1),
+                        color: val[0].series.color,
+                        id: val[0].series.id
+                    }]
+                };
         };
 
         if (vm.widget.charttype == 'interactive') {
