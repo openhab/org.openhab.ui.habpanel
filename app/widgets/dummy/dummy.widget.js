@@ -35,8 +35,8 @@
         function link(scope, element, attrs) {
         }
     }
-    DummyController.$inject = ['$rootScope', '$scope', 'OHService'];
-    function DummyController ($rootScope, $scope, OHService) {
+    DummyController.$inject = ['$rootScope', '$scope', '$filter', 'OHService'];
+    function DummyController ($rootScope, $scope, $filter, OHService) {
         var vm = this;
         this.widget = this.ngModel;
 
@@ -47,8 +47,13 @@
                 return;
             }
             var value = item.state;
-            if (vm.widget.format)
-                value = sprintf(vm.widget.format, value);
+            if (vm.widget.format) {
+                if (item.type === "DateTimeItem") {
+                    value = $filter('date')(value, vm.widget.format);
+                } else {
+                    value = sprintf(vm.widget.format, value);
+                }
+            }
             if (vm.widget.useserverformat && item.stateDescription && item.stateDescription.pattern)
                 value = sprintf(item.stateDescription.pattern, value);
             vm.value = value;

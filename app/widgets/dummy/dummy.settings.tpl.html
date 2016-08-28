@@ -36,7 +36,7 @@
             <div class="form-group" ng-class="{error: _form.unit.$error && _form.submitted}">
                 <label class="control-label col-xs-3">Unit (suffix)</label>
                 <div class="col-xs-4">
-                    <input name="col" ng-model="form.unit" class="form-control" />
+                    <input name="col" ng-disabled="form.useserverformat" ng-model="form.unit" class="form-control" />
                 </div>
             </div>
             <div class="form-group" ng-class="{error: _form.format.$error && _form.submitted}">
