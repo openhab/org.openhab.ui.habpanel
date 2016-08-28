@@ -51,6 +51,7 @@ gulp.task('vendor-js', function() {
         'bower_components/atmosphere.js/atmosphere.min.js',
         'bower_components/angular-atmosphere-service/service/angular-atmosphere-service.js',
         'bower_components/ng-knob/dist/ng-knob.min.js',
+        'bower_components/inobounce/inobounce.min.js',
         'node_modules/n3-charts/build/LineChart.min.js',
         'vendor/angular-web-colorpicker.js'
     ]).pipe(concat('vendor.js')).pipe(gulp.dest('vendor'));

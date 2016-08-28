@@ -29,6 +29,8 @@ input {
 .container {
     margin: auto;
     max-width: 1000px;
+    height: 100%;
+    -webkit-overflow-scrolling: true;
 }
 .dash-buttons {
     font-size: 30px;
