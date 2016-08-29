@@ -48,7 +48,7 @@
             }
             var value = item.state;
             if (vm.widget.format) {
-                if (item.type === "DateTimeItem") {
+                if (item.type === "DateTime" || item.type === "DateTimeItem") {
                     value = $filter('date')(value, vm.widget.format);
                 } else {
                     value = sprintf(vm.widget.format, value);
