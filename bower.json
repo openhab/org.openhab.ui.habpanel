@@ -38,6 +38,7 @@
     "bootstrap": "~3.3.7",
     "d3": "^3.5.x",
     "ng-knob": "https://github.com/ghys/ng-knob.git#0.1.5",
-    "sprintf": "~1.0.3"
+    "sprintf": "~1.0.3",
+    "inobounce": "iNoBounce#~0.1.2"
   }
 }
