@@ -408,3 +408,30 @@ see http://www.makeuseof.com/wp-content/uploads/2016/07/mr-robot-heating.jpg */
 .chart-content .chart-tooltip {
   background-color: #123;
 }
+
+/* Color picker */
+
+.colorpicker-content .axis path,
+.colorpicker-content .axis line {
+  fill: none;
+  stroke: #456;
+  shape-rendering: crispEdges;
+}
+
+.colorpicker-content .axis text {
+    fill: #89a;
+  font: 10px sans-serif;
+}
+
+.colorpicker-content .s .tick:last-of-type text,
+.colorpicker-content .l .tick:last-of-type text {
+  display: none;
+}
+
+.colorpicker-content .channel canvas {
+  float: left;
+  margin: 0px 30px 0 30px;
+  width: 900px;
+  /*width: calc(100% - 60px);*/
+  height: 90px;
+}
