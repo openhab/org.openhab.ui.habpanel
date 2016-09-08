@@ -188,7 +188,7 @@
                 } else {
                     $rootScope.panelsRegistry = JSON.parse(resp.data.panelsRegistry);
                 }
-                if (OH2ServiceConfiguration.lockEditing) {
+                if (OH2ServiceConfiguration.lockEditing === "true") {
                     $rootScope.lockEditing = true;
                 }
 
