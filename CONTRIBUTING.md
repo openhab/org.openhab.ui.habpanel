@@ -5,7 +5,7 @@ Here are instructions to get you started. They are similar to those of openHAB i
 
 ## Reporting Issues
 
-Please report [HABPanel specific issues here](https://github.com/ghys/habpanel/issues),
+Please report [HABPanel specific issues here](https://github.com/openhab/habpanel/issues),
 while issues that are related to openHAB2 or Eclipse SmartHome should be reported in the
 [openHAB2 GitHub repository](https://github.com/openhab/openhab2/issues) or the
 [bugzilla of Eclipse SmartHome](https://bugs.eclipse.org/bugs/buglist.cgi?product=SmartHome&component=Core), respectively.
@@ -67,7 +67,7 @@ else is working on the same thing.
 ### Create issues...
 
 Any significant improvement should be documented as [a GitHub
-issue](https://github.com/ghys/habpanel/issues?labels=enhancement&page=1&state=open) before anybody
+issue](https://github.com/openhab/habpanel/issues?labels=enhancement&page=1&state=open) before anybody
 starts working on it.
 
 ### ...but check for existing issues first!
@@ -208,7 +208,7 @@ There are several exceptions to the signing requirement. Currently these are:
 
 * Step 1: learn the component inside out
 * Step 2: make yourself useful by contributing code, bugfixes, support etc.
-* Step 3: volunteer on [the discussion group](https://community.openhab.org/c/apps-services/habpanel) or on [GitHub](https://github.com/ghys/habpanel/issues?labels=question&page=1&state=open)
+* Step 3: volunteer on [the discussion group](https://community.openhab.org/c/apps-services/habpanel) or on [GitHub](https://github.com/openhab/habpanel/issues?labels=question&page=1&state=open)
 
 Don't forget: being a maintainer is a time investment. Make sure you will have time to make yourself available.
 You don't have to be a maintainer to make a difference on the project!
