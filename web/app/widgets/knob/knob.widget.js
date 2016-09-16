@@ -59,9 +59,11 @@
             var value;
             if (parts.length == 3) {
                 // knob received HSB value, use the 3rd (brightness)
-                value = parseInt(parts[2]);
+                value = parseFloat(parts[2]);
+            } else if (parts.length == 1) {
+                value = parseFloat(parts[0]);
             } else {
-                value = parseInt(parts[0]);
+                return undefined;
             }
 
             return value;
@@ -70,7 +72,7 @@
         vm.knob = {
             options: {
                 id: 'knob-' + vm.widget.item,
-                animate: { enabled: false, duration: 500, ease: 'circle' },
+                animate: { enabled: false, duration: 0, ease: 'circle' },
                 min: (vm.widget.floor) ? vm.widget.floor : 0,
                 max: (vm.widget.ceil) ? vm.widget.ceil : 100,
                 step: (vm.widget.step) ? vm.widget.step : 1,
@@ -121,10 +123,9 @@
             var value = getValue();
 
             if (!isNaN(value) && value != vm.knob.value) {
+                vm.knob.options.animate.enabled = true;
                 vm.value = vm.knob.value = value;
             }
-
-            //vm.knob.options.animate.enabled = false;
 
         }
 
