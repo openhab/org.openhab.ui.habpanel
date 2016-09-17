@@ -51,12 +51,14 @@
             var value;
             if (parts.length == 3) {
                 // slider received HSB value, use the 3rd (brightness)
-                value = parseInt(parts[2]);
+                value = parseFloat(parts[2]);
+            } else if (parts.length == 1) {
+                value = parseFloat(parts[0]);
             } else {
-                value = parseInt(parts[0]);
+                return undefined;
             }
 
-            return value;
+            return value.toFixed(((+vm.widget.step).toFixed(2)).replace(/^-?\d*\.?|0+$/g, '').length);
         }
 
         vm.slider = {
