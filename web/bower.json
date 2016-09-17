@@ -39,6 +39,7 @@
     "d3": "^3.5.x",
     "ng-knob": "https://github.com/ghys/ng-knob.git#0.1.5",
     "sprintf": "~1.0.3",
-    "inobounce": "iNoBounce#~0.1.2"
+    "inobounce": "iNoBounce#~0.1.2",
+    "angular-ui-codemirror": "~0.3.0"
   }
 }
