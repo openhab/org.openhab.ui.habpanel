@@ -21,6 +21,64 @@ angular.module('app')
 
             $scope.widgetTypes = Widgets.getWidgetTypes();
 
+
+            $scope.loadScript = function(url, type, charset) {
+                if (type===undefined) type = 'text/javascript';
+                if (url) {
+                    var script = document.querySelector("script[src*='"+url+"']");
+                    if (!script) {
+                        var heads = document.getElementsByTagName("head");
+                        if (heads && heads.length) {
+                            var head = heads[0];
+                            if (head) {
+                                script = document.createElement('script');
+                                script.setAttribute('src', url);
+                                script.setAttribute('type', type);
+                                if (charset) script.setAttribute('charset', charset);
+                                head.appendChild(script);
+                            }
+                        }
+                    }
+                    return script;
+                }
+            };
+
+            $scope.loadCss = function(url) {
+                if (url) {
+                    var script = document.querySelector("link[href*='"+url+"']");
+                    if (!script) {
+                        var heads = document.getElementsByTagName("head");
+                        if (heads && heads.length) {
+                            var head = heads[0];
+                            if (head) {
+                                script = document.createElement('link');
+                                script.setAttribute('rel', 'stylesheet');
+                                script.setAttribute('href', url);
+                                head.appendChild(script);
+                                setTimeout(200);
+                            }
+                        }
+                    }
+                    return script;
+                }
+            };
+
+            // well, this is ugly... 
+            $scope.loadCss('vendor/cm/lib/codemirror.css', 'text/css');
+            $scope.loadScript('vendor/cm/lib/codemirror.js', 'text/javascript', 'utf-8');
+            $timeout(function () {
+                $scope.loadScript('vendor/cm/addon/fold/xml-fold.js', 'text/javascript', 'utf-8');
+                $scope.loadScript('vendor/cm/addon/edit/matchbrackets.js', 'text/javascript', 'utf-8');
+                $scope.loadScript('vendor/cm/addon/edit/matchtags.js', 'text/javascript', 'utf-8');
+                $scope.loadScript('vendor/cm/addon/edit/closebrackets.js', 'text/javascript', 'utf-8');
+                $scope.loadScript('vendor/cm/addon/edit/closetag.js', 'text/javascript', 'utf-8');
+                // $scope.loadScript('vendor/cm/addon/hint/show-hint.js', 'text/javascript', 'utf-8');
+                // $scope.loadScript('vendor/cm/addon/hint/xml-hint.js', 'text/javascript', 'utf-8');
+                // $scope.loadScript('vendor/cm/addon/hint/html-hint.js', 'text/javascript', 'utf-8');
+                // $scope.loadScript('vendor/cm/addon/hint/css-hint.js', 'text/javascript', 'utf-8');
+                $scope.loadScript('vendor/cm/mode/xml/xml.js', 'text/javascript', 'utf-8');
+            }, 200);
+
             $scope.clear = function() {
                 $scope.dashboard.widgets = [];
             };
@@ -69,6 +127,8 @@ angular.module('app')
                     scope: $scope,
                     templateUrl: 'app/widgets/' + widget.type + '/' + widget.type + '.settings.tpl.html',
                     controller: 'WidgetSettingsCtrl-' + widget.type,
+                    backdrop: 'static',
+                    size: (widget.type == 'template') ? 'lg' : '',
                     resolve: {
                         widget: function() {
                             return widget;

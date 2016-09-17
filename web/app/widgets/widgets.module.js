@@ -6,7 +6,9 @@
         'rzModule',
         'ui.knob',
         'web.colorpicker',
-        'n3-line-chart'
+        'n3-line-chart',
+        'sprintf',
+        'ui.codemirror'
     ])
     .value('WidgetTypes', [])
     .factory('Widgets', WidgetsService)
