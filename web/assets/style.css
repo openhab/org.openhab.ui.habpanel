@@ -42,14 +42,16 @@ input {
     cursor: move;
 }
 .dash-card {
-    margin: 5px 0px 5px 0px;
+    margin: 0px 0px 0px 0px;
     height: 100px !important;
     width: 100%;
     float: left;
 }
 .dash-card h3 {
+    margin: 0 0 0 -15px;
+    padding: 15px;
     height: 100%;
-    width: 100%;
+    width: calc(100% + 30px);
     cursor: pointer;
 }
 
