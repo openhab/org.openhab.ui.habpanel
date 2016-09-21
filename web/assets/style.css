@@ -38,14 +38,19 @@ input {
     margin-top: 16px;
     margin-right: -15px;
 }
+.dash-buttons em {
+    font-size: 12px;
+    clear: both;
+}
 .handle {
     cursor: move;
 }
 .dash-card {
     margin: 0px 0px 0px 0px;
-    height: 100px !important;
+    min-height: 100px !important;
     width: 100%;
     float: left;
+    overflow: hidden;
 }
 .dash-card h3 {
     margin: 0 0 0 -15px;
@@ -53,6 +58,33 @@ input {
     height: 100%;
     width: calc(100% + 30px);
     cursor: pointer;
+}
+
+.dash-card .handle-se {
+    border-width: 0 0 3rem 3rem !important;
+    border-color: transparent transparent #def !important;
+}
+
+.dash-card .backdrop {
+    right: 0;
+    margin: -5px;
+}
+
+.dash-card .backdrop.center {
+    left: 0 !important;
+    right: 0 !important;
+    text-align: center;
+}
+
+.tile-background {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1000;
 }
 
 

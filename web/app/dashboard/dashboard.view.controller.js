@@ -47,6 +47,7 @@
         $timeout(function () {
             OHService.reloadItems();
         });
+        iNoBounce.enable();
       //Fullscreen.all();
     }
 

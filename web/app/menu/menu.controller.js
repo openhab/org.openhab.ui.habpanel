@@ -3,10 +3,11 @@
 
     angular
         .module('app')
-        .controller('MenuCtrl', MenuController);
+        .controller('MenuCtrl', MenuController)
+        .controller('DashboardSettingsCtrl', DashboardSettingsCtrl);
 
-    MenuController.$inject = ['$rootScope', 'dashboards', '$interval', '$location', 'PersistenceService', 'prompt', 'Fullscreen'];
-    function MenuController($rootScope, dashboards, $interval, $location, PersistenceService, prompt, Fullscreen) {
+    MenuController.$inject = ['$rootScope', '$scope', 'dashboards', '$interval', '$location', 'PersistenceService', 'prompt', '$filter', '$uibModal', 'Fullscreen'];
+    function MenuController($rootScope, $scope, dashboards, $interval, $location, PersistenceService, prompt, $filter, $modal, Fullscreen) {
         var vm = this;
         vm.dashboards = dashboards;
         vm.editMode = false;
@@ -23,9 +24,12 @@
             $interval(tick, 1000);
         }
 
+        if (!$rootScope.menucolumns)
+            $rootScope.menucolumns = 1;
+
         vm.gridsterOptions = {
             margins: [5, 5],
-            columns: 1,
+            columns: $rootScope.menucolumns,
             defaultSizeX: 1,
             defaultSizeY: 1,
             rowHeight: 110,
@@ -33,7 +37,7 @@
             //floating: false,
             mobileModeEnabled: false,
             draggable: { enabled: true, handle: '.handle', stop: function(evt) { PersistenceService.saveDashboards() } },
-            resizable: { enabled: false }
+            resizable: { enabled: false, stop: function(evt) { PersistenceService.saveDashboards() } }
         }
 
         vm.addNewDashboard = function() {
@@ -50,6 +54,11 @@
 
         vm.toggleEditMode = function () {
             vm.editMode = !vm.editMode;
+            vm.gridsterOptions.resizable.enabled=vm.editMode;
+            if (vm.editMode)
+                iNoBounce.disable();
+            else
+                iNoBounce.enable();
         }
 
         vm.removeDashboard = function (dash) {
@@ -60,7 +69,7 @@
                 dashboards.splice(dashboards.indexOf(dash), 1);
                 PersistenceService.saveDashboards();
             });
-        }
+        };
 
         vm.renameDashboard = function (dash) {
             prompt({
@@ -73,7 +82,22 @@
                 PersistenceService.saveDashboards();
             })
 
-        }
+        };
+
+        vm.onChangedColumns = function () {
+            if ($rootScope.menucolumns !== vm.gridsterOptions.columns) {
+                console.log('columns from ' + $rootScope.menucolumns + " to " + vm.gridsterOptions.columns);
+                $rootScope.menucolumns = vm.gridsterOptions.columns;
+                PersistenceService.saveDashboards();
+            }
+            angular.forEach(dashboards, function (dash) {
+                if (dash.col > vm.gridsterOptions.columns - 1)
+                    dash.col = vm.gridsterOptions.columns - 1;
+
+                if (dash.col + dash.sizeX > vm.gridsterOptions.columns - 1)
+                    dash.sizeX = vm.gridsterOptions.columns - dash.col;
+            });
+        };
 
         vm.viewDashboard = function (dash) {
             if (vm.editMode) {
@@ -87,5 +111,78 @@
 			Fullscreen.toggleAll();
 		}
 
+
+        vm.openDashboardSettings = function(dashboard) {
+            $modal.open({
+                scope: $scope,
+                templateUrl: 'app/menu/menu.settings.tpl.html',
+                controller: 'DashboardSettingsCtrl',
+                backdrop: 'static',
+                size: 'lg',
+                resolve: {
+                    dashboard: function() {
+                        return dashboard;
+                    }
+                }
+            }).result.then(function (dashboards) {
+                var newdashboard = PersistenceService.getDashboard(dashboard.id);
+                var idx = vm.dashboards.indexOf(dashboard);
+                vm.dashboards[idx] = newdashboard; 
+            });
+        };
+
     }
+
+    // settings dialog
+    DashboardSettingsCtrl.$inject = ['$scope', '$timeout', '$rootScope', '$uibModalInstance', 'dashboard', 'OHService', 'PersistenceService'];
+
+    function DashboardSettingsCtrl($scope, $timeout, $rootScope, $modalInstance, dashboard, OHService, PersistenceService) {
+        $scope.dashboard = dashboard;
+        if (!$scope.dashboard.tile) $scope.dashboard.tile = {};
+        //$scope.items = OHService.getItems();
+
+        $scope.form = {
+            name: dashboard.name,
+            sizeX: dashboard.sizeX,
+            sizeY: dashboard.sizeY,
+            col: dashboard.col,
+            row: dashboard.row,
+            //item: dashboard.item,
+            tile: {
+                background_image: dashboard.tile.background_image,
+                backdrop_iconset: dashboard.tile.backdrop_iconset,
+                backdrop_icon: dashboard.tile.backdrop_icon,
+                backdrop_center : dashboard.tile.backdrop_center,
+                iconset: dashboard.tile.iconset,
+                icon: dashboard.tile.icon,
+                icon_size: dashboard.tile.icon_size,
+                icon_nolinebreak: dashboard.tile.icon_nolinebreak,
+                icon_replacestext: dashboard.tile.icon_replacestext
+            }
+        };
+
+        $scope.dismiss = function() {
+            $modalInstance.dismiss();
+        };
+
+        $scope.remove = function() {
+            $rootScope.dashboards.splice($rootScope.dashboards.indexOf(dashboard), 1);
+            PersistenceService.saveDashboards().then(function () {
+                $modalInstance.dismiss();
+            });
+        };
+
+        $scope.submit = function() {
+            angular.extend(dashboard, $scope.form);
+            PersistenceService.getDashboard(dashboard.id).tile = angular.copy(dashboard.tile);
+            PersistenceService.saveDashboards().then(function () {
+                $rootScope.dashboards = null;
+                PersistenceService.getDashboards().then (function (dashboards) {
+                    $modalInstance.close(dashboards);
+                });
+            });
+        };
+
+    }
+    
 })();
