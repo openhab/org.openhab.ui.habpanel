@@ -188,7 +188,7 @@
                 } else {
                     $rootScope.panelsRegistry = JSON.parse(resp.data.panelsRegistry);
                 }
-                if (OH2ServiceConfiguration.lockEditing === "true") {
+                if (OH2ServiceConfiguration.lockEditing === true) {
                     $rootScope.lockEditing = true;
                 }
 
@@ -246,6 +246,7 @@
                 }
                 config.updatedTime = new Date().toISOString();
                 config.dashboards = angular.copy($rootScope.dashboards);
+                config.menucolumns = $rootScope.menucolumns;
                 return saveServiceConfiguration().then(function () {
                     deferred.resolve();
                 }, function () {
@@ -275,7 +276,10 @@
                 console.log("Warning: current panel config not found, falling back to local storage!");
                 useLocalStorage();
             } else {
-                $rootScope.dashboards = angular.copy($rootScope.panelsRegistry[currentPanelConfig].dashboards);
+                if ($rootScope.panelsRegistry[currentPanelConfig].dashboards)
+                    $rootScope.dashboards = angular.copy($rootScope.panelsRegistry[currentPanelConfig].dashboards);
+                if ($rootScope.panelsRegistry[currentPanelConfig].menucolumns)
+                    $rootScope.menucolumns = $rootScope.panelsRegistry[currentPanelConfig].menucolumns;
             }
         }
 

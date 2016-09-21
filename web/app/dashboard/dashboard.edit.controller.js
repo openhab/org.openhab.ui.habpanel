@@ -95,7 +95,7 @@ angular.module('app')
             };
 
             OHService.reloadItems();
-
+            iNoBounce.disable();
         }
     ])
 
