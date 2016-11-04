@@ -16,7 +16,13 @@
         this.reloadItems = reloadItems;
         //this.clearAllLongPollings = clearAllLongPollings;
 
-        var liveUpdatesEnabled = false;
+        var liveUpdatesEnabled = false, prevAudioUrl = '';
+
+        window.AudioContext = window.AudioContext || window.webkitAudioContext;
+        var context;
+        if (typeof (window.AudioContext) != "undefined") {
+            context = new AudioContext();
+        }
 
         ////////////////
 
@@ -111,9 +117,28 @@
                             try {
                                 var audioUrl = JSON.parse(evtdata.payload);
                                 console.log("Audio event received: playing " + audioUrl);
-                                var audio = new Audio(audioUrl);
-                                audio.load();
-                                audio.play();
+
+                                if (prevAudioUrl !== audioUrl) {
+                                    if (context) {
+                                        var audioBuffer = null;
+                                        $http({
+                                            url : audioUrl,
+                                            method : 'GET',
+                                            responseType : 'arraybuffer'
+                                        }).then(function(response) {
+                                            context.decodeAudioData(response.data, function(buffer) {
+                                                audioBuffer = buffer;
+                                                var source = context.createBufferSource();
+                                                source.buffer = buffer;
+                                                source.connect(context.destination);
+                                                source.start(0);
+                                            });
+                                        });
+                                    } else {
+                                        angular.element("#audioSink").attr('src', audioUrl);
+                                    }
+                                    prevAudioUrl = audioUrl;
+                                }
                             }
                             catch (e) {
                                 console.warn("Error while handling audio event: " + e.toString());
