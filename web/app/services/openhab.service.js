@@ -18,12 +18,6 @@
 
         var liveUpdatesEnabled = false, prevAudioUrl = '';
 
-        window.AudioContext = window.AudioContext || window.webkitAudioContext;
-        var context;
-        if (typeof (window.AudioContext) != "undefined") {
-            context = new AudioContext();
-        }
-
         ////////////////
 
         function onUpdate(scope, name, callback) {
@@ -114,13 +108,18 @@
                                 });
                             }
                         } else if (evtdata.topic === "smarthome/webaudio/playurl") {
+                            var context, audioBuffer;
                             try {
+                                window.AudioContext = window.AudioContext || window.webkitAudioContext;
+                                if (typeof (window.AudioContext) != "undefined") {
+                                    context = new AudioContext();
+                                }
+
                                 var audioUrl = JSON.parse(evtdata.payload);
                                 console.log("Audio event received: playing " + audioUrl);
 
                                 if (prevAudioUrl !== audioUrl) {
                                     if (context) {
-                                        var audioBuffer = null;
                                         $http({
                                             url : audioUrl,
                                             method : 'GET',
@@ -131,17 +130,25 @@
                                                 var source = context.createBufferSource();
                                                 source.buffer = buffer;
                                                 source.connect(context.destination);
+                                                source.onended = function () {
+                                                    context.close();
+                                                }
                                                 source.start(0);
                                             });
                                         });
                                     } else {
-                                        angular.element("#audioSink").attr('src', audioUrl);
+                                        if (!angular.element(document).find("bgsound").length)
+                                            angular.element(document).find("body").append("<bgsound loop='1' />");
+
+                                        angular.element(document).find("bgsound").attr('src', audioUrl);
                                     }
                                     prevAudioUrl = audioUrl;
                                 }
                             }
                             catch (e) {
                                 console.warn("Error while handling audio event: " + e.toString());
+                                if (context)
+                                  context.close();
                             }
                         }
                     } catch (e) {
