@@ -322,7 +322,7 @@
                 if ($rootScope.panelsRegistry[currentPanelConfig].customwidgets)
                     $rootScope.customwidgets = $rootScope.panelsRegistry[currentPanelConfig].customwidgets;
                 else
-                    $rootScope.settings = {};
+                    $rootScope.customwidgets = {};
             }
         }
 
