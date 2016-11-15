@@ -262,5 +262,6 @@ thanks to these awesome JavaScript libraries, most notably:
 - [n3-line-chart](https://github.com/n3-charts/line-chart)
 - [ng-knob](https://github.com/RadMie/ng-knob)
 - [sprintf.js](https://github.com/alexei/sprintf.js)
+- [event-source-polyfill](https://github.com/Yaffle/EventSource/)
 
 Check out the ```web/bower.json``` and ```web/package.json``` files for the complete list.
