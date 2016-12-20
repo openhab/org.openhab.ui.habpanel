@@ -112,9 +112,31 @@
                         vm.value = val;
                         OHService.sendCmd(vm.widget.item, vm.value.toString());
                     }
-                }
+                },
+                rangesEnabled: (vm.widget.rangesEnabled) ? vm.widget.rangesEnabled : false,
+                ranges: []
             }
         };
+
+
+        // if ranges are enabled update knob setings
+        if ( vm.widget.rangesEnabled) {
+          vm.widget.ranges.forEach(function(rangeItem) {
+              if (rangeItem.min != 0 || rangeItem.max != 0) {
+                  var textColor = vm.widget.textColor;
+                  if (vm.widget.rangesTextColorMatching == true) {
+                    textColor = rangeItem.barColor;
+                  }
+                  vm.knob.options.ranges.push({
+                      min: rangeItem.min,
+                      max: rangeItem.max,
+                      barColor: rangeItem.barColor,
+                      textColor: textColor
+                  })
+              }
+          });
+        }
+
 
         var initialValue = getValue();
         vm.value = vm.knob.value = angular.isDefined(getValue()) ? getValue() : 0;
@@ -142,6 +164,11 @@
     function WidgetSettingsCtrlKnob($scope, $timeout, $rootScope, $modalInstance, widget, OHService) {
         $scope.widget = widget;
         $scope.items = OHService.getItems();
+
+        $scope.colorPopover = {
+            barColorTemplateUrl: 'barColorpopoverTemplate.html',
+            textColorTemplateUrl: 'textColorpopoverTemplate.html',
+        };
 
         $scope.form = {
             name: widget.name,
@@ -177,8 +204,31 @@
             skinType: widget.skinType,
             skinWidth: widget.skinWidth,
             skinColor: widget.skinColor,
-            skinSpaceWidth: widget.skinSpaceWidth
+            skinSpaceWidth: widget.skinSpaceWidth,
+            rangesEnabled: widget.rangesEnabled,
+            rangesTextColorMatching: widget.rangesTextColorMatching,
+            ranges: widget.ranges || []
         };
+
+
+        $scope.removeRange = function(rangeIndex){
+            $scope.form.ranges.splice( rangeIndex, 1);
+        };
+
+
+        $scope.addRange = function() {
+            var min = $scope.form.floor;
+            if ($scope.form.ranges.length > 0) {
+                min = $scope.form.ranges[$scope.form.ranges.length - 1].max;  // if not the first range use max of previous range
+            }
+            $scope.form.ranges.push({
+                min: min,   // use max of last range
+                max: $scope.form.ceil,
+                barColor: widget.barColor,   // use barColor
+                textColor: widget.textColor   // use textColor
+            });
+        };
+
 
         $scope.dismiss = function() {
             $modalInstance.dismiss();

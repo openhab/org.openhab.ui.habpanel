@@ -338,6 +338,71 @@
                     </div>
                 </uib-tab>
 
+                <uib-tab heading="Ranges">
+                    <br />
+                    <div class="col-lg-12 col-md-12">
+                        <div class="form-group" ng-class="{error: _form.rangesEnabled.$error && _form.submitted}">
+                            <div class="col-lg-9 col-md-9">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" name="enabled" ng-model="form.rangesEnabled" /> Enable Ranges
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-lg-9 col-md-9">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" name="textColorMatching" ng-model="form.rangesTextColorMatching" /> Match Text Color to Range
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="btn" ng-click="addRange()"><i class="glyphicon glyphicon-plus"></i></button>
+                    <uib-accordion>
+                        <div uib-accordion-group is-open="accordions[$index]" class="panel default" ng-repeat="range in form.ranges">
+                            <uib-accordion-heading>
+                                <span class="badge" style="width: 50px; margin-right: 10px; background-color :{{range.barColor}};">&nbsp</span>{{range.min + ' - ' + range.max  || 'N/A'}}
+                            </uib-accordion-heading>
+                            <div class="col-lg-12 col-md-12">
+                                <button type="button" class="btn pull-right" ng-click="removeRange($index)"><i class="glyphicon glyphicon-trash"></i></button>
+                            </div>
+                            <div class="col-xs-12">
+                                <div class="col-xs-6">
+                                    <div class="form-group">
+                                        <label class="control-label col-xs-2">from</label>
+                                        <div class="col-xs-6">
+                                            <input name="name" type="number" ng-model="range.min" class="form-control" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-6">
+                                    <div class="form-group">
+                                        <label class="control-label col-xs-2">to</label>
+                                        <div class="col-xs-6">
+                                            <input name="name" type="number" ng-model="range.max" class="form-control" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12">
+                                <div class="col-xs-6">
+                                    <div class="form-group">
+                                        <label class="control-label col-xs-2">Bar</label>
+                                        <div class="col-xs-6">
+                                            <input name="name" type="text" ng-model="range.barColor" class="form-control" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12">
+                                    <div class="col-lg-4 col-md-4">
+                                        <div dab-model="range.barColor" web-colorpicker dab-width="20" dab-height="20" dab-radius="50" dab-vertical="4" dab-rotate="0" show-grayscale="true"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </uib-accordion>
+                </uib-tab>
 
                 <uib-tab heading="Misc.">
                     <br />
