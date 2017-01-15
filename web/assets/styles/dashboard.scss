@@ -23,6 +23,8 @@
     display: inline;
 
     &.dashboard-title {
+      user-select: none;
+
       span {
         &:hover {
           .btn-edit-dashboard {
@@ -98,6 +100,7 @@ ul {
   padding: 10px;
   text-align: center;
   height: 100%;
+  user-select: none;
 }
 
 .box-header-btns {
