@@ -8,6 +8,8 @@
     </parent>
 
   <modelVersion>4.0.0</modelVersion>
+
+  <groupId>org.openhab.ui</groupId>
   <artifactId>org.openhab.ui.habpanel</artifactId>
 
   <name>HABPanel user interface</name>
