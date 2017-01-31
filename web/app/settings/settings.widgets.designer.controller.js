@@ -123,8 +123,9 @@
             var templateOverlay = {
                 token: function(stream, state) {
                     var ch;
-                    if (stream.match("itemValue(") || stream.match("sendCmd(")
-                     || stream.match("itemsInGroup(") || stream.match("itemsWithTag(")) {
+                    if (stream.match("itemState(") || stream.match("sendCmd(")
+                     || stream.match("itemsInGroup(") || stream.match("itemsWithTag(")
+                     || stream.match("itemValue(") || stream.match("getItem(")) {
                          while ((ch = stream.next()) != null)
                          if (ch == ")") {
                              stream.eat(")");
@@ -139,9 +140,9 @@
                         }
                     }
                     while (stream.next() != null
-                        && (!stream.match("{{", false)) && !stream.match("itemValue", false)
+                        && (!stream.match("{{", false)) && !stream.match("itemState", false) && !stream.match("itemValue", false)
                             && !stream.match("sendCmd", false) && !stream.match("itemsInGroup", false)
-                            && !stream.match("itemsWithTags", false)) {}
+                            && !stream.match("itemsWithTag", false) && !stream.match("getItem", false)) {}
                     return null;
                 }
             };
