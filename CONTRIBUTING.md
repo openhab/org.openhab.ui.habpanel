@@ -271,3 +271,5 @@ thanks to these awesome JavaScript libraries, most notably:
 - [angular-snap](https://github.com/jtrussell/angular-snap.js)
 
 Check out the ```web/bower.json``` and ```web/package.json``` files for the complete list.
+
+[<img align="right" src="https://user-images.githubusercontent.com/2004147/30233170-35d19c3a-94f4-11e7-8540-894977d1c653.png">](https://www.browserstack.com/) Thanks to [BrowserStack](https://www.browserstack.com/) for kindly providing the maintainer with a free open source account to help testing HABPanel on a wide range of devices!
