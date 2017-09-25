@@ -1,42 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-
     <parent>
-	    <groupId>org.openhab</groupId>
-    	<artifactId>pom-tycho</artifactId>
-	    <version>2.2.0-SNAPSHOT</version>
-		<relativePath></relativePath>
+        <groupId>org.openhab</groupId>
+        <artifactId>pom-tycho</artifactId>
+        <version>2.2.0-SNAPSHOT</version>
     </parent>
 
-  <modelVersion>4.0.0</modelVersion>
+    <modelVersion>4.0.0</modelVersion>
 
-  <groupId>org.openhab.ui</groupId>
-  <artifactId>org.openhab.ui.habpanel</artifactId>
-  <version>2.2.0-SNAPSHOT</version>
+    <groupId>org.openhab.ui</groupId>
+    <artifactId>org.openhab.ui.habpanel</artifactId>
+    <version>2.2.0-SNAPSHOT</version>
 
-  <name>HABPanel user interface</name>
+    <name>HABPanel user interface</name>
 
-  <packaging>eclipse-plugin</packaging>
+    <packaging>eclipse-plugin</packaging>
 
     <properties>
         <ohc.version>${project.version}</ohc.version>
     </properties>
 
-	<dependencies>
-		<dependency>
-			<groupId>org.openhab.core</groupId>
-			<artifactId>org.openhab.core</artifactId>
-			<version>${ohc.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.openhab.core</groupId>
-			<artifactId>org.openhab.ui.dashboard</artifactId>
-			<version>${ohc.version}</version>
-		</dependency>
-	</dependencies>
+    <scm>
+        <connection>scm:git:${scm.gitBaseUrl}/org.openhab.ui.habpanel.git</connection>
+        <developerConnection>scm:git:${scm.gitBaseUrl}/org.openhab.ui.habpanel.git</developerConnection>
+        <url>https://github.com/openhab/org.openhab.ui.habpanel</url>
+    </scm>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.openhab.core</groupId>
+            <artifactId>org.openhab.core</artifactId>
+            <version>${ohc.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.openhab.core</groupId>
+            <artifactId>org.openhab.ui.dashboard</artifactId>
+            <version>${ohc.version}</version>
+        </dependency>
+    </dependencies>
 
     <pluginRepositories>
-      <pluginRepository>
+        <pluginRepository>
             <id>jcenter</id>
             <name>JCenter Repository</name>
             <url>https://jcenter.bintray.com/</url>
@@ -47,23 +51,23 @@
             <snapshots>
                 <enabled>false</enabled>
             </snapshots>
-      </pluginRepository>
-      <pluginRepository>
-          <id>artifactory</id>
-          <name>JFrog Artifactory Repository</name>
-          <url>https://openhab.jfrog.io/openhab/libs-release</url>
-          <releases>
-              <enabled>true</enabled>
-              <updatePolicy>never</updatePolicy>
-          </releases>
-          <snapshots>
-              <enabled>false</enabled>
-          </snapshots>
-      </pluginRepository>
+        </pluginRepository>
+        <pluginRepository>
+            <id>artifactory</id>
+            <name>JFrog Artifactory Repository</name>
+            <url>https://openhab.jfrog.io/openhab/libs-release</url>
+            <releases>
+                <enabled>true</enabled>
+                <updatePolicy>never</updatePolicy>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </pluginRepository>
     </pluginRepositories>
 
     <repositories>
-        
+
         <!-- releases -->
         <repository>
             <id>jcenter</id>
@@ -77,7 +81,6 @@
                 <enabled>false</enabled>
             </snapshots>
         </repository>
-
         <repository>
             <id>openhab-artifactory-release</id>
             <name>JFrog Artifactory Repository</name>
@@ -118,7 +121,6 @@
             <url>https://dl.bintray.com/openhab/p2/openhab-deps-repo/${ohdr.version}</url>
             <layout>p2</layout>
         </repository>
-
     </repositories>
 
 </project>
