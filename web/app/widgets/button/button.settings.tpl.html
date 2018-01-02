@@ -7,217 +7,288 @@
 
         <div class="modal-body">
             <div class="form-group">
-                <div class="col-xs-9"> 
-                <uib-tabset>
-                    <uib-tab heading="General">
-                      <br />
-                      <div class="form-group" ng-class="{error: _form.name.$error && _form.submitted}">
-                          <label class="control-label col-lg-3 col-md-3">Name</label>
-                          <div class="col-lg-9 col-md-9">
-                              <input name="name" type="text" ng-model="form.name" class="form-control" />
-                          </div>
-                      </div>
-                      <div class="form-group" ng-class="{error: _form.action_type.$error && _form.submitted}">
-                          <label class="control-label col-lg-3 col-md-3">Action type</label>
-                          <div class="col-lg-9 col-md-9">
-                              <select ng-model="form.action_type" class="form-control">
-                                  <option value="command">Send a fixed command to an item</option>
-                                  <option value="toggle">Alternate item between 2 states</option>
-                                  <option value="navigate">Navigate to another dashboard</option>
-                              </select>
-                          </div>
-                      </div>
-                      <div ng-if="form.action_type !== 'navigate'" class="form-group" ng-class="{error: _form.item.$error && _form.submitted}">
-                          <label class="control-label col-lg-3 col-md-3">openHAB Item</label>
-                          <div class="col-lg-9 col-md-9">
-                                <item-picker ng-model="form.item"></item-picker>
-                          </div>
-                      </div>
-                      <div ng-if="form.action_type !== 'navigate'" class="form-group" ng-class="{error: _form.command.$error && _form.submitted}">
-                          <label class="control-label col-lg-3 col-md-3">Command value</label>
-                          <div class="col-lg-9 col-md-9">
-                              <input name="command" type="text" ng-model="form.command" class="form-control" />
-                          </div>
-                      </div>
-                      <div ng-if="form.action_type === 'toggle'" class="form-group" ng-class="{error: _form.command_alt.$error && _form.submitted}">
-                          <label class="control-label col-lg-3 col-md-3">Alternate command value</label>
-                          <div class="col-lg-9 col-md-9">
-                              <input name="command" type="text" ng-model="form.command_alt" class="form-control" />
-                          </div>
-                      </div>
-                      <div ng-if="form.action_type === 'navigate'" class="form-group" ng-class="{error: _form.navigate_dashboard.$error && _form.submitted}">
-                          <label class="control-label col-lg-3 col-md-3">Dashboard</label>
-                          <div class="col-lg-9 col-md-9">
-                              <select ng-model="form.navigate_dashboard" class="form-control" ng-options="dashboard.id as dashboard.name for dashboard in dashboards"></select>
-                          </div>
-                      </div>
-                    </uib-tab>
+                <div class="col-xs-9">
+                    <uib-tabset>
+                        <uib-tab heading="General">
+                            <br />
+                            <div class="form-group" ng-class="{error: _form.name.$error && _form.submitted}">
+                                <label class="control-label col-lg-3 col-md-3">Name</label>
+                                <div class="col-lg-9 col-md-9">
+                                    <input name="name" type="text" ng-model="form.name" class="form-control" />
+                                </div>
+                            </div>
+                            <div class="form-group" ng-class="{error: _form.action_type.$error && _form.submitted}">
+                                <label class="control-label col-lg-3 col-md-3">Action type</label>
+                                <div class="col-lg-9 col-md-9">
+                                    <select ng-model="form.action_type" class="form-control">
+                                        <option value="command">Send a fixed command to an item</option>
+                                        <option value="toggle">Alternate item between 2 states</option>
+                                        <option value="navigate">Navigate</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div ng-if="form.action_type !== 'navigate'" class="form-group" ng-class="{error: _form.item.$error && _form.submitted}">
+                                <label class="control-label col-lg-3 col-md-3">openHAB Item</label>
+                                <div class="col-lg-9 col-md-9">
+                                    <item-picker ng-model="form.item"></item-picker>
+                                </div>
+                            </div>
+                            <div ng-if="form.action_type !== 'navigate'" class="form-group" ng-class="{error: _form.command.$error && _form.submitted}">
+                                <label class="control-label col-lg-3 col-md-3">Command value</label>
+                                <div class="col-lg-9 col-md-9">
+                                    <input name="command" type="text" ng-model="form.command" class="form-control" />
+                                </div>
+                            </div>
+                            <div ng-if="form.action_type === 'toggle'" class="form-group" ng-class="{error: _form.command_alt.$error && _form.submitted}">
+                                <label class="control-label col-lg-3 col-md-3">Alternate command value</label>
+                                <div class="col-lg-9 col-md-9">
+                                    <input name="command" type="text" ng-model="form.command_alt" class="form-control" />
+                                </div>
+                            </div>
+                            <section ng-if="form.action_type === 'navigate'">
+                                <div class="form-group" ng-class="{error: _form.navigate_dashboard.$error && _form.submitted}">
+                                    <label class="control-label col-lg-3 col-md-3">Navigation type</label>
+                                    <div class="col-lg-9 col-md-9">
+                                        <div>
+                                            <label class="radio-inline">
+                                                <input type="radio" ng-model="form.navigate_type" value="dashboard" name="navigate_type" /> Dashboard
+                                            </label>
+                                            <label class="radio-inline">
+                                                <input type="radio" ng-model="form.navigate_type" value="url" name="navigate_type" /> URL
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group" ng-if="form.navigate_type=='dashboard'" ng-class="{error: _form.navigate_dashboard.$error && _form.submitted}">
+                                    <label class="control-label col-lg-3 col-md-3">Dashboard</label>
+                                    <div class="col-lg-9 col-md-9">
+                                        <select ng-model="form.navigate_dashboard" class="form-control" ng-options="dashboard.id as dashboard.name for dashboard in dashboards"></select>
+                                    </div>
+                                </div>
+                                <section ng-if="form.navigate_type=='url'">
+                                    <div class="form-group">
+                                        <label class="control-label col-lg-3 col-md-3">URL</label>
+                                        <div class="col-lg-9 col-md-9">
+                                            <input name="navigate_url" ng-model="form.navigate_url" class="form-control" required />
+                                        </div>
+                                    </div>
+                                    <div class="form-group" ng-if="form.navigate_url && form.navigate_type=='url'" ng-class="{error: _form.navigate_target.$error && _form.submitted}">
+                                        <label class="control-label col-lg-3 col-md-3">Open in</label>
+                                        <div class="col-lg-9 col-md-9">
+                                            <label class="radio-inline">
+                                                <input type="radio" ng-model="form.navigate_target" value="self" name="navigate_target" checked/> Current tab
+                                            </label>
+                                            <label class="radio-inline">
+                                                <input type="radio" ng-model="form.navigate_target" value="new_tab" name="navigate_target" /> New tab
+                                            </label>
+                                            <label class="radio-inline">
+                                                <input type="radio" ng-model="form.navigate_target" value="new_window" name="navigate_target" /> New window
+                                            </label>
+                                        </div>
+                                    </div>
+                                </section>
+                            </section>
+                        </uib-tab>
 
-                    <uib-tab heading="Inactive">
-                    <br />
+
+                        <uib-tab heading="Display">
+                            <br />
+                            <h4>Label</h4>
                             <div class="form-group" ng-class="{error: _form.font_size.$error && _form.submitted}">
-                                <label class="control-label col-xs-4">Font size</label>
+                                <label class="control-label col-lg-3 col-md-3">Font size</label>
                                 <div class="col-xs-4">
                                     <input name="font_size" ng-model="form.font_size" class="form-control" />
                                 </div>
-                                <div class="col-xs-4">
-                                <!--<label class="control-label">
-                                    <input type="checkbox"  name="font_bold" ng-model="form.font_bold" />
-                                    <label for="font_bold"><i class="glyphicon glyphicon-bold"></i></label>
-                                    <input type="checkbox"  name="font_italic" ng-model="form.font_italic" />
-                                    <label for="font_italic"><i class="glyphicon glyphicon-italic"></i></label>
-                                </label>-->
+                            </div>
+
+                            <br />
+                            <h4>Icons</h4>
+                            <div class="form-group" ng-class="{error: _form.backdrop_icon.$error && _form.submitted}">
+                                <label class="control-label col-lg-3 col-md-3">Backdrop Icon</label>
+                                <div class="col-lg-9 col-md-9">
+                                    <icon-picker iconset="form.backdrop_iconset" icon="form.backdrop_icon"></icon-picker>
+                                    <div ng-if="form.backdrop_icon" class="checkbox">
+                                        <label>
+                                            <input type="checkbox" name="vertical" ng-model="form.backdrop_center" /> Center backdrop horizontally
+                                        </label>
+                                    </div>
                                 </div>
                             </div>
-                        <div class="form-group" ng-class="{error: _form.background.$error && _form.submitted}">
-                            <label class="control-label col-lg-2 col-md-2">Background color</label>
-                            <div class="col-lg-4 col-md-4">
-                                <div dab-model="form.background" web-colorpicker dab-width="20" dab-height="20" dab-radius="50" dab-vertical="4" dab-rotate="0" show-grayscale="true"></div>
-                            </div>
-                        </div>
-                        <div class="form-group" ng-class="{error: _form.foreground.$error && _form.submitted}">
-                            <label class="control-label col-lg-2 col-md-2">Text color</label>
-                            <div class="col-lg-4 col-md-4">
-                                <div dab-model="form.foreground" web-colorpicker dab-width="20" dab-height="20" dab-radius="50" dab-vertical="4" dab-rotate="0" show-grayscale="true"></div>
-                            </div>
-                        </div>
-                    </uib-tab>
 
-
-                    <uib-tab heading="Active">
-                    <br />
-                        <div class="form-group" ng-class="{error: _form.font_size.$error && _form.submitted}">
-                            <label class="control-label col-xs-4">Font size</label>
-                            <div class="col-xs-4">
-                                <input name="font_size" disabled="disabled" ng-model="form.font_size" class="form-control" />
-                            </div>
-                            <div class="col-xs-4">
-                            <!--<label class="control-label">
-                                <input type="checkbox"  name="font_bold_active" ng-model="form.font_bold_active" />
-                                <label for="font_bold_active"><i class="glyphicon glyphicon-bold"></i></label>
-                                <input type="checkbox"  name="font_italic_active" ng-model="form.font_italic_active" />
-                                <label for="font_italic_active"><i class="glyphicon glyphicon-italic"></i></label>
-                            </label>-->
-                            </div>
-                        </div>
-                        <div class="form-group" ng-class="{error: _form.background_active.$error && _form.submitted}">
-                            <label class="control-label col-lg-2 col-md-2">Background color</label>
-                            <div class="col-lg-4 col-md-4">
-                                <div dab-model="form.background_active" web-colorpicker dab-width="20" dab-height="20" dab-radius="50" dab-vertical="4" dab-rotate="0" show-grayscale="true"></div>
-                            </div>
-                        </div>
-                        <div class="form-group" ng-class="{error: _form.foreground_active.$error && _form.submitted}">
-                            <label class="control-label col-lg-2 col-md-2">Text color</label>
-                            <div class="col-lg-4 col-md-4">
-                                <div dab-model="form.foreground_active" web-colorpicker dab-width="20" dab-height="20" dab-radius="50" dab-vertical="4" dab-rotate="0" show-grayscale="true"></div>
-                            </div>
-                        </div>
-                    </uib-tab>
-
-
-                    <uib-tab heading="Icons">
-                        <br />
-                        <div class="form-group" ng-class="{error: _form.backdrop_icon.$error && _form.submitted}">
-                            <label class="control-label col-lg-3 col-md-3">Backdrop Icon</label>
-                            <div class="col-lg-9 col-md-9">
-                                <icon-picker iconset="form.backdrop_iconset" icon="form.backdrop_icon"></icon-picker>
-                                <div ng-if="form.backdrop_icon" class="checkbox">
-                                    <label>
-                                        <input type="checkbox" name="vertical" ng-model="form.backdrop_center" /> Center backdrop horizontally
-                                    </label>
+                            <div class="form-group" ng-class="{error: _form.icon.$error && _form.submitted}">
+                                <label class="control-label col-lg-3 col-md-3">Icon</label>
+                                <div class="col-lg-9 col-md-9">
+                                    <icon-picker iconset="form.iconset" icon="form.icon"></icon-picker>
+                                    <div class="col-xs-6 input-group" ng-if="form.icon">
+                                        <div class="input-group-addon">Size</div>
+                                        <input name="icon_size" ng-model="form.icon_size" class="form-control" />
+                                        <div class="input-group-addon">px</div>
+                                    </div>
+                                    <div ng-if="form.icon" class="checkbox">
+                                        <label>
+                                            <input type="checkbox" name="vertical" ng-model="form.icon_nolinebreak" /> Icon left of label instead of below
+                                        </label>
+                                    </div>
+                                    <div ng-if="form.icon" class="checkbox">
+                                        <label>
+                                            <input type="checkbox" name="vertical" ng-model="form.icon_replacestext" /> Icon replaces text
+                                        </label>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <div class="form-group" ng-class="{error: _form.icon.$error && _form.submitted}">
-                            <label class="control-label col-lg-3 col-md-3">Icon</label>
-                            <div class="col-lg-9 col-md-9">
-                                <icon-picker iconset="form.iconset" icon="form.icon"></icon-picker>
-                                <div class="col-xs-6 input-group" ng-if="form.icon">
-                                    <div class="input-group-addon">Size</div>
-                                    <input name="icon_size" ng-model="form.icon_size" class="form-control" />
-                                    <div class="input-group-addon">px</div>
+                            <br />
+                            <h4>Value</h4>
+                            <div class="form-group" ng-class="{error: _form.show_item_value.$error && _form.submitted}">
+                                <label class="control-label col-lg-3 col-md-3">&nbsp;</label>
+                                <div class="col-lg-9 col-md-9">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" name="show_item_value" ng-model="form.show_item_value" />
+                                            <span ng-if="form.action_type !== 'navigate'">Show the item's state value</span>
+                                            <span ng-if="form.action_type === 'navigate'">Show an item's state value</span>
+                                        </label>
+                                    </div>
                                 </div>
-                                <div ng-if="form.icon" class="checkbox">
-                                    <label>
-                                        <input type="checkbox" name="vertical" ng-model="form.icon_nolinebreak" /> Icon left of label instead of below
-                                    </label>
-                                </div>
-                                <div ng-if="form.icon" class="checkbox">
-                                    <label>
-                                        <input type="checkbox" name="vertical" ng-model="form.icon_replacestext" /> Icon replaces text
-                                    </label>
-                                </div>
-
                             </div>
-                        </div>
-                    </uib-tab>
+
+                            <div ng-if="form.action_type === 'navigate' && form.show_item_value" class="form-group" ng-class="{error: _form.item.$error && _form.submitted}">
+                                <label class="control-label col-lg-3 col-md-3">openHAB Item</label>
+                                <div class="col-lg-9 col-md-9">
+                                    <item-picker ng-model="form.item"></item-picker>
+                                </div>
+                            </div>
+                            <div ng-if="form.action_type === 'navigate' && form.show_item_value" class="form-group" ng-class="{error: _form.command.$error && _form.submitted}">
+                                <label class="control-label col-lg-3 col-md-3">Active state</label>
+                                <div class="col-lg-9 col-md-9">
+                                    <input name="command" type="text" ng-model="form.navigate_active_state" class="form-control" />
+                                </div>
+                            </div>
+
+                            <section ng-if="form.show_item_value">
+                                <div class="form-group" ng-class="{error: _form.font_size.$error && _form.submitted}">
+                                    <label class="control-label col-xs-3">Font size</label>
+                                    <div class="col-xs-4">
+                                        <input name="font_size" ng-model="form.value_font_size" class="form-control" />
+                                    </div>
+                                </div>
+                                <div class="form-group" ng-class="{error: _form.value_unit.$error && _form.submitted}">
+                                    <label class="control-label col-xs-3">Unit (suffix)</label>
+                                    <div class="col-xs-4">
+                                        <input name="col" ng-disabled="form.value_useserverformat" ng-model="form.value_unit" class="form-control" />
+                                    </div>
+                                </div>
+                                <div class="form-group" ng-class="{error: _form.format.$error && _form.submitted}">
+                                    <label class="control-label col-xs-3">Format</label>
+                                    <div class="col-xs-7">
+                                        <input name="col" ng-disabled="form.value_useserverformat" ng-model="form.value_format" class="form-control" />
+                                    </div>
+                                    <label class="control-label col-lg-3 col-md-3"></label>
+                                    <div class="col-lg-9 col-md-9">
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox" name="vertical" ng-model="form.value_useserverformat" /> Use server-provided format if available
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group" ng-class="{error: _form.value_nolinebreak.$error && _form.submitted}">
+                                    <label class="control-label col-lg-3 col-md-3">Layout</label>
+                                    <div class="col-lg-9 col-md-9">
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox" name="vertical" ng-model="form.value_nolinebreak" /> Value right of label instead of below
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </uib-tab>
 
 
-                </uib-tabset>
-                
+                        <uib-tab heading="{{(form.action_type !== 'navigate' || form.show_item_value) ? 'Inactive' : 'Colors'}}">
+                            <br />
+                            <div class="form-group" ng-class="{error: _form.background.$error && _form.submitted}">
+                                <label class="control-label col-lg-2 col-md-2">Background color</label>
+                                <div class="col-lg-4 col-md-4">
+                                    <div dab-model="form.background" web-colorpicker dab-width="20" dab-height="20" dab-radius="50" dab-vertical="4" dab-rotate="0"
+                                        show-grayscale="true"></div>
+                                </div>
+                            </div>
+                            <div class="form-group" ng-class="{error: _form.foreground.$error && _form.submitted}">
+                                <label class="control-label col-lg-2 col-md-2">Label color</label>
+                                <div class="col-lg-4 col-md-4">
+                                    <div dab-model="form.foreground" web-colorpicker dab-width="20" dab-height="20" dab-radius="50" dab-vertical="4" dab-rotate="0"
+                                        show-grayscale="true"></div>
+                                </div>
+                            </div>
+                            <div class="form-group" ng-if="form.show_item_value" ng-class="{error: _form.value_color.$error && _form.submitted}">
+                                <label class="control-label col-lg-2 col-md-2">Value color</label>
+                                <div class="col-lg-4 col-md-4">
+                                    <div dab-model="form.value_color" web-colorpicker dab-width="20" dab-height="20" dab-radius="50" dab-vertical="4" dab-rotate="0"
+                                        show-grayscale="true"></div>
+                                </div>
+                            </div>
+                        </uib-tab>
+
+
+                        <uib-tab heading="Active" ng-if="form.action_type !== 'navigate' || form.show_item_value">
+                            <br />
+                            <div class="form-group" ng-class="{error: _form.background_active.$error && _form.submitted}">
+                                <label class="control-label col-lg-2 col-md-2">Background color</label>
+                                <div class="col-lg-4 col-md-4">
+                                    <div dab-model="form.background_active" web-colorpicker dab-width="20" dab-height="20" dab-radius="50" dab-vertical="4" dab-rotate="0"
+                                        show-grayscale="true"></div>
+                                </div>
+                            </div>
+                            <div class="form-group" ng-class="{error: _form.foreground_active.$error && _form.submitted}">
+                                <label class="control-label col-lg-2 col-md-2">Label color</label>
+                                <div class="col-lg-4 col-md-4">
+                                    <div dab-model="form.foreground_active" web-colorpicker dab-width="20" dab-height="20" dab-radius="50" dab-vertical="4" dab-rotate="0"
+                                        show-grayscale="true"></div>
+                                </div>
+                            </div>
+                            <div class="form-group" ng-if="form.show_item_value" ng-class="{error: _form.value_color_active.$error && _form.submitted}">
+                                <label class="control-label col-lg-2 col-md-2">Value color</label>
+                                <div class="col-lg-4 col-md-4">
+                                    <div dab-model="form.value_color_active" web-colorpicker dab-width="20" dab-height="20" dab-radius="50" dab-vertical="4" dab-rotate="0"
+                                        show-grayscale="true"></div>
+                                </div>
+                            </div>
+                        </uib-tab>
+
+                    </uib-tabset>
                 </div>
-                <div class="col-xs-3" style="height: 80px">
-                    <div class="box">
-                        <div class="box-content switch" ng-style="{ 'background-color': form.background, color: form.foreground }">
+                <div class="col-xs-3">
+                    <div class="box" style="overflow: hidden;">
+                        <div class="box-content switch" ng-style="{ 'background-color': form.background, color: form.foreground, padding: '20px' }">
                             <div class="switch-content">
-                                <span ng-style="{ 'font-size': form.font_size + 'pt' }">Inactive</span>
+                                <span ng-if="form.action_type !== 'navigate' || form.show_item_value" ng-style="{ 'font-size': form.font_size + 'pt' }">Inactive</span>
+                                <span ng-if="form.action_type === 'navigate' && !form.show_item_value" ng-style="{ 'font-size': form.font_size + 'pt' }">Label</span>
+                                <div ng-if="form.show_item_value" class="value" ng-style="{ 'color': form.value_color, 'font-size': form.value_font_size + 'pt' }">State</div>
                             </div>
                         </div>
                     </div>
-                    <div class="box">
-                        <div class="box-content switch" ng-style="{ 'background-color': form.background_active, color: form.foreground_active }">
+                    <div class="box" ng-if="form.action_type !== 'navigate' || form.show_item_value" style="overflow: hidden;">
+                        <div class="box-content switch" ng-style="{ 'background-color': form.background_active, color: form.foreground_active, padding: '20px' }">
                             <div class="switch-content">
                                 <span ng-style="{ 'font-size': form.font_size + 'pt' }">Active</span>
+                                <div ng-if="form.show_item_value" class="value" ng-style="{ 'color': form.value_color_active, 'font-size': form.value_font_size + 'pt' }">State</div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
-            
-            <!--<div class="row">
-                <div class="col-lg-6 col-md-6">
-                    <div class="form-group" ng-class="{error: _form.sizeX.$error && _form.submitted}">
-                        <label class="control-label col-lg-6 col-md-6">Width</label>
-                        <div class="col-lg-6 col-md-6">
-                            <input name="sizeX" ng-model="form.sizeX" class="form-control" />
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-6">
-                    <div class="form-group">
-                        <label class="control-label col-lg-6 col-md-6">Height</label>
-                        <div class="col-lg-6 col-md-6">
-                            <input name="sizeY" ng-model="form.sizeY" class="form-control" />
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-6 col-md-6">
-                    <div class="form-group" ng-class="{error: _form.sizeX.$error && _form.submitted}">
-                        <label class="control-label col-lg-6 col-md-6">Column</label>
-                        <div class="col-lg-6 col-md-6">
-                            <input name="col" ng-model="form.col" class="form-control" />
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-6">
-                    <div class="form-group">
-                        <label class="control-label col-lg-6 col-md-6">Row</label>
-                        <div class="col-lg-6 col-md-6">
-                            <input name="row" ng-model="form.row" class="form-control" />
-                        </div>
-                    </div>
-                </div>
-            </div>-->
         </div>
 
         <div class="modal-footer">
-            <a ng-click="remove()" class="btn btn-danger pull-left" tabindex="-1"><i class="glyphicon glyphicon-trash"></i>&nbsp;Delete</a>
-            <a ng-click="dismiss()" class="btn btn-default" tabindex="-1"><i class="glyphicon glyphicon-remove"></i>&nbsp;Cancel</a>
-            <button type="submit" class="btn btn-primary"><i class="glyphicon glyphicon-ok"></i>&nbsp;Save</button>
+            <a ng-click="remove()" class="btn btn-danger pull-left" tabindex="-1">
+                <i class="glyphicon glyphicon-trash"></i>&nbsp;Delete</a>
+            <a ng-click="dismiss()" class="btn btn-default" tabindex="-1">
+                <i class="glyphicon glyphicon-remove"></i>&nbsp;Cancel</a>
+            <button type="submit" class="btn btn-primary" ng-disabled="_form.$invalid">
+                <i class="glyphicon glyphicon-ok"></i>&nbsp;Save</button>
         </div>
     </form>
 </div>
