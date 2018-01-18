@@ -6,8 +6,8 @@
         .controller('MenuCtrl', MenuController)
         .controller('DashboardSettingsCtrl', DashboardSettingsCtrl);
 
-    MenuController.$inject = ['$rootScope', '$scope', 'dashboards', '$routeParams', '$interval', '$location', 'PersistenceService', 'OHService', 'prompt', '$filter', '$uibModal', 'Fullscreen'];
-    function MenuController($rootScope, $scope, dashboards, $routeParams, $interval, $location, PersistenceService, OHService, prompt, $filter, $modal, Fullscreen) {
+    MenuController.$inject = ['$rootScope', '$scope', 'dashboards', '$routeParams', '$interval', '$location', 'PersistenceService', 'OHService', 'prompt', '$filter', '$uibModal', 'Fullscreen', 'TranslationService'];
+    function MenuController($rootScope, $scope, dashboards, $routeParams, $interval, $location, PersistenceService, OHService, prompt, $filter, $modal, Fullscreen, TranslationService) {
         var vm = this;
         vm.dashboards = dashboards;
         vm.editMode = false;
@@ -43,8 +43,8 @@
 
         vm.addNewDashboard = function() {
             prompt({
-                title: "New dashboard",
-                message: "Name of your new dashboard:",
+                title: TranslationService.translate("menu.dialog.newdashboard.title", "New dashboard"),
+                message: TranslationService.translate("menu.dialog.newdashboard.message", "Name of your new dashboard:"),
                 input: true
             }).then(function (name) {
                 dashboards.push({ id: name, name: name, widgets: [] });
@@ -61,29 +61,6 @@
             else
                 if ($rootScope.settings.no_scrolling) iNoBounce.enable();
         }
-
-        vm.removeDashboard = function (dash) {
-            prompt({
-                title: "Remove dashboard",
-                message: "Please confirm you want to delete this dashboard: " + dash.name,
-            }).then(function () {
-                dashboards.splice(dashboards.indexOf(dash), 1);
-                PersistenceService.saveDashboards();
-            });
-        };
-
-        vm.renameDashboard = function (dash) {
-            prompt({
-                title: "Rename dashboard",
-                message: "New name:",
-                value: dash.name,
-                input: true
-            }).then(function (name) {
-                dash.id = dash.name = name;
-                PersistenceService.saveDashboards();
-            })
-
-        };
 
         vm.onChangedColumns = function () {
             if ($rootScope.menucolumns !== vm.gridsterOptions.columns) {
@@ -123,7 +100,13 @@
                 resolve: {
                     dashboard: function() {
                         return dashboard;
-                    }
+                    },
+                    translations: ['TranslationService', function (TranslationService) {
+                        return TranslationService.enterPart('admin');
+                    }],
+                    translations_widgets: ['TranslationService', function (TranslationService) {
+                        return TranslationService.enterPart('widgets');
+                    }]
                 }
             });
         };
@@ -131,9 +114,9 @@
     }
 
     // settings dialog
-    DashboardSettingsCtrl.$inject = ['$scope', '$timeout', '$rootScope', '$uibModalInstance', 'dashboard', 'OHService', 'PersistenceService', 'prompt'];
+    DashboardSettingsCtrl.$inject = ['$scope', '$timeout', '$rootScope', '$uibModalInstance', 'dashboard', 'OHService', 'PersistenceService', 'prompt', 'TranslationService'];
 
-    function DashboardSettingsCtrl($scope, $timeout, $rootScope, $modalInstance, dashboard, OHService, PersistenceService, prompt) {
+    function DashboardSettingsCtrl($scope, $timeout, $rootScope, $modalInstance, dashboard, OHService, PersistenceService, prompt, TranslationService) {
         $scope.dashboard = dashboard;
         if (!$scope.dashboard.tile) $scope.dashboard.tile = {};
         if (!$scope.dashboard.drawer) $scope.dashboard.drawer = {};
@@ -189,8 +172,8 @@
 
         $scope.remove = function() {
             prompt({
-                title: "Remove dashboard",
-                message: "Please confirm you want to delete this dashboard: " + dashboard.name,
+                title: TranslationService.translate("menu.dialog.removedashboard.title", "Remove dashboard"),
+                message: TranslationService.translate("menu.dialog.removedashboard.message", "Please confirm you want to delete this dashboard: ") + dashboard.name
             }).then(function () {
                 $rootScope.dashboards.splice($rootScope.dashboards.indexOf(dashboard), 1);
                 PersistenceService.saveDashboards().then(function () {
