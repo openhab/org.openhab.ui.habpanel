@@ -5,113 +5,113 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: crowdin.com\n"
 "X-Crowdin-Project: openhab-habpanel\n"
-"X-Crowdin-Language: de\n"
+"X-Crowdin-Language: bg\n"
 "X-Crowdin-File: /master/web/assets/i18n/main/main.pot\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Last-Translator: openhab-bot <bot@openhab.org>\n"
-"Language-Team: German\n"
-"Language: de_DE\n"
-"PO-Revision-Date: 2018-01-19 11:34-0500\n"
+"Language-Team: Bulgarian\n"
+"Language: bg_BG\n"
+"PO-Revision-Date: 2018-01-19 07:11-0500\n"
 
 #. Common term
 msgctxt "OK"
 msgid "OK"
-msgstr "OK"
+msgstr ""
 
 #. Common term
 msgctxt "Cancel"
 msgid "Cancel"
-msgstr "Abbrechen"
+msgstr ""
 
 #. Common term
 msgctxt "Delete"
 msgid "Delete"
-msgstr "Löschen"
+msgstr ""
 
 #. Common term
 msgctxt "Save"
 msgid "Save"
-msgstr "Speichern"
+msgstr ""
 
 #. Common term
 msgctxt "Name"
 msgid "Name"
-msgstr "Name"
+msgstr ""
 
 #. Common term
 msgctxt "Icon"
 msgid "Icon"
-msgstr "Symbol"
+msgstr ""
 
 #. Common term (plural)
 msgctxt "Icons"
 msgid "Icons"
-msgstr "Symbole"
+msgstr ""
 
 #. Common term
 msgctxt "Backdrop Icon"
 msgid "Backdrop Icon"
-msgstr "Hintergrund-Symbol"
+msgstr ""
 
 #. Common term
 msgctxt "Size"
 msgid "Size"
-msgstr "Größe"
+msgstr ""
 
 #. Common term
 msgctxt "Font size"
 msgid "Font Size"
-msgstr "Schriftgröße"
+msgstr ""
 
 #. Common term
 msgctxt "Color"
 msgid "Color"
-msgstr "Farbe"
+msgstr ""
 
 #. Common term (plural)
 msgctxt "Colors"
 msgid "Colors"
-msgstr "Farben"
+msgstr ""
 
 #. Common term
 msgctxt "Transparent"
 msgid "Transparent"
-msgstr "Transparent"
+msgstr ""
 
 #. Common term
 msgctxt "openHAB Item"
 msgid "openHAB Item"
-msgstr "openHAB Item"
+msgstr ""
 
 #. Common term (e.g. tooltip in the dashboard header toolbar)
 msgctxt "Speak"
 msgid "Speak"
-msgstr "Sprich"
+msgstr ""
 
 #. Common term (e.g. tooltip in the dashboard header toolbar)
 msgctxt "Refresh"
 msgid "Refresh"
-msgstr "Aktualisieren"
+msgstr ""
 
 #. Common term (e.g. tooltip in the dashboard header toolbar)
 msgctxt "Fullscreen"
 msgid "Fullscreen"
-msgstr "Vollbild"
+msgstr ""
 
 #. Common term
 msgctxt "Help"
 msgid "Help"
-msgstr "Hilfe"
+msgstr ""
 
 #. Appears in a red background in the bottom of the screen when openHAB is not responding
 msgctxt "error.connectionlost"
 msgid "Connection lost! Trying to reconnect..."
-msgstr "Verbindung verloren, versuche neu zu verbinden..."
+msgstr ""
 
 #. Appears below the edit mode button when there's no dashboard - please use the Chrome developer tools and check with phone resolutions: iPhone 6, Nexus 5 etc.!
 msgctxt "tutorial.welcome"
 msgid "Welcome to HABPanel!"
-msgstr "Willkommen im HABPanel!"
+msgstr ""
 
 #. Appears below the edit mode button when there's no dashboard - please use the Chrome developer tools and check with phone resolutions: iPhone 6, Nexus 5 etc.!
 msgctxt "tutorial.clickheretobegin"
@@ -191,25 +191,25 @@ msgstr ""
 #. Dashboard toolbar Speak button tooltip
 msgctxt "dashboard.toolbar.speak"
 msgid "Speak"
-msgstr "Sprich"
+msgstr ""
 
 #. Dashboard toolbar Refresh button tooltip
 msgctxt "dashboard.toolbar.refresh"
 msgid "Refresh"
-msgstr "Aktualisieren"
+msgstr ""
 
 #. Dashboard toolbar Fullscreen button tooltip
 msgctxt "dashboard.toolbar.fullscreen"
 msgid "Fullscreen"
-msgstr "Vollbild"
+msgstr ""
 
 #. Displayed at the bottom after clicking on the Speak button
 msgctxt "dashboard.speaknow"
 msgid "Speak now..."
-msgstr "Bitte sprechen..."
+msgstr ""
 
 #. Prefix of an error message, displayed at the bottom after clicking on the Speak button
 msgctxt "dashboard.speakerror"
 msgid "Error: "
-msgstr "Fehler: "
+msgstr ""
 
