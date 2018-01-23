@@ -82,6 +82,12 @@ input {
     padding-top: 15px;
 }
 
+.pinneddrawer .container {
+    left: 265px;
+    right: 0;
+    width: auto;
+}
+
 .scrollable {
     -webkit-overflow-scrolling: touch;
 }
@@ -216,4 +222,10 @@ input {
             color: white;
         }
     }
+}
+
+.pinneddrawer .header a[title="Menu"] {
+    visibility: hidden;
+    width: 0;
+    padding-right: 0;
 }
