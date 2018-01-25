@@ -150,6 +150,10 @@ ul {
     -ms-user-select: none;
 }
 
+.gridster-mobile .box-content {
+    position: relative;
+}
+
 .box-header-btns {
     top: 0;
     right: .5rem;
