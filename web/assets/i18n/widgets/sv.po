@@ -11,57 +11,57 @@ msgstr ""
 "Last-Translator: openhab-bot <bot@openhab.org>\n"
 "Language-Team: Swedish\n"
 "Language: sv_SE\n"
-"PO-Revision-Date: 2018-01-23 16:41-0500\n"
+"PO-Revision-Date: 2018-01-29 14:41-0500\n"
 
 #. Common term in widget settings dialogs
 msgctxt "widget.common.min"
 msgid "Min"
-msgstr ""
+msgstr "Min"
 
 #. Common term in widget settings dialogs
 msgctxt "widget.common.max"
 msgid "Max"
-msgstr ""
+msgstr "Max"
 
 #. Common term in widget settings dialogs
 msgctxt "widget.common.step"
 msgid "Step"
-msgstr ""
+msgstr "Steg"
 
 #. Common term in widget settings dialogs
 msgctxt "widget.common.unit"
 msgid "Unit"
-msgstr ""
+msgstr "Enhet"
 
 #. Common term in widget settings dialogs
 msgctxt "widget.common.format"
 msgid "Format"
-msgstr ""
+msgstr "Format"
 
 #. Common option label in widget settings dialogs
 msgctxt "widget.common.format.useserverprovided"
 msgid "Use server-provided format if available"
-msgstr ""
+msgstr "Använd serverns format om tillgängligt"
 
 #. Common option label in widget settings dialogs
 msgctxt "widget.common.dontwrap"
 msgid "Value right of label"
-msgstr ""
+msgstr "Värde till höger om etikett"
 
 #. Common option label in widget settings dialogs
 msgctxt "widget.common.backdrop_center"
 msgid "Center backdrop horizontally"
-msgstr ""
+msgstr "Centrera bakgrund horisontellt"
 
 #. Common option label in widget settings dialogs
 msgctxt "widget.common.icon_nolinebreak"
 msgid "Icon left of label instead of below"
-msgstr ""
+msgstr "Ikon till vänster om värde istället"
 
 #. Common option label in widget settings dialogs
 msgctxt "widget.common.icon_replacestext"
 msgid "Icon replaces textual value display"
-msgstr ""
+msgstr "Ikon ersätter textvärde"
 
 #. Common tab header label
 msgctxt "widget.common.general"
@@ -71,7 +71,7 @@ msgstr "Allmänt"
 #. Common tab header label
 msgctxt "widget.common.advanced"
 msgid "Advanced"
-msgstr ""
+msgstr "Avancerat"
 
 #. Display name of the widget (appears in the Add Widget dropdown menu in the designer)
 msgctxt "widget.button"
@@ -81,7 +81,7 @@ msgstr "Knapp"
 #. Description of the widget, displayed in a tooltip when hovering the option in the Add Widget dropdown menu in the designer
 msgctxt "widget.button.description"
 msgid "A button performing a certain action, like sending a command to an openHAB item"
-msgstr ""
+msgstr "En knapp som genomför en viss åtgärd t ex skicka kommando till en openHAB-item"
 
 #. Settings dialog title
 msgctxt "widget.button.settings.header"
@@ -96,17 +96,17 @@ msgstr "Allmänt"
 #. Dropdown header
 msgctxt "widget.button.general.action_type"
 msgid "Action type"
-msgstr ""
+msgstr "Typ av åtgärd"
 
 #. Dropdown option
 msgctxt "widget.button.general.action_type.command"
 msgid "Send a fixed command to an item"
-msgstr ""
+msgstr "Skicka ett bestämt kommando till en item"
 
 #. Dropdown option
 msgctxt "widget.button.general.action_type.toggle"
 msgid "Alternate item between 2 states"
-msgstr ""
+msgstr "Växla mellan två lägen"
 
 #. Dropdown option
 msgctxt "widget.button.general.action_type.navigate"
@@ -116,12 +116,12 @@ msgstr "Navigera"
 #. Textbox header
 msgctxt "widget.button.general.command"
 msgid "Command value"
-msgstr ""
+msgstr "Kommando"
 
 #. Textbox header
 msgctxt "widget.button.general.command_alt"
 msgid "Alternate command value"
-msgstr ""
+msgstr "Alternativt kommando"
 
 #. Radio buttons header
 msgctxt "widget.button.general.navigation_type"
@@ -131,7 +131,7 @@ msgstr "Typ av navigering"
 #. Radio button label
 msgctxt "widget.button.general.navigation_type.dashboard"
 msgid "Dashboard"
-msgstr ""
+msgstr "Vy"
 
 #. Radio buttons header
 msgctxt "widget.button.general.navigation_target"
@@ -181,12 +181,12 @@ msgstr "Visa items värde"
 #. Textbox header
 msgctxt "widget.button.display.value.active_state"
 msgid "Active state"
-msgstr ""
+msgstr "Värde om aktiv"
 
 #. Checkboxes header
 msgctxt "widget.button.display.value.layout"
 msgid "Layout"
-msgstr ""
+msgstr "Layout"
 
 #. Tab header
 msgctxt "widget.button.inactive"
@@ -220,7 +220,7 @@ msgstr "Värdets färg"
 
 msgctxt "widget.button.preview.state"
 msgid "State"
-msgstr ""
+msgstr "Läge"
 
 #. Display name of the widget (appears in the Add Widget dropdown menu in the designer)
 msgctxt "widget.chart"
@@ -255,7 +255,7 @@ msgstr "Standard"
 #. Dropdown option
 msgctxt "widget.chart.general.type.rrd4j"
 msgid "RRD4j (rrd4j persistence service only)"
-msgstr ""
+msgstr "RRD4j (endast för rrd4j-persistence)"
 
 #. Dropdown option
 msgctxt "widget.chart.general.type.interactive"
@@ -270,12 +270,12 @@ msgstr ""
 #. Textbox placeholder
 msgctxt "widget.chart.general.service.hint"
 msgid "rrd4j, mysql, influxdb... Leave blank for default"
-msgstr ""
+msgstr "rrd4j, mysql, influxdb... Lämna tomt för standard"
 
 #. Item picker header
 msgctxt "widget.chart.general.itemgroup"
 msgid "openHAB Item or Group"
-msgstr ""
+msgstr "openHAB item eller group"
 
 #. Dropdown header
 msgctxt "widget.chart.general.period"
@@ -340,7 +340,7 @@ msgstr "Linje"
 #. Radio button label
 msgctxt "widget.chart.series.display.area"
 msgid "Area"
-msgstr ""
+msgstr "Yta"
 
 #. Radio button label
 msgctxt "widget.chart.series.display.dots"
@@ -355,7 +355,7 @@ msgstr "Liveuppdatering (experimentell)"
 #. Checkbox label
 msgctxt "widget.chart.series.liveupdate.fillvalues"
 msgid "Repeat other series' current values on update if necessary"
-msgstr ""
+msgstr "Upprepa andra seriers nuvarande värden om nödvändigt"
 
 #. Display name of the widget (appears in the Add Widget dropdown menu in the designer)
 msgctxt "widget.clock"
@@ -390,7 +390,7 @@ msgstr "Digital"
 #. Dropdown header
 msgctxt "widget.clock.theme"
 msgid "Analog Theme"
-msgstr ""
+msgstr "Tema (analog)"
 
 #. Dropdown option
 msgctxt "widget.clock.theme.light"
@@ -405,12 +405,12 @@ msgstr "mörk"
 #. Textbox header
 msgctxt "widget.clock.digital_format"
 msgid "Digital Format"
-msgstr ""
+msgstr "Format (digital)"
 
 #. Textbox header
 msgctxt "widget.clock.font_size"
 msgid "Digital Font Size"
-msgstr ""
+msgstr "Textstorlek (digital)"
 
 #. Display name of the widget (appears in the Add Widget dropdown menu in the designer)
 msgctxt "widget.colorpicker"
@@ -420,22 +420,22 @@ msgstr "Färjväljare"
 #. Description of the widget, displayed in a tooltip when hovering the option in the Add Widget dropdown menu in the designer
 msgctxt "widget.colorpicker.description"
 msgid "Displays an color picker"
-msgstr ""
+msgstr "Visar en färgväljare"
 
 #. Settings dialog title
 msgctxt "widget.colorpicker.settings.header"
 msgid "Color Picker Settings"
-msgstr ""
+msgstr "Inställningar för färgväljare"
 
 #. Dropdown header
 msgctxt "widget.colorpicker.type"
 msgid "Type"
-msgstr ""
+msgstr "Typ"
 
 #. Dropdown option
 msgctxt "widget.colorpicker.type.hsl"
 msgid "HSL Sliders"
-msgstr ""
+msgstr "HSL-reglage"
 
 #. Dropdown option
 msgctxt "widget.colorpicker.type.ackolor"
@@ -445,12 +445,12 @@ msgstr ""
 #. Checkbox label
 msgctxt "widget.colorpicker.blur_background"
 msgid "Apply blurring effect to background"
-msgstr ""
+msgstr "Gör bakgrunden suddig"
 
 #. Displayed below the checkbox in small text
 msgctxt "widget.colorpicker.blur_background.warning"
 msgid "Warning: This can cause performance problems on tablets"
-msgstr ""
+msgstr "Varning: Detta kan skapa prestandaproblem på tablets"
 
 #. Display name of the widget (appears in the Add Widget dropdown menu in the designer)
 msgctxt "widget.dummy"
@@ -470,32 +470,32 @@ msgstr ""
 #. Checkboxes header
 msgctxt "widget.dummy.layout"
 msgid "Layout"
-msgstr ""
+msgstr "Layout"
 
 #. Display name of the widget (appears in the Add Widget dropdown menu in the designer)
 msgctxt "widget.frame"
 msgid "Frame"
-msgstr ""
+msgstr "Ram"
 
 #. Description of the widget, displayed in a tooltip when hovering the option in the Add Widget dropdown menu in the designer
 msgctxt "widget.frame.description"
 msgid "Embedded website from predefined URL or openHAB item."
-msgstr ""
+msgstr "Inbäddad webbsida från förvald URL eller openHAB-item."
 
 #. Settings dialog title
 msgctxt "widget.frame.settings.header"
 msgid "Frame Settings"
-msgstr ""
+msgstr "Inställningar för ram"
 
 #. Dropdown header
 msgctxt "widget.frame.url_source"
 msgid "URL Source"
-msgstr ""
+msgstr "URL-källa"
 
 #. Dropdown option
 msgctxt "widget.frame.url_source.static"
 msgid "Static URL"
-msgstr ""
+msgstr "Statisk URL"
 
 #. Dropdown option
 msgctxt "widget.frame.url_source.item"
@@ -505,7 +505,7 @@ msgstr ""
 #. Textbox header
 msgctxt "widget.frame.refresh_interval"
 msgid "Refresh interval (seconds)"
-msgstr ""
+msgstr "Uppdateringsfrekvens (sekunder)"
 
 #. Checkbox header - appears only if the refresh interval is set
 msgctxt "widget.frame.nosuffix"
@@ -520,17 +520,17 @@ msgstr ""
 #. Color picker header
 msgctxt "widget.frame.background_color"
 msgid "Frame background color"
-msgstr ""
+msgstr "Bakgrundsfärg för ram"
 
 #. Checkbox header
 msgctxt "widget.frame.frameless"
 msgid "Frameless"
-msgstr ""
+msgstr "Ingen ram"
 
 #. Checkbox label
 msgctxt "widget.frame.frameless.description"
 msgid "Fill to edges"
-msgstr ""
+msgstr "Fyll till kant"
 
 #. Checkbox header
 msgctxt "widget.frame.label"
@@ -545,22 +545,22 @@ msgstr ""
 #. Display name of the widget (appears in the Add Widget dropdown menu in the designer)
 msgctxt "widget.image"
 msgid "Image"
-msgstr ""
+msgstr "Bild"
 
 #. Description of the widget, displayed in a tooltip when hovering the option in the Add Widget dropdown menu in the designer
 msgctxt "widget.image.description"
 msgid "Displays an image (not necessarily from openHAB)"
-msgstr ""
+msgstr "Visar en bild (inte nödvändigtvis från openHAB)"
 
 #. Settings dialog title
 msgctxt "widget.image.settings.header"
 msgid "Image Settings"
-msgstr ""
+msgstr "Inställningar för bild"
 
 #. Dropdown header
 msgctxt "widget.image.image_source"
 msgid "Image source"
-msgstr ""
+msgstr "Bildkälla"
 
 #. Dropdown option
 msgctxt "widget.image.image_source.static"
@@ -610,22 +610,22 @@ msgstr "Bakgrundsfärg"
 #. Display name of the widget (appears in the Add Widget dropdown menu in the designer)
 msgctxt "widget.knob"
 msgid "Knob"
-msgstr ""
+msgstr "Vred"
 
 #. Description of the widget, displayed in a tooltip when hovering the option in the Add Widget dropdown menu in the designer
 msgctxt "widget.knob.description"
 msgid "A knob for setting numerical openHAB items"
-msgstr ""
+msgstr "Ett vred för att ställa in numeriska openHAB-items"
 
 #. Settings dialog title
 msgctxt "widget.knob.settings.header"
 msgid "Knob Settings"
-msgstr ""
+msgstr "Inställningar för vred"
 
 #. Checkbox header
 msgctxt "widget.knob.general.readonly"
 msgid "Read only"
-msgstr ""
+msgstr "Endast visning"
 
 #. Checkbox label
 msgctxt "widget.knob.general.readonly.description"
@@ -635,12 +635,12 @@ msgstr ""
 #. Checkboxes header
 msgctxt "widget.knob.general.centraldisplay"
 msgid "Central display"
-msgstr ""
+msgstr "Visa i mitten"
 
 #. Checkbox label
 msgctxt "widget.knob.general.centraldisplay.showvalue"
 msgid "Show value"
-msgstr ""
+msgstr "Visa värde"
 
 #. Checkbox label
 msgctxt "widget.knob.general.centraldisplay.showlabel"
@@ -745,7 +745,7 @@ msgstr "Avstånd"
 #. Tab header
 msgctxt "widget.knob.skin"
 msgid "Skin"
-msgstr ""
+msgstr "Utseende"
 
 #. Radio buttons header
 msgctxt "widget.knob.skin.type"
@@ -765,7 +765,7 @@ msgstr "Tron"
 #. Section header
 msgctxt "widget.knob.skin.tronsettings"
 msgid "Tron skin settings"
-msgstr ""
+msgstr "Inställningar för Tron-tema"
 
 #. Textbox header (small)
 msgctxt "widget.knob.skin.tronsettings.width"
@@ -780,17 +780,17 @@ msgstr "Mellanrum"
 #. Tab header
 msgctxt "widget.knob.ranges"
 msgid "Ranges"
-msgstr ""
+msgstr "Delområden"
 
 #. Checkbox label
 msgctxt "widget.knob.ranges.enable"
 msgid "Enable Ranges"
-msgstr ""
+msgstr "Aktivera delområden"
 
 #. Checkbox label
 msgctxt "widget.knob.ranges.match_text_color"
 msgid "Match Text Color to Range"
-msgstr ""
+msgstr "Matcha textfärg"
 
 #. Textbox header (small)
 msgctxt "widget.knob.ranges.from"
@@ -810,7 +810,7 @@ msgstr ""
 #. Tab header
 msgctxt "widget.knob.misc"
 msgid "Misc."
-msgstr ""
+msgstr "Övrigt"
 
 #. Color picker header
 msgctxt "widget.knob.misc.text"
@@ -840,7 +840,7 @@ msgstr ""
 #. Preview widget label in the top-right corner
 msgctxt "widget.label.preview"
 msgid "Preview"
-msgstr ""
+msgstr "Förhandsvisning"
 
 #. Color picker label
 msgctxt "widget.label.background_color"
@@ -855,47 +855,47 @@ msgstr "Textfärg"
 #. Display name of the widget (appears in the Add Widget dropdown menu in the designer)
 msgctxt "widget.selection"
 msgid "Selection"
-msgstr ""
+msgstr "Flerval"
 
 #. Description of the widget, displayed in a tooltip when hovering the option in the Add Widget dropdown menu in the designer
 msgctxt "widget.selection.description"
 msgid "A widget allowing a selection between multiple choices"
-msgstr ""
+msgstr "En widget för att välja mellan olika alternativ"
 
 #. Settings dialog title
 msgctxt "widget.selection.settings.header"
 msgid "Selection Settings"
-msgstr ""
+msgstr "Inställningar för flerval"
 
 #. Dropdown header
 msgctxt "widget.selection.choices_source"
 msgid "Choices source"
-msgstr ""
+msgstr "Källa för alternativ"
 
 #. Dropdown option
 msgctxt "widget.selection.choices_source.server"
 msgid "Server-provided item options"
-msgstr ""
+msgstr "Item på servern"
 
 #. Dropdown option
 msgctxt "widget.selection.choices_source.csv"
 msgid "Comma-separated list"
-msgstr ""
+msgstr "Komma-separerad lista"
 
 #. Textbox header - appears only when the "comma-separated list" choice source is selected
 msgctxt "widget.selection.choices"
 msgid "List of comma-separated choices"
-msgstr ""
+msgstr "Lista med komma-separerade val"
 
 #. Displayed in small text below the textbox
 msgctxt "widget.selection.choices.hint"
 msgid "You can optionally use the syntax: 'cmd=label' for each choice<br />Example: 18=Cold,20,22,24,26,28=Warm"
-msgstr ""
+msgstr "Du kan även använda 'kommando=etikett' för de olika valen<br />Exempel: 18=Kallt,20,22,24,26,28=Varmt"
 
 #. Header
 msgctxt "widget.selection.display"
 msgid "Display options"
-msgstr ""
+msgstr "Visningsalternativ"
 
 #. Checkbox label (very small)
 msgctxt "widget.selection.display.hidelabel"
@@ -910,12 +910,12 @@ msgstr "Dölj ikon"
 #. Checkbox label (very small)
 msgctxt "widget.selection.display.hidestate"
 msgid "Hide current value"
-msgstr ""
+msgstr "Dölj aktuellt värde"
 
 #. Header
 msgctxt "widget.selection.choices_window"
 msgid "Choices window"
-msgstr ""
+msgstr "Alternativfönster"
 
 #. Textbox (very small)
 msgctxt "widget.selection.choices_window.columns"
@@ -925,7 +925,7 @@ msgstr "Kolumner"
 #. Checkbox label (very small)
 msgctxt "widget.selection.choices_window.disable_mobile"
 msgid "Disable mobile mode"
-msgstr ""
+msgstr "Inaktivera mobilläge"
 
 #. Checkbox label (very small)
 msgctxt "widget.selection.choices_window.no_squares"
@@ -935,47 +935,47 @@ msgstr "Ej kvadratiska rutor"
 #. Header
 msgctxt "widget.selection.selection_options"
 msgid "Selection options"
-msgstr ""
+msgstr "Inställningar för flerval"
 
 #. Checkbox label (small)
 msgctxt "widget.selection.selection_options.no_highlight"
 msgid "Don't highlight current selection"
-msgstr ""
+msgstr "Markera ej aktuellt val"
 
 #. Checkbox label (small)
 msgctxt "widget.selection.selection_options.keep_open"
 msgid "Keep window open upon selection"
-msgstr ""
+msgstr "Håll fönster öppet efter val"
 
 #. Displayed when running the widget if no choices available
 msgctxt "widget.selection.nochoices"
 msgid "No choices available - check widget config"
-msgstr ""
+msgstr "Inga val tillgängliga - kontrollera widget-inställningar"
 
 #. Display name of the widget (appears in the Add Widget dropdown menu in the designer)
 msgctxt "widget.slider"
 msgid "Slider"
-msgstr ""
+msgstr "Skjutreglage"
 
 #. Description of the widget, displayed in a tooltip when hovering the option in the Add Widget dropdown menu in the designer
 msgctxt "widget.slider.description"
 msgid "A slider for setting numerical openHAB items"
-msgstr ""
+msgstr "Ett reglage för att ställa in numeriska openHAB-items"
 
 #. Settings dialog title
 msgctxt "widget.slider.settings.header"
 msgid "Slider Settings"
-msgstr ""
+msgstr "Inställningar för reglage"
 
 #. Checkbox header
 msgctxt "widget.slider.general.orientation"
 msgid "Orientation"
-msgstr ""
+msgstr "Riktning"
 
 #. Checkbox label
 msgctxt "widget.slider.general.orientation.vertical"
 msgid "Vertical slider"
-msgstr ""
+msgstr "Vertikalt reglage"
 
 #. Checkbox label
 msgctxt "widget.slider.advanced.hidelabel"
@@ -990,12 +990,12 @@ msgstr ""
 #. Checkbox label
 msgctxt "widget.slider.advanced.hidepointer"
 msgid "Hide current value label"
-msgstr ""
+msgstr "Dölj aktuellt värde"
 
 #. Checkbox label
 msgctxt "widget.slider.advanced.showticks"
 msgid "Show ticks"
-msgstr ""
+msgstr "Visa steg"
 
 #. Checkbox label
 msgctxt "widget.slider.advanced.showticksvalues"
@@ -1005,12 +1005,12 @@ msgstr ""
 #. Checkbox label
 msgctxt "widget.slider.advanced.inverted"
 msgid "Reverse direction"
-msgstr ""
+msgstr "Omvänd riktning"
 
 #. Checkbox label
 msgctxt "widget.slider.advanced.bigslider"
 msgid "Big slider (horizontal only)"
-msgstr ""
+msgstr "Brett reglage (endast horisontellt)"
 
 #. Tab header
 msgctxt "widget.slider.backdrop"
@@ -1020,22 +1020,22 @@ msgstr "Bakgrund"
 #. Display name of the widget (appears in the Add Widget dropdown menu in the designer)
 msgctxt "widget.switch"
 msgid "Switch"
-msgstr ""
+msgstr "Strömbrytare"
 
 #. Description of the widget, displayed in a tooltip when hovering the option in the Add Widget dropdown menu in the designer
 msgctxt "widget.switch.description"
 msgid "A ON/OFF toggle for openHAB switches"
-msgstr ""
+msgstr "ON/OFF-reglage för openHAB Switch-items"
 
 #. Settings dialog title
 msgctxt "widget.switch.settings.header"
 msgid "Switch Settings"
-msgstr ""
+msgstr "Inställningar för strömbrytare"
 
 #. Header
 msgctxt "widget.switch.display"
 msgid "Display options"
-msgstr ""
+msgstr "Visningsalternativ"
 
 #. Checkbox label (very small)
 msgctxt "widget.switch.display.hidelabel"
@@ -1055,17 +1055,17 @@ msgstr "Dölj ON/OFF"
 #. Display name of the widget (appears in the Add Widget dropdown menu in the designer)
 msgctxt "widget.template"
 msgid "Template"
-msgstr ""
+msgstr "Mall"
 
 #. Description of the widget, displayed in a tooltip when hovering the option in the Add Widget dropdown menu in the designer
 msgctxt "widget.template.description"
 msgid "A template widget - displays a custom dynamic template"
-msgstr ""
+msgstr "En mall-widget - visar en anpassningsbar mall"
 
 #. Settings dialog title
 msgctxt "widget.template.settings.header"
 msgid "Template Settings"
-msgstr ""
+msgstr "Inställningar för mall"
 
 #. Settings dialog title for a custom widget (don't translate the variable)
 msgctxt "widget.template.settings.header.customwidget"
@@ -1075,7 +1075,7 @@ msgstr "Inställningar för {{customwidget_name}}"
 #. Checkbox label (small)
 msgctxt "widget.template.dontwrap"
 msgid "Don't wrap in container"
-msgstr ""
+msgstr "Anpassa ej till ruta"
 
 #. Checkbox label (small)
 msgctxt "widget.template.nobackground"
@@ -1085,7 +1085,7 @@ msgstr "Ingen bakgrund"
 #. Section header (displayed above the code editor)
 msgctxt "widget.template.template"
 msgid "Template"
-msgstr ""
+msgstr "Mall"
 
 #. Menu entry (top-right above the code editor)
 msgctxt "widget.template.importfromfile"
@@ -1105,22 +1105,22 @@ msgstr "Hjälp från communityn"
 #. Menu entry (top-right above the code editor)
 msgctxt "widget.template.knowledgebase"
 msgid "Knowledge base"
-msgstr ""
+msgstr "Kunskapsdatabas"
 
 #. Display name of the widget (appears in the Add Widget dropdown menu in the designer)
 msgctxt "widget.timeline"
 msgid "Timeline"
-msgstr ""
+msgstr "Tidslinje"
 
 #. Description of the widget, displayed in a tooltip when hovering the option in the Add Widget dropdown menu in the designer
 msgctxt "widget.timeline.description"
 msgid "Displays a timeline of several items"
-msgstr ""
+msgstr "Visar en tidslinje för en eller flera items"
 
 #. Settings dialog title
 msgctxt "widget.timeline.settings.header"
 msgid "Timeline Settings"
-msgstr ""
+msgstr "Inställningar för tidslinje"
 
 #. Textbox header
 msgctxt "widget.timeline.general.service"
@@ -1130,7 +1130,7 @@ msgstr ""
 #. Textbox placeholder
 msgctxt "widget.timeline.general.service.hint"
 msgid "rrd4j, mysql, influxdb... Leave blank for default"
-msgstr ""
+msgstr "rrd4j, mysql, influxdb... Lämna tomt för standard"
 
 #. Dropdown placeholder
 msgctxt "widget.timeline.general.period"
@@ -1145,7 +1145,7 @@ msgstr "Färger"
 #. Accordion header (followed by the state value)
 msgctxt "widget.timeline.colors.state"
 msgid "State"
-msgstr ""
+msgstr "Värde"
 
 #. Tab header
 msgctxt "widget.timeline.series"
