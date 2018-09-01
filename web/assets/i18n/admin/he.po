@@ -11,7 +11,7 @@ msgstr ""
 "Last-Translator: openhab-bot <bot@openhab.org>\n"
 "Language-Team: Hebrew\n"
 "Language: he_IL\n"
-"PO-Revision-Date: 2018-04-10 15:02-0400\n"
+"PO-Revision-Date: 2018-04-16 16:41-0400\n"
 
 #. Save button in the dashboard designer
 msgctxt "designer.save"
@@ -210,7 +210,7 @@ msgstr "(ללא)"
 #. Appears when focusing the icon textbox when the "Custom icon" iconset is selected
 msgctxt "iconpicker.customicontooltip"
 msgid "Type the name of a <a href='http://docs.openhab.org/configuration/items.html#icons' target='_blank'>registered icon</a> (only SVG supported)<br />Examples: <em>switch</em>, <em>temperature</em> or an additional icon in your configuration's <code>icons/classic</code> folder"
-msgstr ""
+msgstr "הקלד את השם של < 'a href='http://docs.openhab.org/configuration/items.html#icons' target='_blank> צלמית רשומה <a/> (תמיכה ב- SVG בלבד) </ br> דוגמאות: <em> switch <em>, </em> temperature <em/> או צלמית נוספת בתיקיה <code> icon/classic </code>"
 
 #. Screen title
 msgctxt "settings.header"
