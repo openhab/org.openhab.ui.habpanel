@@ -11,7 +11,7 @@ msgstr ""
 "Last-Translator: openhab-bot <bot@openhab.org>\n"
 "Language-Team: Ukrainian\n"
 "Language: uk_UA\n"
-"PO-Revision-Date: 2018-10-22 13:21\n"
+"PO-Revision-Date: 2018-11-05 21:41\n"
 
 #. Common term
 msgctxt "OK"
@@ -41,17 +41,17 @@ msgstr ""
 #. Common term
 msgctxt "Icon"
 msgid "Icon"
-msgstr ""
+msgstr "Іконка"
 
 #. Common term (plural)
 msgctxt "Icons"
 msgid "Icons"
-msgstr ""
+msgstr "Іконки"
 
 #. Common term
 msgctxt "Backdrop Icon"
 msgid "Backdrop Icon"
-msgstr ""
+msgstr "Фон іконки"
 
 #. Common term
 msgctxt "Size"
@@ -116,7 +116,7 @@ msgstr ""
 #. Appears below the edit mode button when there's no dashboard - please use the Chrome developer tools and check with phone resolutions: iPhone 6, Nexus 5 etc.!
 msgctxt "tutorial.clickheretobegin"
 msgid "Click or tap here to begin."
-msgstr ""
+msgstr "Клацніть або торкніться тут, щоб почати."
 
 #. Appears at the top of the screen when in edit mode and no dashboards are present
 msgctxt "tutorial.editmode"
@@ -166,7 +166,7 @@ msgstr ""
 #. Label of the bottom-right link in edit mode - please also test with phone resolutions!
 msgctxt "menu.panelsettings"
 msgid "Panel settings"
-msgstr ""
+msgstr "Налаштування панелі"
 
 #. New dashboard dialog box title
 msgctxt "menu.dialog.newdashboard.title"
