@@ -11,7 +11,7 @@ msgstr ""
 "Last-Translator: openhab-bot <bot@openhab.org>\n"
 "Language-Team: Dutch\n"
 "Language: nl_NL\n"
-"PO-Revision-Date: 2018-11-05 17:02\n"
+"PO-Revision-Date: 2018-11-05 17:11\n"
 
 #. Common term in widget settings dialogs
 msgctxt "widget.common.min"
@@ -1095,7 +1095,7 @@ msgstr "Uit een bestand importeren..."
 #. Menu entry (top-right above the code editor)
 msgctxt "widget.template.exporttofile"
 msgid "Export to file"
-msgstr ""
+msgstr "Exporteren naar bestand"
 
 #. Menu entry (top-right above the code editor)
 msgctxt "widget.template.communitysupport"
