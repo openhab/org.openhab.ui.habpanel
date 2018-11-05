@@ -11,7 +11,7 @@ msgstr ""
 "Last-Translator: openhab-bot <bot@openhab.org>\n"
 "Language-Team: Ukrainian\n"
 "Language: uk_UA\n"
-"PO-Revision-Date: 2018-11-05 21:51\n"
+"PO-Revision-Date: 2018-11-05 22:01\n"
 
 #. Save button in the dashboard designer
 msgctxt "designer.save"
@@ -66,7 +66,7 @@ msgstr "Видалити"
 #. Title of copy/move widget dialog
 msgctxt "designer.copymove.header"
 msgid "Copy/move {{widgetName}}"
-msgstr ""
+msgstr "Копіювання/переміщення {{widgetName}}"
 
 #. Alongside the dropdown dashboard selection
 msgctxt "designer.copymove.todashboard"
@@ -76,46 +76,46 @@ msgstr ""
 #. Move button
 msgctxt "designer.copymove.move"
 msgid "Move"
-msgstr ""
+msgstr "Перемістити"
 
 #. Copy button
 msgctxt "designer.copymove.copy"
 msgid "Copy"
-msgstr ""
+msgstr "Копіювати"
 
 #. Default name of a newly created widget
 msgctxt "designer.newwidget.defaultname"
 msgid "New Widget"
-msgstr ""
+msgstr "Новий віджет"
 
 msgctxt "designer.serversavefailed"
 msgid "Server save failed!"
-msgstr ""
+msgstr "Збереження на сервері не вдалося!"
 
 #. Title of the dashboard settings dialog
 msgctxt "dashboard.settings.dialog.title"
 msgid "Dashboard Settings"
-msgstr ""
+msgstr "Налаштування панелі"
 
 #. Tab header
 msgctxt "dashboard.settings.tile"
 msgid "Menu tile"
-msgstr ""
+msgstr "Плитка меню"
 
 #. Textbox header
 msgctxt "dashboard.settings.tile.background_image_url"
 msgid "Background Image URL"
-msgstr ""
+msgstr "URL-адреса зображення фону"
 
 #. Color picker header
 msgctxt "dashboard.settings.tile.title_text_color"
 msgid "Title Text color"
-msgstr ""
+msgstr "Колір тексту заголовка"
 
 #. Checkbox header
 msgctxt "dashboard.settings.tile.click_feedback"
 msgid "Click feedback"
-msgstr ""
+msgstr "Натисніть кнопку зворотного зв'язку"
 
 #. Checkbox label
 msgctxt "dashboard.settings.tile.click_feedback.description"
@@ -150,7 +150,7 @@ msgstr ""
 #. Dropdown header
 msgctxt "dashboard.settings.customwidgets.customwidget"
 msgid "Custom Widget"
-msgstr ""
+msgstr "Користувальницький Віджет"
 
 #. Accordion header
 msgctxt "dashboard.settings.customwidgets.tile"
@@ -190,7 +190,7 @@ msgstr ""
 #. Icon picker dropdown placeholder
 msgctxt "iconpicker.selecticonset"
 msgid "Select icon set"
-msgstr ""
+msgstr "Виберіть набір іконок"
 
 #. Icon picker dropdown entry
 msgctxt "iconpicker.customicon"
@@ -220,12 +220,12 @@ msgstr ""
 #. Header of the storage section
 msgctxt "settings.storage.header"
 msgid "Current storage configuration"
-msgstr ""
+msgstr "Поточна конфігурація сховища"
 
 #. Radio button for local storage
 msgctxt "settings.storage.localstorage"
 msgid "Local storage"
-msgstr ""
+msgstr "Локальне сховище"
 
 #. Explanation of the "local storage only" option
 msgctxt "settings.storage.localstorage.hint"
@@ -240,7 +240,7 @@ msgstr ""
 #. Prefix of a panel configuration before its name
 msgctxt "settings.storage.panelconfiguration"
 msgid "Panel configuration:"
-msgstr ""
+msgstr "Конфігурація панелі:"
 
 #. Prefix of the last synced line, before the date
 msgctxt "settings.storage.panelconfiguration.lastsynced"
@@ -250,7 +250,7 @@ msgstr ""
 #. Displayed before the list of dashboard the panel configuration contains
 msgctxt "settings.storage.panelconfiguration.contains"
 msgid "Contains:"
-msgstr ""
+msgstr "Містить:"
 
 #. Link to create a panel configuration from the current configuration
 msgctxt "settings.storage.panelconfiguration.save"
@@ -260,7 +260,7 @@ msgstr ""
 #. Title of the dialog box when creating a new panel configuration
 msgctxt "settings.storage.panelconfiguration.dialog.title"
 msgid "New panel configuration"
-msgstr ""
+msgstr "Нова конфігурація панелі"
 
 #. Message of the dialog box when creating a new panel configuration
 msgctxt "settings.storage.panelconfiguration.dialog.message"
@@ -270,7 +270,7 @@ msgstr ""
 #. Panel name (section header)
 msgctxt "settings.panel.name"
 msgid "Panel name"
-msgstr ""
+msgstr "Назва панелі"
 
 #. Placeholder inside the text box
 msgctxt "settings.panel.name.hint"
@@ -280,22 +280,22 @@ msgstr ""
 #. Appearance (section header)
 msgctxt "settings.panel.appearance.header"
 msgid "Appearance"
-msgstr ""
+msgstr "Зовнішній вигляд"
 
 #. Dropown menu header
 msgctxt "settings.panel.appearance.theme"
 msgid "Theme"
-msgstr ""
+msgstr "Тема"
 
 #. Alert banner displayed when the browsers doesn't support themes (CSS variables)
 msgctxt "settings.panel.appearance.theme.not_supported"
 msgid "Themes are not compatible with this browser."
-msgstr ""
+msgstr "Теми не сумісні з цим браузером."
 
 #. Setting header
 msgctxt "settings.panel.appearance.additional_stylesheet"
 msgid "Additional stylesheet (optional)"
-msgstr ""
+msgstr "Додаткові таблиці стилів (опціонально)"
 
 #. Placeholder inside the text box
 msgctxt "settings.panel.appearance.additional_stylesheet.hint"
@@ -310,7 +310,7 @@ msgstr ""
 #. Placeholder inside the text box
 msgctxt "settings.panel.appearance.background_image.hint"
 msgid "Example: //source.unsplash.com/random"
-msgstr ""
+msgstr "Приклад: //source.unsplash.com/random"
 
 #. Setting header
 msgctxt "settings.panel.appearance.drawer_heading_image"
