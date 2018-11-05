@@ -11,7 +11,7 @@ msgstr ""
 "Last-Translator: openhab-bot <bot@openhab.org>\n"
 "Language-Team: Norwegian\n"
 "Language: no_NO\n"
-"PO-Revision-Date: 2018-11-05 17:02\n"
+"PO-Revision-Date: 2018-11-05 17:21\n"
 
 #. Save button in the dashboard designer
 msgctxt "designer.save"
@@ -115,17 +115,17 @@ msgstr "Titteltekst farge"
 #. Checkbox header
 msgctxt "dashboard.settings.tile.click_feedback"
 msgid "Click feedback"
-msgstr ""
+msgstr "Klikk for tilbakemelding"
 
 #. Checkbox label
 msgctxt "dashboard.settings.tile.click_feedback.description"
 msgid "Don't brighten tile on click/tap"
-msgstr ""
+msgstr "Ikke opplys flisen ved klikk/trykk"
 
 #. Tab header
 msgctxt "dashboard.settings.advanced"
 msgid "Advanced"
-msgstr ""
+msgstr "Avansert"
 
 #. Alert display at the top
 msgctxt "dashboard.settings.advanced.warning"
@@ -135,177 +135,177 @@ msgstr "Disse alternativene er for tiden eksperimentelle."
 #. Tab header
 msgctxt "dashboard.settings.customwidgets"
 msgid "Custom widgets"
-msgstr ""
+msgstr "Spesialtilpasset widgets"
 
 #. Alert displayed at the top
 msgctxt "dashboard.settings.customwidgets.warning"
 msgid "This feature is currently experimental, and targeted at advanced users! Use at your own risk."
-msgstr ""
+msgstr "Disse alternativene er eksperimentell, ustabil eller rettet mot erfarne brukere! Bruk på eget ansvar."
 
 #. Checkbox header
 msgctxt "dashboard.settings.customwidgets.usecustomwidget"
 msgid "Use a custom widget"
-msgstr ""
+msgstr "Bruk en egendefinert widget"
 
 #. Dropdown header
 msgctxt "dashboard.settings.customwidgets.customwidget"
 msgid "Custom Widget"
-msgstr ""
+msgstr "Spesialtilpasset widgets"
 
 #. Accordion header
 msgctxt "dashboard.settings.customwidgets.tile"
 msgid "Main menu tile"
-msgstr ""
+msgstr "Hovedmenyen fliser"
 
 #. Checkbox label
 msgctxt "dashboard.settings.customwidgets.tile.description"
 msgid "Replace the tile contents by a custom widget"
-msgstr ""
+msgstr "Erstatt flis innholdet av en egendefinert widget"
 
 #. Accordion header
 msgctxt "dashboard.settings.customwidgets.drawer"
 msgid "Drawer"
-msgstr ""
+msgstr "Skuff"
 
 #. Checkbox label
 msgctxt "dashboard.settings.customwidgets.drawer.description"
 msgid "Replace the contents of the drawer menu by a custom widget"
-msgstr ""
+msgstr "Erstatte innholdet i skuffen menyen med en egendefinert widget"
 
 #. Accordion header
 msgctxt "dashboard.settings.customwidgets.header"
 msgid "Dashboard header"
-msgstr ""
+msgstr "Dashboard topptekst"
 
 #. Checkbox label
 msgctxt "dashboard.settings.customwidgets.header.description"
 msgid "Replace the contents of the dashboard header by a custom widget"
-msgstr ""
+msgstr "Erstatt innholdet i hodet av dashboard med en egendefinert widget"
 
 #. Displayed in the item picker when no item selected
 msgctxt "itempicker.placeholder"
 msgid "Search or select an openHAB item"
-msgstr ""
+msgstr "Søk eller velg et openHAB element"
 
 #. Icon picker dropdown placeholder
 msgctxt "iconpicker.selecticonset"
 msgid "Select icon set"
-msgstr ""
+msgstr "Velg ikongruppe"
 
 #. Icon picker dropdown entry
 msgctxt "iconpicker.customicon"
 msgid "Custom icon"
-msgstr ""
+msgstr "Tilpasset ikon"
 
 #. Icon picker dropdown entry
 msgctxt "iconpicker.customurl"
 msgid "Custom URL"
-msgstr ""
+msgstr "Tilpasset nettadresse"
 
 #. Icon picker dropdown entry
 msgctxt "iconpicker.none"
 msgid "(none)"
-msgstr ""
+msgstr "(Ingen)"
 
 #. Appears when focusing the icon textbox when the "Custom icon" iconset is selected
 msgctxt "iconpicker.customicontooltip"
 msgid "Type the name of a <a href='http://docs.openhab.org/configuration/items.html#icons' target='_blank'>registered icon</a> (only SVG supported)<br />Examples: <em>switch</em>, <em>temperature</em> or an additional icon in your configuration's <code>icons/classic</code> folder"
-msgstr ""
+msgstr "Skriv navnet på et <a href='http://docs.openhab.org/configuration/items.html#icons' target='_blank'>registrert ikon</a> (bare SVG støttes)<br />eksempler: <em>bytte</em>, <em>temperatur</em> eller et ekstra ikon i konfigurasjonens <code>ikoner/classic</code> -mappen"
 
 #. Screen title
 msgctxt "settings.header"
 msgid "Settings"
-msgstr ""
+msgstr "Innstillinger"
 
 #. Header of the storage section
 msgctxt "settings.storage.header"
 msgid "Current storage configuration"
-msgstr ""
+msgstr "Gjeldende lagringskonfigurasjon"
 
 #. Radio button for local storage
 msgctxt "settings.storage.localstorage"
 msgid "Local storage"
-msgstr ""
+msgstr "Lokal lagring"
 
 #. Explanation of the "local storage only" option
 msgctxt "settings.storage.localstorage.hint"
 msgid "The configuration is saved for this browser and device only. It will be kept as long as you don't clean up the browser's historical data."
-msgstr ""
+msgstr "Konfigurasjonen lagres for denne nettleseren og enheten. Det vil bli holdt så lenge du ikke rydde opp i nettleserens historiske data."
 
 #. Link below the "local storage" option
 msgctxt "settings.storage.localstorage.edit"
 msgid "Edit the local panel configuration (experts only)"
-msgstr ""
+msgstr "Redigere lokale panelet konfigurasjonen (bare for eksperter)"
 
 #. Prefix of a panel configuration before its name
 msgctxt "settings.storage.panelconfiguration"
 msgid "Panel configuration:"
-msgstr ""
+msgstr "Panel konfigurasjonen:"
 
 #. Prefix of the last synced line, before the date
 msgctxt "settings.storage.panelconfiguration.lastsynced"
 msgid "Last synced on"
-msgstr ""
+msgstr "Sist synkronisert"
 
 #. Displayed before the list of dashboard the panel configuration contains
 msgctxt "settings.storage.panelconfiguration.contains"
 msgid "Contains:"
-msgstr ""
+msgstr "Inneholder:"
 
 #. Link to create a panel configuration from the current configuration
 msgctxt "settings.storage.panelconfiguration.save"
 msgid "Save the current configuration to a new panel configuration"
-msgstr ""
+msgstr "Lagre gjeldende konfigurasjon til en ny panel-konfigurasjon"
 
 #. Title of the dialog box when creating a new panel configuration
 msgctxt "settings.storage.panelconfiguration.dialog.title"
 msgid "New panel configuration"
-msgstr ""
+msgstr "Ny panel konfigurasjon"
 
 #. Message of the dialog box when creating a new panel configuration
 msgctxt "settings.storage.panelconfiguration.dialog.message"
 msgid "Please choose a name for the new panel configuration (letters and digits only please):"
-msgstr ""
+msgstr "Velg et navn for den nye panel konfigurasjonen (bokstaver og sifre Vennligst):"
 
 #. Panel name (section header)
 msgctxt "settings.panel.name"
 msgid "Panel name"
-msgstr ""
+msgstr "Panel navn"
 
 #. Placeholder inside the text box
 msgctxt "settings.panel.name.hint"
 msgid "Replaces 'HABPanel' in the side drawer when set"
-msgstr ""
+msgstr "Erstatter 'HABPanel' i side menyen når valgt"
 
 #. Appearance (section header)
 msgctxt "settings.panel.appearance.header"
 msgid "Appearance"
-msgstr ""
+msgstr "Utseende"
 
 #. Dropown menu header
 msgctxt "settings.panel.appearance.theme"
 msgid "Theme"
-msgstr ""
+msgstr "Tema"
 
 #. Alert banner displayed when the browsers doesn't support themes (CSS variables)
 msgctxt "settings.panel.appearance.theme.not_supported"
 msgid "Themes are not compatible with this browser."
-msgstr ""
+msgstr "Temaer er ikke kompatible med denne nettleseren."
 
 #. Setting header
 msgctxt "settings.panel.appearance.additional_stylesheet"
 msgid "Additional stylesheet (optional)"
-msgstr ""
+msgstr "Flere stilark (valgfritt)"
 
 #. Placeholder inside the text box
 msgctxt "settings.panel.appearance.additional_stylesheet.hint"
 msgid "Relative URL only; example: /static/example.css"
-msgstr ""
+msgstr "Relativ URL-adresse. eksempel: /static/example.css"
 
 #. Setting header
 msgctxt "settings.panel.appearance.background_image"
 msgid "Background image (optional)"
-msgstr ""
+msgstr "Bakgrunnsbilde (valgfritt)"
 
 #. Placeholder inside the text box
 msgctxt "settings.panel.appearance.background_image.hint"
@@ -315,7 +315,7 @@ msgstr "Eksempel: //source.unsplash.com/random"
 #. Setting header
 msgctxt "settings.panel.appearance.drawer_heading_image"
 msgid "Drawer heading image (optional)"
-msgstr ""
+msgstr "Meny overskrift bilde (valgfritt)"
 
 #. Placeholder inside the text box
 msgctxt "settings.panel.appearance.drawer_heading_image.hint"
@@ -495,7 +495,7 @@ msgstr "Denne widgeten er definert manuelt i denne panelkonfigurasjonen, og kan 
 #. Custom widget context menu entry - clone a globally-provisioned widget
 msgctxt "customwidgets.list.contextmenu.clone"
 msgid "Clone widget..."
-msgstr ""
+msgstr "Klone widget..."
 
 #. Custom widget context menu entry - downloads a widget's .widget.json file
 msgctxt "customwidgets.list.contextmenu.exporttofile"
@@ -560,370 +560,370 @@ msgstr "Vennligst bekreft eller endre identiteten til din widget (unngå mellomr
 #. Prefix of an error message - followed by a technical exception message
 msgctxt "customwidgets.list.import.error"
 msgid "Widget import error: "
-msgstr ""
+msgstr "Widget importfeil: "
 
 #. Dialog box title
 msgctxt "customwidgets.list.update.dialog.title"
 msgid "Update widget"
-msgstr ""
+msgstr "Oppdater widget"
 
 #. Dialog box message
 msgctxt "customwidgets.list.update.dialog.message"
 msgid "This will update widget <id> from <source_url>. Any changes you made will be overwritten! Continue?"
-msgstr ""
+msgstr "Dette vil oppdatere widget <id> fra <source_url>. Endringer du har gjort vil bli overskrevet! Vil du fortsette?"
 
 #. Alert banner message
 msgctxt "customwidgets.list.update.error.notemplatefound"
 msgid "Couldn't update widget <id> from <source_url>: no template found"
-msgstr ""
+msgstr "Kunne ikke oppdatere widget <id> fra <source_url>: ingen mal funnet"
 
 #. Alert banner message
 msgctxt "customwidgets.list.update.error.unknown"
 msgid "Couldn't update widget <id> from <source_url>: "
-msgstr ""
+msgstr "Kunne ikke oppdatere widget <id> fra <source_url>: "
 
 #. Alert banner message
 msgctxt "customwidgets.list.update.success"
 msgid "Widget <id> updated successfully from <source_url>"
-msgstr ""
+msgstr "Widgeten <id> ble vellykket oppdatert fra <source_url>"
 
 #. Dialog box title
 msgctxt "customwidgets.list.delete.dialog.title"
 msgid "Remove widget"
-msgstr ""
+msgstr "Fjern widget"
 
 #. Dialog box message
 msgctxt "customwidgets.list.delete.dialog.message"
 msgid "Please confirm you want to delete this widget: "
-msgstr ""
+msgstr "Bekreft at du vil slette denne widget: "
 
 #. Dialog box title
 msgctxt "customwidgets.list.clone.dialog.title"
 msgid "Clone widget"
-msgstr ""
+msgstr "Klone widget"
 
 #. Dialog box message
 msgctxt "customwidgets.list.clone.dialog.message"
 msgid "This will clone the globally provisioned widget: <id> to be modified as part of the panel configuration. Enter an unique identifier below - it must be different from the widget being cloned, and should avoid spaces and special chars. If an user-defined widget with the same identifier already exists, it will be replaced!"
-msgstr ""
+msgstr "Dette vil klone den globalt anskaffede widgeten: <id> blir modifisert som en del av panel konfigurasjonen. Skriv inn en unik id under - den må være forskjellig fra widgeten den blir klonet fra, og burde ikke inneholde mellomrom og spesielle tegn. Hvis en bruker-definert widget med samme id allerede eksisterer vil den bli erstattet!"
 
 #. Screen title, followed by the widget name - beware of size!
 msgctxt "customwidgets.designer.heading"
 msgid "Widget:"
-msgstr ""
+msgstr "Widget:"
 
 #. Save button on the right, default label - can be hidden on phones
 msgctxt "customwidgets.designer.save"
 msgid "Save"
-msgstr ""
+msgstr "Lagre"
 
 #. Save button on the right, displayed for a few seconds after a save - can be hidden on phones
 msgctxt "customwidgets.designer.saved"
 msgid "Saved!"
-msgstr ""
+msgstr "Lagret!"
 
 #. Tab header
 msgctxt "customwidgets.designer.code"
 msgid "Code"
-msgstr ""
+msgstr "Kode"
 
 #. Tab header
 msgctxt "customwidgets.designer.settings"
 msgid "Settings"
-msgstr ""
+msgstr "Innstillinger"
 
 #. Section header in the Settings tab
 msgctxt "customwidgets.designer.settings.general"
 msgid "General settings"
-msgstr ""
+msgstr "Generelle innstillinger"
 
 #. Textbox header
 msgctxt "customwidgets.designer.settings.general.display_name"
 msgid "Display name"
-msgstr ""
+msgstr "Visningsnavn"
 
 #. Textbox header
 msgctxt "customwidgets.designer.settings.general.author"
 msgid "Author"
-msgstr ""
+msgstr "Forfatter"
 
 #. Textbox header
 msgctxt "customwidgets.designer.settings.general.description"
 msgid "Description"
-msgstr ""
+msgstr "Beskrivelse"
 
 #. Section header in the Settings tab
 msgctxt "customwidgets.designer.settings.config"
 msgid "Configuration settings"
-msgstr ""
+msgstr "Konfigurasjonsinnstillinger"
 
 #. Displayed in small text below the section header, with an information icon
 msgctxt "customwidgets.designer.settings.config.warning"
 msgid "Beware: always bear in mind instances of this widget might be existing when altering configuration settings!"
-msgstr ""
+msgstr "OBS: husk alltid, at forekomster av denne widgeten kan eksisterende, når man endrer konfigurasjonsinnstillinger!"
 
 #. Button label
 msgctxt "customwidgets.designer.settings.config.add"
 msgid "Add setting"
-msgstr ""
+msgstr "Legg til innstilling"
 
 #. Dropdown header
 msgctxt "customwidgets.designer.settings.config.type"
 msgid "Type"
-msgstr ""
+msgstr "Type"
 
 #. Dropdown option
 msgctxt "customwidgets.designer.settings.config.type.string"
 msgid "String"
-msgstr ""
+msgstr "Tekst"
 
 #. Dropdown option
 msgctxt "customwidgets.designer.settings.config.type.number"
 msgid "Number"
-msgstr ""
+msgstr "Nummer"
 
 #. Dropdown option
 msgctxt "customwidgets.designer.settings.config.type.checkbox"
 msgid "Checkbox"
-msgstr ""
+msgstr "Avkryssingsboks"
 
 #. Dropdown option
 msgctxt "customwidgets.designer.settings.config.type.item"
 msgid "Item"
-msgstr ""
+msgstr "Element"
 
 #. Dropdown option
 msgctxt "customwidgets.designer.settings.config.type.color"
 msgid "Color"
-msgstr ""
+msgstr "Farge"
 
 #. Dropdown option
 msgctxt "customwidgets.designer.settings.config.type.choices"
 msgid "Choices"
-msgstr ""
+msgstr "Valg"
 
 #. Dropdown option
 msgctxt "customwidgets.designer.settings.config.type.icon"
 msgid "Icon"
-msgstr ""
+msgstr "Ikon"
 
 #. Dropdown option
 msgctxt "customwidgets.designer.settings.config.type.heading"
 msgid "Heading"
-msgstr ""
+msgstr "Overskrift"
 
 #. Tooltip displayed when hovering the help icon alongside the ID field
 msgctxt "customwidgets.designer.settings.config.id.hint"
 msgid "Enter a JSON friendly key for this setting - ideally, use only lowercase letters, digits and underscores. Examples: my_setting, first_item, text_size, font_color"
-msgstr ""
+msgstr "Angi en JSON vennlig nøkkel for denne innstillingen - ideellt, bruk kun små bokstaver, sifre og understrekingstegn. Eksempler: my_setting, first_item, text_size, font_color"
 
 #. Textbox header
 msgctxt "customwidgets.designer.settings.config.label"
 msgid "Label"
-msgstr ""
+msgstr "Etikett"
 
 #. Textbox header
 msgctxt "customwidgets.designer.settings.config.default"
 msgid "Default value"
-msgstr ""
+msgstr "Standardverdi"
 
 #. Textbox header
 msgctxt "customwidgets.designer.settings.config.choices"
 msgid "Choices"
-msgstr ""
+msgstr "Valg"
 
 #. Textbox placeholder
 msgctxt "customwidgets.designer.settings.config.choices.hint"
 msgid "Comma-separated possible values"
-msgstr ""
+msgstr "Komma-separerte mulige verdier"
 
 #. Textbox header
 msgctxt "customwidgets.designer.settings.config.description"
 msgid "Description"
-msgstr ""
+msgstr "Beskrivelse"
 
 #. Banner displayed when selecting the Icon type for the settings, followed by the defined settings themselves
 msgctxt "customwidgets.designer.settings.config.icon.hint"
 msgid "This will define 2 config elements:"
-msgstr ""
+msgstr "Dette vil definere 2 konfigurasjons elementer:"
 
 #. Tab header
 msgctxt "customwidgets.designer.preview"
 msgid "Preview"
-msgstr ""
+msgstr "Forhåndsvisning"
 
 #. Dialog box title
 msgctxt "widgetgallery.heading"
 msgid "Widget Gallery"
-msgstr ""
+msgstr "Widget galleri"
 
 #. Dialog box title (when displaying a repository)
 msgctxt "widgetgallery.heading.importrepo"
 msgid "Import GitHub Repository"
-msgstr ""
+msgstr "Importer GitHub Repository"
 
 #. Dialog box title (when displaying a community gallery item)
 msgctxt "widgetgallery.heading.importgallery"
 msgid "Import Gallery Item"
-msgstr ""
+msgstr "Importer gallerielement"
 
 #. Alert banner message
 msgctxt "widgetgallery.warning.githubratelimit"
 msgid "Warning: rate limiting on the GitHub API will temporarily block further requests!"
-msgstr ""
+msgstr "Advarsel: rate begrensing på GitHub APIet vil midlertidig blokkere flere forespørsler!"
 
 #. Alert banner message (2nd part)
 msgctxt "widgetgallery.warning.githubratelimit.wait"
 msgid "Wait until this time and try again:"
-msgstr ""
+msgstr "Vent denne tiden og prøv igjen:"
 
 #. Textbox placeholder
 msgctxt "widgetgallery.addressbar.hint"
 msgid "GitHub repository full name (owner/name) or URL"
-msgstr ""
+msgstr "Fullt navn på GitHub repository (eier/navn) eller URL"
 
 #. Button on the right of the addressbar
 msgctxt "widgetgallery.addressbar.go"
 msgid "Go"
-msgstr ""
+msgstr "Gå"
 
 #. Suffix displayed after a number, i.e. "24 community contributions"
 msgctxt "widgetgallery.toolbar.communitycontributions"
 msgid "community&nbsp;contributions"
-msgstr ""
+msgstr "samfunns&nbsp;bidrag"
 
 #. On the right with the sort options
 msgctxt "widgetgallery.toolbar.sortby"
 msgid "sort by:"
-msgstr ""
+msgstr "sorter etter:"
 
 #. Link to change the sort criteria - keep the non breaking spaces (&nbsp;)
 msgctxt "widgetgallery.toolbar.sortby.mostrecent"
 msgid "most&nbsp;recent"
-msgstr ""
+msgstr "nyeste"
 
 #. Link to change the sort criteria - keep the non breaking spaces (&nbsp;)
 msgctxt "widgetgallery.toolbar.sortby.mostliked"
 msgid "most&nbsp;liked"
-msgstr ""
+msgstr "mest&nbsp;likte"
 
 #. Link to change the sort criteria - keep the non breaking spaces (&nbsp;)
 msgctxt "widgetgallery.toolbar.sortby.mostpopular"
 msgid "most&nbsp;popular"
-msgstr ""
+msgstr "mest&nbsp;populære"
 
 #. Link to change the sort criteria - keep the non breaking spaces (&nbsp;)
 msgctxt "widgetgallery.toolbar.sortby.mostdiscussed"
 msgid "most&nbsp;discussed"
-msgstr ""
+msgstr "mest&nbsp;diskutert"
 
 #. Prefix before the author's name
 msgctxt "widgetgallery.details.authorby"
 msgid "by"
-msgstr ""
+msgstr "av"
 
 #. Suffix displayed after a number, i.e. "24 posts on this topic"
 msgctxt "widgetgallery.details.forumposts"
 msgid "post(s) on this topic - discuss on community.openhab.org"
-msgstr ""
+msgstr "innlegg på dette emnet - diskuter på community.openhab.org"
 
 #. Label of the big green button when nothing to import
 msgctxt "widgetgallery.details.nothingtoimport"
 msgid "Nothing to import"
-msgstr ""
+msgstr "Ingenting å importere"
 
 #. Label of the big green button when 1 widget was found
 msgctxt "widgetgallery.details.importwidget"
 msgid "Import Widget"
-msgstr ""
+msgstr "Importer widget"
 
 #. Label of the big green button when 2 or more widgets were found
 msgctxt "widgetgallery.details.importwidgets"
 msgid "Import {} Widgets"
-msgstr ""
+msgstr "Importer {} Widgets"
 
 #. Label of the big blue button when there is a referenced GitHub repo
 msgctxt "widgetgallery.details.gotorepository"
 msgid "Go to the repository"
-msgstr ""
+msgstr "Gå til repository"
 
 #. Displyed in orange inside the big green button after a number, when some widgets are already present
 msgctxt "widgetgallery.details.toupdate"
 msgid "to update"
-msgstr ""
+msgstr "å oppdatere"
 
 #. Little white button label with a down caret
 msgctxt "widgetgallery.details.showdetails"
 msgid "Show details"
-msgstr ""
+msgstr "Vis detaljer"
 
 #. Little white button label with a up caret
 msgctxt "widgetgallery.details.hidedetails"
 msgid "Hide details"
-msgstr ""
+msgstr "Skjul detaljer"
 
 #. Little white button label
 msgctxt "widgetgallery.details.downloadzip"
 msgid "Download ZIP"
-msgstr ""
+msgstr "Last ned ZIP"
 
 #. 1. Prefix of the explanation in the expanded details section
 msgctxt "widgetgallery.details.widget.hint.prefix"
 msgid "This"
-msgstr ""
+msgstr "Denne"
 
 #. 2a. Name of a community contribution
 msgctxt "widgetgallery.details.widget.hint.communitycontribution"
 msgid "community contribution"
-msgstr ""
+msgstr "samfunns bidrag"
 
 #. 2b. Name of a community contribution
 msgctxt "widgetgallery.details.widget.hint.repository"
 msgid "repository"
-msgstr ""
+msgstr "repository"
 
 #. 3. Suffix of the explanation in the expanded details section
 msgctxt "widgetgallery.details.widget.hint.suffix"
 msgid "contains the following widgets; you can import them individually:"
-msgstr ""
+msgstr "inneholder følgende widgets; du kan importere dem enkeltvis:"
 
 #. Explanation in the expanded details section
 msgctxt "widgetgallery.details.widget.hint.nowidgets"
 msgid "No widgets were found (*.widget.json files)! Please report this."
-msgstr ""
+msgstr "Ingen widgets ble funnet (*. widget.json filer)! Vennligst rapport dette."
 
 #. Explanation in the expanded details section
 msgctxt "widgetgallery.details.widget.hint.checkrepo"
 msgid "The widgets are likely in the referenced GitHub repository. Click the 'Go to the repository' button to open it."
-msgstr ""
+msgstr "Widgetene er sannsynlig i det refererte GitHub repo'et. Klikk på 'Gå til repo'et' knappen for å åpne det."
 
 #. Green button in the expanded details section
 msgctxt "widgetgallery.details.widget.import"
 msgid "Import widget"
-msgstr ""
+msgstr "Importer widget"
 
 #. Orange button in the expanded details section
 msgctxt "widgetgallery.details.widget.update"
 msgid "Update widget"
-msgstr ""
+msgstr "Oppdater widget"
 
 #. Disabled button in the expanded details section after a widget was imported/updated
 msgctxt "widgetgallery.details.widget.imported"
 msgid "Widget imported!"
-msgstr ""
+msgstr "Widget importert!"
 
 #. Alert banner, followed by a technical exception message
 msgctxt "widgetgallery.error"
 msgid "Error:"
-msgstr ""
+msgstr "Feil:"
 
 #. Dialog box title
 msgctxt "widgetgallery.widgetsdetected.dialog.title"
 msgid "Existing widgets detected"
-msgstr ""
+msgstr "Eksisterende widgets oppdaget"
 
 #. Dialog box message
 msgctxt "widgetgallery.widgetsdetected.dialog.message"
 msgid "Warning: please confirm you wish to update <nbexisting> existing widgets, overwriting any eventual changes made locally! If unsure, cancel and click Show details to review the list of affected widgets."
-msgstr ""
+msgstr "Advarsel: vennligst bekreft at du ønsker å oppdatere <nbexisting> eksisterende widgets og samtidig overskrive eventuelle lokale endringer! Dersom du er usikker, avbryt og klikk Vis detaljer for å se listen med påvirkede widgets."
 
