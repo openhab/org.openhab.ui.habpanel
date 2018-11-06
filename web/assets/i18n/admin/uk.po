@@ -11,7 +11,7 @@ msgstr ""
 "Last-Translator: openhab-bot <bot@openhab.org>\n"
 "Language-Team: Ukrainian\n"
 "Language: uk_UA\n"
-"PO-Revision-Date: 2018-11-06 20:02\n"
+"PO-Revision-Date: 2018-11-06 20:11\n"
 
 #. Save button in the dashboard designer
 msgctxt "designer.save"
@@ -315,92 +315,92 @@ msgstr "Приклад: //source.unsplash.com/random"
 #. Setting header
 msgctxt "settings.panel.appearance.drawer_heading_image"
 msgid "Drawer heading image (optional)"
-msgstr ""
+msgstr "Зображення заголовка випливаючого меню (опціонально)"
 
 #. Placeholder inside the text box
 msgctxt "settings.panel.appearance.drawer_heading_image.hint"
 msgid "Example: //via.placeholder.com/265x95"
-msgstr ""
+msgstr "Приклад: //via.placeholder.com/265x95"
 
 #. Checkbox
 msgctxt "settings.panel.appearance.prevent_scrolling"
 msgid "Prevent scrolling (when not editing)"
-msgstr ""
+msgstr "Не прокручувати (якщо не редагується)"
 
 #. Checkbox
 msgctxt "settings.panel.appearance.hide_drawer_footer"
 msgid "Hide the drawer's footer"
-msgstr ""
+msgstr "Сховати футер випливаючого меню"
 
 #. Checkbox
 msgctxt "settings.panel.appearance.hide_toolbar_buttons"
 msgid "Hide toolbar buttons:"
-msgstr ""
+msgstr "Приховати кнопки на панелі інструментів:"
 
 #. Checkbox
 msgctxt "settings.panel.appearance.show_clock"
 msgid "Show a clock on the header"
-msgstr ""
+msgstr "Відображати годинник у заголовку"
 
 #. Textbox setting header, only displayed when the "Show a clock on the header" option is checked
 msgctxt "settings.panel.appearance.show_clock.header_format"
 msgid "Header clock format"
-msgstr ""
+msgstr "Формат часу у заголовку"
 
 #. Textbox placeholder, only displayed when the "Show a clock on the header" option is checked
 msgctxt "settings.panel.appearance.show_clock.header_format.hint"
 msgid "Default: shortTime, use AngularJS date format"
-msgstr ""
+msgstr "За замовчуванням: shortTime, використовуйте формат дати AngularJS"
 
 #. Custom widgets settings (section header)
 msgctxt "settings.panel.customwidgets.header"
 msgid "Custom Widgets"
-msgstr ""
+msgstr "Користувальницькі Віджети"
 
 #. Big "manage" button label (a > suffix is added)
 msgctxt "settings.panel.customwidgets.manage"
 msgid "Manage"
-msgstr ""
+msgstr "Керувати"
 
 #. Voice support (section header) - formerly (<=2.2.0) : "Voice feedback"
 msgctxt "settings.panel.voicesupport.header"
 msgid "Voice Support"
-msgstr ""
+msgstr "Голосова Підтримка"
 
 #. Dropdown header - formerly (<=2.2.0) : "Voice"
 msgctxt "settings.panel.voicesupport.speech_synthesis_voice"
 msgid "Speech synthesis voice"
-msgstr ""
+msgstr "Голос синтезатора Мови"
 
 #. Displayed below the voice dropdown
 msgctxt "settings.panel.voicesupport.speech_synthesis_voice.hint"
 msgid "Available voices depend on the operating system and browser environments."
-msgstr ""
+msgstr "Доступні голоси залежать від операційної системи і браузера."
 
 #. Test button below the voice selection - make the voice say "habpanel 1 2 3"
 msgctxt "settings.panel.voicesupport.speech_synthesis_voice.test"
 msgid "Test"
-msgstr ""
+msgstr "Перевірка"
 
 #. Checkbox
 msgctxt "settings.panel.voicesupport.floating_speech_button"
 msgid "Display a floating speech button at the bottom of the screen"
-msgstr ""
+msgstr "Відображати плаваючу кнопку мовлення в нижній частині екрана"
 
 #. Dropdown header
 msgctxt "settings.panel.voicesupport.speech_synthesis_item"
 msgid "Speak the new value of the following item when it changes:"
-msgstr ""
+msgstr "Вимовляти нове значення елемента, коли воно змінюється:"
 
 #. Section header
 msgctxt "settings.panel.dashboard_control.header"
 msgid "Switch dashboard with item value"
-msgstr ""
+msgstr "Перемикати панелі за допомогою значення елемента"
 
 #. Dropdown header
 msgctxt "settings.panel.dashboard_control.item"
 msgid "When this item changes to a dashboard's name, switch to it:"
-msgstr ""
+msgstr "Коли цей параметр змінюється на ім'я панелі, переключитися на цю панель:"
 
 #. Local panel configuration editor header
 msgctxt "settings.localconfig.title"
