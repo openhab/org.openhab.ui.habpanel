@@ -11,7 +11,7 @@ msgstr ""
 "Last-Translator: openhab-bot <bot@openhab.org>\n"
 "Language-Team: Ukrainian\n"
 "Language: uk_UA\n"
-"PO-Revision-Date: 2018-11-06 19:54\n"
+"PO-Revision-Date: 2018-11-06 20:02\n"
 
 #. Save button in the dashboard designer
 msgctxt "designer.save"
@@ -210,12 +210,12 @@ msgstr "(немає)"
 #. Appears when focusing the icon textbox when the "Custom icon" iconset is selected
 msgctxt "iconpicker.customicontooltip"
 msgid "Type the name of a <a href='http://docs.openhab.org/configuration/items.html#icons' target='_blank'>registered icon</a> (only SVG supported)<br />Examples: <em>switch</em>, <em>temperature</em> or an additional icon in your configuration's <code>icons/classic</code> folder"
-msgstr ""
+msgstr "Введіть ім'я <a href='http://docs.openhab.org/configuration/items.html#icons' target='_blank'>значка</a> (тільки SVG)<br /> Наприклад: <em>switch</em>,<em>temperature</em> або додатковий значок у вашій конфігураційній <code>icons/classic</code> папці"
 
 #. Screen title
 msgctxt "settings.header"
 msgid "Settings"
-msgstr ""
+msgstr "Параметри"
 
 #. Header of the storage section
 msgctxt "settings.storage.header"
@@ -230,12 +230,12 @@ msgstr "Локальне сховище"
 #. Explanation of the "local storage only" option
 msgctxt "settings.storage.localstorage.hint"
 msgid "The configuration is saved for this browser and device only. It will be kept as long as you don't clean up the browser's historical data."
-msgstr ""
+msgstr "Налаштування зберігаються тільки для цього браузера і пристрою. Вони зберігаються до тих пір, доки ви не очистите історію браузера."
 
 #. Link below the "local storage" option
 msgctxt "settings.storage.localstorage.edit"
 msgid "Edit the local panel configuration (experts only)"
-msgstr ""
+msgstr "Редагування локальної панелі конфігурації (тільки для експертів)"
 
 #. Prefix of a panel configuration before its name
 msgctxt "settings.storage.panelconfiguration"
@@ -245,7 +245,7 @@ msgstr "Конфігурація панелі:"
 #. Prefix of the last synced line, before the date
 msgctxt "settings.storage.panelconfiguration.lastsynced"
 msgid "Last synced on"
-msgstr ""
+msgstr "Остання синхронізація"
 
 #. Displayed before the list of dashboard the panel configuration contains
 msgctxt "settings.storage.panelconfiguration.contains"
@@ -255,7 +255,7 @@ msgstr "Містить:"
 #. Link to create a panel configuration from the current configuration
 msgctxt "settings.storage.panelconfiguration.save"
 msgid "Save the current configuration to a new panel configuration"
-msgstr ""
+msgstr "Зберегти поточну конфігурацію в конфігурації нової панелі"
 
 #. Title of the dialog box when creating a new panel configuration
 msgctxt "settings.storage.panelconfiguration.dialog.title"
@@ -265,7 +265,7 @@ msgstr "Нова конфігурація панелі"
 #. Message of the dialog box when creating a new panel configuration
 msgctxt "settings.storage.panelconfiguration.dialog.message"
 msgid "Please choose a name for the new panel configuration (letters and digits only please):"
-msgstr ""
+msgstr "Будь ласка, оберіть ім'я для нової панелі конфігурації (лише букви і цифри, будь ласка):"
 
 #. Panel name (section header)
 msgctxt "settings.panel.name"
@@ -275,7 +275,7 @@ msgstr "Назва панелі"
 #. Placeholder inside the text box
 msgctxt "settings.panel.name.hint"
 msgid "Replaces 'HABPanel' in the side drawer when set"
-msgstr ""
+msgstr "При встановленні, замінює HABPanel в бічному випливаючому меню"
 
 #. Appearance (section header)
 msgctxt "settings.panel.appearance.header"
@@ -300,12 +300,12 @@ msgstr "Додаткові таблиці стилів (опціонально)"
 #. Placeholder inside the text box
 msgctxt "settings.panel.appearance.additional_stylesheet.hint"
 msgid "Relative URL only; example: /static/example.css"
-msgstr ""
+msgstr "Тільки відносна URL-адреса; наприклад: /static/example.css"
 
 #. Setting header
 msgctxt "settings.panel.appearance.background_image"
 msgid "Background image (optional)"
-msgstr ""
+msgstr "Фонове зображення (опціонально)"
 
 #. Placeholder inside the text box
 msgctxt "settings.panel.appearance.background_image.hint"
