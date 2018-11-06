@@ -11,7 +11,7 @@ msgstr ""
 "Last-Translator: openhab-bot <bot@openhab.org>\n"
 "Language-Team: Ukrainian\n"
 "Language: uk_UA\n"
-"PO-Revision-Date: 2018-11-06 20:30\n"
+"PO-Revision-Date: 2018-11-06 20:52\n"
 
 #. Save button in the dashboard designer
 msgctxt "designer.save"
@@ -685,17 +685,17 @@ msgstr "Номер"
 #. Dropdown option
 msgctxt "customwidgets.designer.settings.config.type.checkbox"
 msgid "Checkbox"
-msgstr ""
+msgstr "Прапорець"
 
 #. Dropdown option
 msgctxt "customwidgets.designer.settings.config.type.item"
 msgid "Item"
-msgstr ""
+msgstr "Пункт"
 
 #. Dropdown option
 msgctxt "customwidgets.designer.settings.config.type.color"
 msgid "Color"
-msgstr ""
+msgstr "Колір"
 
 #. Dropdown option
 msgctxt "customwidgets.designer.settings.config.type.choices"
@@ -705,12 +705,12 @@ msgstr ""
 #. Dropdown option
 msgctxt "customwidgets.designer.settings.config.type.icon"
 msgid "Icon"
-msgstr ""
+msgstr "Значок"
 
 #. Dropdown option
 msgctxt "customwidgets.designer.settings.config.type.heading"
 msgid "Heading"
-msgstr ""
+msgstr "Заголовок"
 
 #. Tooltip displayed when hovering the help icon alongside the ID field
 msgctxt "customwidgets.designer.settings.config.id.hint"
