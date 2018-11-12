@@ -11,7 +11,7 @@ msgstr ""
 "Last-Translator: openhab-bot <bot@openhab.org>\n"
 "Language-Team: Ukrainian\n"
 "Language: uk_UA\n"
-"PO-Revision-Date: 2018-11-12 10:34\n"
+"PO-Revision-Date: 2018-11-12 10:44\n"
 
 #. Save button in the dashboard designer
 msgctxt "designer.save"
@@ -850,17 +850,17 @@ msgstr "Перейти в репозиторій"
 #. Displyed in orange inside the big green button after a number, when some widgets are already present
 msgctxt "widgetgallery.details.toupdate"
 msgid "to update"
-msgstr ""
+msgstr "до оновлення"
 
 #. Little white button label with a down caret
 msgctxt "widgetgallery.details.showdetails"
 msgid "Show details"
-msgstr ""
+msgstr "Показати подробиці"
 
 #. Little white button label with a up caret
 msgctxt "widgetgallery.details.hidedetails"
 msgid "Hide details"
-msgstr "Приховати деталі"
+msgstr "Приховати подробиці"
 
 #. Little white button label
 msgctxt "widgetgallery.details.downloadzip"
