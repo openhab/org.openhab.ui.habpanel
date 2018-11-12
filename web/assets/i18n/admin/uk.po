@@ -11,7 +11,7 @@ msgstr ""
 "Last-Translator: openhab-bot <bot@openhab.org>\n"
 "Language-Team: Ukrainian\n"
 "Language: uk_UA\n"
-"PO-Revision-Date: 2018-11-06 20:52\n"
+"PO-Revision-Date: 2018-11-12 10:34\n"
 
 #. Save button in the dashboard designer
 msgctxt "designer.save"
@@ -860,7 +860,7 @@ msgstr ""
 #. Little white button label with a up caret
 msgctxt "widgetgallery.details.hidedetails"
 msgid "Hide details"
-msgstr ""
+msgstr "Приховати деталі"
 
 #. Little white button label
 msgctxt "widgetgallery.details.downloadzip"
@@ -885,17 +885,17 @@ msgstr "репозиторий"
 #. 3. Suffix of the explanation in the expanded details section
 msgctxt "widgetgallery.details.widget.hint.suffix"
 msgid "contains the following widgets; you can import them individually:"
-msgstr ""
+msgstr "містить наступні віджети; Ви можете імпортувати їх:"
 
 #. Explanation in the expanded details section
 msgctxt "widgetgallery.details.widget.hint.nowidgets"
 msgid "No widgets were found (*.widget.json files)! Please report this."
-msgstr ""
+msgstr "Не виявлено віджетів (*. widget.json файли)! Будь-ласка повідомте про це."
 
 #. Explanation in the expanded details section
 msgctxt "widgetgallery.details.widget.hint.checkrepo"
 msgid "The widgets are likely in the referenced GitHub repository. Click the 'Go to the repository' button to open it."
-msgstr ""
+msgstr "Віджети, ймовірно, знаходяться в GitHub. Натисніть кнопку 'Перейти до репозиторія', щоб відкрити його."
 
 #. Green button in the expanded details section
 msgctxt "widgetgallery.details.widget.import"
@@ -920,10 +920,10 @@ msgstr "Помилка:"
 #. Dialog box title
 msgctxt "widgetgallery.widgetsdetected.dialog.title"
 msgid "Existing widgets detected"
-msgstr ""
+msgstr "Виявлено існуючі віджети"
 
 #. Dialog box message
 msgctxt "widgetgallery.widgetsdetected.dialog.message"
 msgid "Warning: please confirm you wish to update <nbexisting> existing widgets, overwriting any eventual changes made locally! If unsure, cancel and click Show details to review the list of affected widgets."
-msgstr ""
+msgstr "Увага: будь ласка, підтвердьте, що хочете оновити <nbexisting> існуючі віджети, перезаписавши будь-які можливі зміни, внесені локально! Якщо ви не впевнені, натисніть \"скасувати\" та клацніть \"Показати деталі\", щоб переглянути список змінюваних віджетів."
 
