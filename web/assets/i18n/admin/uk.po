@@ -11,7 +11,7 @@ msgstr ""
 "Last-Translator: openhab-bot <bot@openhab.org>\n"
 "Language-Team: Ukrainian\n"
 "Language: uk_UA\n"
-"PO-Revision-Date: 2018-11-12 10:44\n"
+"PO-Revision-Date: 2018-11-13 09:13\n"
 
 #. Save button in the dashboard designer
 msgctxt "designer.save"
@@ -660,7 +660,7 @@ msgstr "Параметри конфігурації"
 #. Displayed in small text below the section header, with an information icon
 msgctxt "customwidgets.designer.settings.config.warning"
 msgid "Beware: always bear in mind instances of this widget might be existing when altering configuration settings!"
-msgstr ""
+msgstr "Будьте обережні: при зміні налаштувань конфігурації памятайте, що вже можуть існувати екземпляри цього віджета!"
 
 #. Button label
 msgctxt "customwidgets.designer.settings.config.add"
@@ -700,7 +700,7 @@ msgstr "Колір"
 #. Dropdown option
 msgctxt "customwidgets.designer.settings.config.type.choices"
 msgid "Choices"
-msgstr ""
+msgstr "Вибір"
 
 #. Dropdown option
 msgctxt "customwidgets.designer.settings.config.type.icon"
@@ -715,12 +715,12 @@ msgstr "Заголовок"
 #. Tooltip displayed when hovering the help icon alongside the ID field
 msgctxt "customwidgets.designer.settings.config.id.hint"
 msgid "Enter a JSON friendly key for this setting - ideally, use only lowercase letters, digits and underscores. Examples: my_setting, first_item, text_size, font_color"
-msgstr ""
+msgstr "Введіть ключ у форматі JSON - в ідеалі, використовуйте тільки малі літери, цифри та підкреслення. Приклади: my_setting, first_item, text_size, font_color"
 
 #. Textbox header
 msgctxt "customwidgets.designer.settings.config.label"
 msgid "Label"
-msgstr ""
+msgstr "Мітка"
 
 #. Textbox header
 msgctxt "customwidgets.designer.settings.config.default"
@@ -730,12 +730,12 @@ msgstr "Значення за замовчуванням"
 #. Textbox header
 msgctxt "customwidgets.designer.settings.config.choices"
 msgid "Choices"
-msgstr ""
+msgstr "Вибір"
 
 #. Textbox placeholder
 msgctxt "customwidgets.designer.settings.config.choices.hint"
 msgid "Comma-separated possible values"
-msgstr ""
+msgstr "Можливі значення, розділені комами"
 
 #. Textbox header
 msgctxt "customwidgets.designer.settings.config.description"
@@ -745,7 +745,7 @@ msgstr "Опис"
 #. Banner displayed when selecting the Icon type for the settings, followed by the defined settings themselves
 msgctxt "customwidgets.designer.settings.config.icon.hint"
 msgid "This will define 2 config elements:"
-msgstr ""
+msgstr "Це дозволить визначити два елемента конфігурації:"
 
 #. Tab header
 msgctxt "customwidgets.designer.preview"
@@ -760,12 +760,12 @@ msgstr "Галерея Віджетів"
 #. Dialog box title (when displaying a repository)
 msgctxt "widgetgallery.heading.importrepo"
 msgid "Import GitHub Repository"
-msgstr ""
+msgstr "Імпорт репозиторія Github"
 
 #. Dialog box title (when displaying a community gallery item)
 msgctxt "widgetgallery.heading.importgallery"
 msgid "Import Gallery Item"
-msgstr ""
+msgstr "Імпорт галереї Item"
 
 #. Alert banner message
 msgctxt "widgetgallery.warning.githubratelimit"
