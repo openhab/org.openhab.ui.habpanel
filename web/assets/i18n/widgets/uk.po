@@ -11,7 +11,7 @@ msgstr ""
 "Last-Translator: openhab-bot <bot@openhab.org>\n"
 "Language-Team: Ukrainian\n"
 "Language: uk_UA\n"
-"PO-Revision-Date: 2018-11-13 17:16\n"
+"PO-Revision-Date: 2018-11-13 17:21\n"
 
 #. Common term in widget settings dialogs
 msgctxt "widget.common.min"
@@ -91,7 +91,7 @@ msgstr "Налаштування кнопки"
 #. Tab header
 msgctxt "widget.button.general"
 msgid "General"
-msgstr ""
+msgstr "Загальне"
 
 #. Dropdown header
 msgctxt "widget.button.general.action_type"
@@ -240,22 +240,22 @@ msgstr "Налаштування графіку"
 #. Tab header
 msgctxt "widget.chart.general"
 msgid "General"
-msgstr ""
+msgstr "Загальне"
 
 #. Dropdown header
 msgctxt "widget.chart.general.type"
 msgid "Type"
-msgstr ""
+msgstr "Тип"
 
 #. Dropdown option
 msgctxt "widget.chart.general.type.default"
 msgid "Default"
-msgstr ""
+msgstr "За замовчуванням"
 
 #. Dropdown option
 msgctxt "widget.chart.general.type.rrd4j"
 msgid "RRD4j (rrd4j persistence service only)"
-msgstr ""
+msgstr "RRD4j (тільки для збереження rrd4j)"
 
 #. Dropdown option
 msgctxt "widget.chart.general.type.interactive"
