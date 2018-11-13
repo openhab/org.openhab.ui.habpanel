@@ -11,7 +11,7 @@ msgstr ""
 "Last-Translator: openhab-bot <bot@openhab.org>\n"
 "Language-Team: Ukrainian\n"
 "Language: uk_UA\n"
-"PO-Revision-Date: 2018-11-13 17:03\n"
+"PO-Revision-Date: 2018-11-13 17:16\n"
 
 #. Common term in widget settings dialogs
 msgctxt "widget.common.min"
@@ -91,7 +91,7 @@ msgstr "Налаштування кнопки"
 #. Tab header
 msgctxt "widget.button.general"
 msgid "General"
-msgstr "Загальні"
+msgstr ""
 
 #. Dropdown header
 msgctxt "widget.button.general.action_type"
@@ -101,141 +101,141 @@ msgstr "Тип дії"
 #. Dropdown option
 msgctxt "widget.button.general.action_type.command"
 msgid "Send a fixed command to an item"
-msgstr ""
+msgstr "Відправити фіксовану команду елементу"
 
 #. Dropdown option
 msgctxt "widget.button.general.action_type.toggle"
 msgid "Alternate item between 2 states"
-msgstr ""
+msgstr "Перемикання між 2ма станами"
 
 #. Dropdown option
 msgctxt "widget.button.general.action_type.navigate"
 msgid "Navigate"
-msgstr ""
+msgstr "Перейти"
 
 #. Textbox header
 msgctxt "widget.button.general.command"
 msgid "Command value"
-msgstr ""
+msgstr "Значення команди"
 
 #. Textbox header
 msgctxt "widget.button.general.command_alt"
 msgid "Alternate command value"
-msgstr ""
+msgstr "Альтернативне значення команди"
 
 #. Radio buttons header
 msgctxt "widget.button.general.navigation_type"
 msgid "Navigation type"
-msgstr ""
+msgstr "Тип навігації"
 
 #. Radio button label
 msgctxt "widget.button.general.navigation_type.dashboard"
 msgid "Dashboard"
-msgstr ""
+msgstr "Панель керування"
 
 #. Radio buttons header
 msgctxt "widget.button.general.navigation_target"
 msgid "Open in"
-msgstr ""
+msgstr "Відкрити в"
 
 #. Radio button label
 msgctxt "widget.button.general.navigation_target.self"
 msgid "Current tab"
-msgstr ""
+msgstr "Поточна вкладка"
 
 #. Radio button label
 msgctxt "widget.button.general.navigation_target.new_tab"
 msgid "New tab"
-msgstr ""
+msgstr "Нова вкладка"
 
 #. Radio button label
 msgctxt "widget.button.general.navigation_target.new_window"
 msgid "New window"
-msgstr ""
+msgstr "Нове вікно"
 
 #. Tab header
 msgctxt "widget.button.display"
 msgid "Display"
-msgstr ""
+msgstr "Вигляд"
 
 #. Section header
 msgctxt "widget.button.display.label"
 msgid "Label"
-msgstr ""
+msgstr "Мітка"
 
 #. Section header
 msgctxt "widget.button.display.value"
 msgid "Value"
-msgstr ""
+msgstr "Значення"
 
 #. Checkbox label (when there's an item configured in the General tab)
 msgctxt "widget.button.display.value.showitemvalue"
 msgid "Show the item's state value"
-msgstr ""
+msgstr "Показати значення елемента"
 
 #. Checkbox label (when there's no item configured in the General tab)
 msgctxt "widget.button.display.value.showitemvalue_noitem"
 msgid "Show an item's state value"
-msgstr ""
+msgstr "Показати значення елемента"
 
 #. Textbox header
 msgctxt "widget.button.display.value.active_state"
 msgid "Active state"
-msgstr ""
+msgstr "Активний стан"
 
 #. Checkboxes header
 msgctxt "widget.button.display.value.layout"
 msgid "Layout"
-msgstr ""
+msgstr "Розкладка"
 
 #. Tab header
 msgctxt "widget.button.inactive"
 msgid "Inactive"
-msgstr ""
+msgstr "Неактивний"
 
 #. Tab header
 msgctxt "widget.button.active"
 msgid "Active"
-msgstr ""
+msgstr "Активний"
 
 #. Tab header (when there's no item configured in the General tab)
 msgctxt "widget.button.colors"
 msgid "Colors"
-msgstr ""
+msgstr "Кольори"
 
 #. Color picker header
 msgctxt "widget.button.background_color"
 msgid "Background color"
-msgstr ""
+msgstr "Колір тла"
 
 #. Color picker header
 msgctxt "widget.button.foreground_color"
 msgid "Label color"
-msgstr ""
+msgstr "Колір мітки"
 
 #. Color picker header
 msgctxt "widget.button.value_color"
 msgid "Value color"
-msgstr ""
+msgstr "Колір значення"
 
 msgctxt "widget.button.preview.state"
 msgid "State"
-msgstr ""
+msgstr "Стан"
 
 #. Display name of the widget (appears in the Add Widget dropdown menu in the designer)
 msgctxt "widget.chart"
 msgid "Chart"
-msgstr ""
+msgstr "Графік"
 
 #. Description of the widget, displayed in a tooltip when hovering the option in the Add Widget dropdown menu in the designer
 msgctxt "widget.chart.description"
 msgid "Displays a chart"
-msgstr ""
+msgstr "Відображає графік"
 
 #. Settings dialog title
 msgctxt "widget.chart.settings.header"
 msgid "Chart Settings"
-msgstr ""
+msgstr "Налаштування графіку"
 
 #. Tab header
 msgctxt "widget.chart.general"
