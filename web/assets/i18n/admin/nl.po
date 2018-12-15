@@ -11,7 +11,7 @@ msgstr ""
 "Last-Translator: openhab-bot <bot@openhab.org>\n"
 "Language-Team: Dutch\n"
 "Language: nl_NL\n"
-"PO-Revision-Date: 2018-05-30 14:40-0400\n"
+"PO-Revision-Date: 2018-11-05 17:02\n"
 
 #. Save button in the dashboard designer
 msgctxt "designer.save"
@@ -405,7 +405,7 @@ msgstr "Wanneer dit item verandert in een dashboard naam, maak deze actief:"
 #. Local panel configuration editor header
 msgctxt "settings.localconfig.title"
 msgid "Local panel configuration editor"
-msgstr ""
+msgstr "Lokale panel configuration editor"
 
 #. Displayed in a tooltip when hovering the exclamation mark in the local panel config editor
 msgctxt "settings.localconfig.warning"
@@ -485,7 +485,7 @@ msgstr "door"
 #. Displayed in a tooltip when hovering the icon indicating a globally provisioned widget
 msgctxt "customwidgets.list.globallyprovisioned.hint"
 msgid "This widget was provisioned globally via a bundle. It cannot be modified, but may be cloned to an user-defined widget with another name."
-msgstr ""
+msgstr "Deze widget is als een bundel geïnstalleerd en kan niet worden gewijzigd. U kunt hem wel kopiëren naar een gebruikergedefineerde widget onder een andere naam."
 
 #. Displayed in a tooltip when hovering the icon indicating a user defined widget
 msgctxt "customwidgets.list.userdefined.hint"
@@ -555,7 +555,7 @@ msgstr "Importeer widget"
 #. Dialog box message
 msgctxt "customwidgets.list.import.dialog.message"
 msgid "Please confirm or change the identifier of your widget (avoid spaces and special chars!). If a widget with the same identifier already exists, it will be replaced!"
-msgstr ""
+msgstr "Bevestig of wijzig de identifier van het widget (geen spaties of speciale tekens!). Als een widget met dezelfde identifier bestaat zal deze worden vervangen!"
 
 #. Prefix of an error message - followed by a technical exception message
 msgctxt "customwidgets.list.import.error"
@@ -605,7 +605,7 @@ msgstr "Dupliceer widget"
 #. Dialog box message
 msgctxt "customwidgets.list.clone.dialog.message"
 msgid "This will clone the globally provisioned widget: <id> to be modified as part of the panel configuration. Enter an unique identifier below - it must be different from the widget being cloned, and should avoid spaces and special chars. If an user-defined widget with the same identifier already exists, it will be replaced!"
-msgstr ""
+msgstr "Dit maakt een kopie van deze widget: <id>, zodat het gebruikt kan worden in een panel. Voer een unieke naam in, anders dan de originele naam en gebruik geen spaties en speciale karakters. Een bestaande widget met dezelfde naam zal overschreven worden!"
 
 #. Screen title, followed by the widget name - beware of size!
 msgctxt "customwidgets.designer.heading"
